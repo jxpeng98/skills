@@ -1,0 +1,26 @@
+{
+  "name": "presentation-tools",
+  "version": "0.1.0",
+  "description": "Presentation skills for creating engineering and project slides with Slidev.",
+  "author": {
+    "name": "jxpeng98",
+    "url": "https://github.com/jxpeng98"
+  },
+  "repository": "https://github.com/jxpeng98/skills",
+  "license": "MIT",
+  "keywords": ["skills", "presentations", "slidev", "slides"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Presentation Tools",
+    "shortDescription": "Slidev and engineering presentation helpers.",
+    "longDescription": "Reusable presentation skills for creating Markdown-based Slidev decks for engineering reviews, technical talks, and project updates.",
+    "developerName": "jxpeng98",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Create a Slidev deck for this project.",
+      "Turn these notes into technical slides.",
+      "Export this Slidev deck for sharing."
+    ]
+  }
+}

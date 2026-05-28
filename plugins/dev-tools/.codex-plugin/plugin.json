@@ -1,0 +1,26 @@
+{
+  "name": "dev-tools",
+  "version": "0.1.0",
+  "description": "Developer skills for repository boundaries, validation, and release readiness.",
+  "author": {
+    "name": "jxpeng98",
+    "url": "https://github.com/jxpeng98"
+  },
+  "repository": "https://github.com/jxpeng98/skills",
+  "license": "MIT",
+  "keywords": ["skills", "development", "repository", "release"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Dev Tools",
+    "shortDescription": "Repository review and release-readiness helpers.",
+    "longDescription": "Reusable development skills for keeping skill repositories, plugin layouts, and release checks consistent.",
+    "developerName": "jxpeng98",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Review this repo against DEVELOPMENT.md.",
+      "Check whether this plugin is ready to publish.",
+      "Find boundary violations in these changes."
+    ]
+  }
+}

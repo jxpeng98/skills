@@ -1,0 +1,10 @@
+{
+  "name": "productivity",
+  "description": "Productivity skills for planning, critique, review, commit, and PR work.",
+  "version": "0.1.0",
+  "author": {
+    "name": "jxpeng98"
+  },
+  "repository": "https://github.com/jxpeng98/skills",
+  "license": "MIT"
+}

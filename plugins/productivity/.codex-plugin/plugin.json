@@ -1,0 +1,26 @@
+{
+  "name": "productivity",
+  "version": "0.1.0",
+  "description": "Productivity skills for planning, critique, review, commit, and PR work.",
+  "author": {
+    "name": "jxpeng98",
+    "url": "https://github.com/jxpeng98"
+  },
+  "repository": "https://github.com/jxpeng98/skills",
+  "license": "MIT",
+  "keywords": ["skills", "productivity", "planning", "review"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Productivity",
+    "shortDescription": "Planning, critique, commit, and PR helpers.",
+    "longDescription": "Reusable productivity skills for stress-testing plans, making decisions, and preparing collaboration artifacts.",
+    "developerName": "jxpeng98",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Grill me on this plan.",
+      "Help me choose between these options.",
+      "Write a PR description from my changes."
+    ]
+  }
+}
