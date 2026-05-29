@@ -1,26 +1,26 @@
 {
   "name": "writing-tools",
-  "version": "0.1.0",
-  "description": "Writing skills for clarity, tone, summarization, and reusable text transformation.",
+  "version": "0.1.1",
+  "description": "Writing skills for clarity, tone, humanization, summarization, and reusable text transformation.",
   "author": {
     "name": "jxpeng98",
     "url": "https://github.com/jxpeng98"
   },
   "repository": "https://github.com/jxpeng98/skills",
   "license": "MIT",
-  "keywords": ["skills", "writing", "editing", "summarization"],
+  "keywords": ["skills", "writing", "editing", "humanizer", "summarization"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Writing Tools",
-    "shortDescription": "Editing, clarity, and summarization helpers.",
-    "longDescription": "Reusable writing skills for improving clarity, preserving meaning, and summarizing source material.",
+    "shortDescription": "Editing, clarity, humanization, and summarization helpers.",
+    "longDescription": "Reusable writing skills for improving clarity, preserving meaning, making text sound more natural, and summarizing source material.",
     "developerName": "jxpeng98",
     "category": "Writing",
     "capabilities": ["Read", "Write"],
     "defaultPrompt": [
       "Rewrite this for clarity.",
-      "Summarize this material into decisions.",
-      "Make this text more direct."
+      "Make this sound more human.",
+      "Summarize this material into decisions."
     ]
   }
 }

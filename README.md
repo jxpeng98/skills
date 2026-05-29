@@ -66,11 +66,12 @@ readiness.
 
 ### `writing-tools`
 
-Writing skills for clarity, tone, summarization, and reusable text
+Writing skills for clarity, tone, humanization, summarization, and reusable text
 transformation.
 
 | Skill | Use When |
 | --- | --- |
+| `humanizer` | Make text sound more natural, human, conversational, warm, direct, less robotic, or closer to an authentic voice. |
 | `rewrite-for-clarity` | Rewrite, edit, tighten, or adapt text while preserving meaning. |
 | `summarize-material` | Summarize notes, articles, transcripts, documents, meetings, or long context into useful decisions and actions. |
 
@@ -145,4 +146,4 @@ upstream guidance changes.
 | `commit-message` | Based on [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/). |
 | `pr-description` | Informed by GitHub Docs on [helping others review your changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/helping-others-review-your-changes). |
 | `slidev-slides` | Based on official Slidev documentation: [Getting Started](https://sli.dev/guide/), [CLI](https://sli.dev/builtin/cli), and [Exporting](https://sli.dev/guide/exporting). |
-| `decide-between-options`, `repo-boundary-review`, `release-readiness`, `rewrite-for-clarity`, `summarize-material` | Original local workflow skills derived from day-to-day engineering, repository maintenance, and communication practice. |
+| `decide-between-options`, `repo-boundary-review`, `release-readiness`, `humanizer`, `rewrite-for-clarity`, `summarize-material` | Original local workflow skills derived from day-to-day engineering, repository maintenance, and communication practice. |
