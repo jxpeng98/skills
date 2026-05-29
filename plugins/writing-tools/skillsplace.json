@@ -1,0 +1,24 @@
+{
+  "name": "Writing Tools",
+  "slug": "writing-tools",
+  "version": "0.1.0",
+  "description": "Writing skills for clarity, tone, summarization, and reusable text transformation.",
+  "manifest": ".codex-plugin/plugin.json",
+  "category": {
+    "codex": "Writing",
+    "claude": "writing"
+  },
+  "tags": [
+    "writing",
+    "editing",
+    "summarization"
+  ],
+  "platforms": {
+    "codex": true,
+    "claude": true,
+    "antigravity": {
+      "status": "ready",
+      "requiredRootFile": "plugin.json"
+    }
+  }
+}

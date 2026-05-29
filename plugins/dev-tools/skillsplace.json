@@ -1,0 +1,24 @@
+{
+  "name": "Dev Tools",
+  "slug": "dev-tools",
+  "version": "0.1.0",
+  "description": "Developer skills for repository boundaries, validation, and release readiness.",
+  "manifest": ".codex-plugin/plugin.json",
+  "category": {
+    "codex": "Developer Tools",
+    "claude": "developer-tools"
+  },
+  "tags": [
+    "development",
+    "repository",
+    "release"
+  ],
+  "platforms": {
+    "codex": true,
+    "claude": true,
+    "antigravity": {
+      "status": "ready",
+      "requiredRootFile": "plugin.json"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Presentation Tools",
+  "slug": "presentation-tools",
+  "version": "0.1.0",
+  "description": "Presentation skills for creating engineering and project slides with Slidev.",
+  "manifest": ".codex-plugin/plugin.json",
+  "category": {
+    "codex": "Productivity",
+    "claude": "presentations"
+  },
+  "tags": [
+    "presentations",
+    "slidev",
+    "slides"
+  ],
+  "platforms": {
+    "codex": true,
+    "claude": true,
+    "antigravity": {
+      "status": "ready",
+      "requiredRootFile": "plugin.json"
+    }
+  }
+}
