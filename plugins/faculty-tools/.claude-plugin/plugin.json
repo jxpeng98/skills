@@ -1,0 +1,10 @@
+{
+  "name": "faculty-tools",
+  "description": "Daily university faculty skills for teaching, feedback, student communication, meetings, and light academic-service writing.",
+  "version": "0.1.0",
+  "author": {
+    "name": "jxpeng98"
+  },
+  "repository": "https://github.com/jxpeng98/skills",
+  "license": "MIT"
+}

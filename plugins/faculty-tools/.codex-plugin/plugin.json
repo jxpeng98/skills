@@ -1,0 +1,26 @@
+{
+  "name": "faculty-tools",
+  "version": "0.1.0",
+  "description": "Daily university faculty skills for teaching, feedback, student communication, meetings, and light academic-service writing.",
+  "author": {
+    "name": "jxpeng98",
+    "url": "https://github.com/jxpeng98"
+  },
+  "repository": "https://github.com/jxpeng98/skills",
+  "license": "MIT",
+  "keywords": ["skills", "faculty", "teaching", "university", "students"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Faculty Tools",
+    "shortDescription": "Daily teaching, feedback, student, and faculty-service helpers.",
+    "longDescription": "Reusable skills for university faculty and students working on courses, assignments, feedback, professional email, meetings, and light academic-service writing without replacing academic judgment.",
+    "developerName": "jxpeng98",
+    "category": "Education",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Plan this week's seminar.",
+      "Turn this assignment idea into a clear brief and rubric.",
+      "Help me write constructive feedback on this student draft."
+    ]
+  }
+}

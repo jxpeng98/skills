@@ -12,6 +12,7 @@ from pathlib import Path
 SEMVER_RE = re.compile(r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$")
 NAME_RE = re.compile(r"^[a-z0-9-]+$")
 DISALLOWED_PLUGIN_NAMES = {"research-tools"}
+EXCLUDE_DIRS = {"__pycache__"}
 
 
 def main() -> None:
@@ -27,6 +28,7 @@ def main() -> None:
     else:
         for plugin_dir in sorted(path for path in root.iterdir() if path.is_dir()):
             validate_plugin(plugin_dir, errors)
+        validate_hermes_tap(Path("."), root, errors)
 
     validate_repository_boundaries(Path("."), errors)
 
@@ -107,6 +109,80 @@ def validate_skill(skill_dir: Path, errors: list[str]) -> None:
     description = frontmatter.get("description")
     if not isinstance(description, str) or not description.startswith("Use when"):
         errors.append(f"{skill_md} description must start with 'Use when'")
+
+
+def validate_hermes_tap(root: Path, plugins_root: Path, errors: list[str]) -> None:
+    """Validate the top-level skills/ mirror consumed by Hermes taps."""
+
+    skills = collect_plugin_skills(root, plugins_root, errors)
+    hermes_root = root / "skills"
+
+    if not hermes_root.is_dir():
+        errors.append("missing skills/ directory for Hermes tap")
+
+    for name, source_dir in sorted(skills.items()):
+        mirror_dir = hermes_root / name
+        if not mirror_dir.is_dir():
+            errors.append(f"skills/{name} is missing for Hermes tap")
+            continue
+        if not directories_match(source_dir, mirror_dir):
+            errors.append(
+                f"skills/{name} does not match {relative_path(source_dir, root)}"
+            )
+
+    if hermes_root.is_dir():
+        for mirror_dir in sorted(path for path in hermes_root.iterdir() if path.is_dir()):
+            if mirror_dir.name not in skills:
+                errors.append(f"skills/{mirror_dir.name} has no matching plugin skill")
+
+
+def collect_plugin_skills(
+    root: Path,
+    plugins_root: Path,
+    errors: list[str],
+) -> dict[str, Path]:
+    skills: dict[str, Path] = {}
+    for skill_dir in sorted(plugins_root.glob("*/skills/*")):
+        if not skill_dir.is_dir():
+            continue
+        existing = skills.get(skill_dir.name)
+        if existing is not None:
+            errors.append(
+                "duplicate skill name for Hermes tap: "
+                f"{skill_dir.name} in {relative_path(existing, root)} and "
+                f"{relative_path(skill_dir, root)}"
+            )
+            continue
+        skills[skill_dir.name] = skill_dir
+    return skills
+
+
+def directories_match(left: Path, right: Path) -> bool:
+    left_files = set(iter_relative_files(left))
+    right_files = set(iter_relative_files(right))
+    if left_files != right_files:
+        return False
+    return all(
+        (left / path).read_bytes() == (right / path).read_bytes()
+        for path in left_files
+    )
+
+
+def iter_relative_files(root: Path) -> list[Path]:
+    files: list[Path] = []
+    for path in root.rglob("*"):
+        if any(part in EXCLUDE_DIRS for part in path.parts):
+            continue
+        if path.is_file():
+            files.append(path.relative_to(root))
+    return sorted(files)
+
+
+def relative_path(path: Path, root: Path) -> str:
+    try:
+        return path.relative_to(root).as_posix()
+    except ValueError:
+        return path.as_posix()
 
 
 def parse_frontmatter(text: str) -> dict[str, str] | None:

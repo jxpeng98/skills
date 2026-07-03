@@ -36,6 +36,8 @@ This repository may contain:
 - Skill directories with `SKILL.md`.
 - Plugin directories that package related skills.
 - Platform plugin manifests inside plugin directories.
+- A top-level `skills/` Hermes tap mirror generated from plugin skill
+  directories.
 - Skill-specific `references/`, `scripts/`, and `assets/`.
 - Shared references or helper scripts when they are directly used by skills.
 - Repository-level development documentation.
@@ -51,7 +53,9 @@ This repository should not contain:
 - Local absolute paths or user-specific machine configuration.
 - Private customer data or internal documents that should not be distributed.
 - Academic research workflows, literature review systems, citation workflows, or
-  thesis/paper planning skills.
+  thesis/paper planning skills. Teaching, student support, faculty service, and
+  university-writing coaching are allowed when they preserve academic integrity
+  and do not replace the user's own research or assessed work.
 
 Plugin manifests are allowed here when they are part of an installable plugin
 directory. Marketplace catalog files are not.
@@ -64,6 +68,11 @@ Use `plugins/` for anything intended to be installable from `skillsplace`:
 .
 ├── DEVELOPMENT.md
 ├── README.md
+├── skills/
+│   ├── grill-me/
+│   │   └── SKILL.md
+│   └── pr-description/
+│       └── SKILL.md
 ├── drafts/
 │   └── experimental-skill/
 │       └── SKILL.md
@@ -88,6 +97,13 @@ Use `plugins/` for anything intended to be installable from `skillsplace`:
         └── skills/
             └── slidev-slides/
                 └── SKILL.md
+```
+
+The top-level `skills/` tree is generated for Hermes taps. Do not edit it
+directly. Edit `plugins/<plugin-name>/skills/<skill-name>/`, then run:
+
+```bash
+python scripts/sync_hermes_tap.py
 ```
 
 Use `drafts/` or a temporary top-level category folder only for early local
@@ -115,6 +131,8 @@ together:
   helpers.
 - `writing-tools`: editing, translation, tone, and summarization helpers.
 - `dev-tools`: debugging, repository maintenance, and release automation helpers.
+- `faculty-tools`: university teaching, assignment design, student feedback,
+  faculty communication, meetings, and light academic-service writing helpers.
 - `presentation-tools`: Slidev decks, engineering presentations, technical
   talks, project reviews, and architecture walkthroughs.
 
@@ -247,6 +265,21 @@ Each publishable plugin should include these platform markers:
 Keep shared skills at the plugin root under `skills/<skill-name>/SKILL.md`.
 Do not move `skills/` inside a platform-specific manifest directory.
 
+For Hermes, keep the repository-level `skills/<skill-name>/SKILL.md` mirror in
+sync. Hermes taps default to the repository `skills/` path, so users can install
+with:
+
+```bash
+hermes skills tap add jxpeng98/skills
+hermes skills install jxpeng98/skills/<skill-name>
+```
+
+Check the mirror without changing files:
+
+```bash
+python scripts/sync_hermes_tap.py --check
+```
+
 Validate the repo-local plugin layout before publishing:
 
 ```bash
@@ -293,7 +326,8 @@ access may see the catalog entry but will not be able to install it.
 6. Review for trigger accuracy, unnecessary context, and safety issues.
 7. Test with realistic prompts.
 8. Update plugin manifests if packaging details changed.
-9. Update `skillsplace` only after the plugin path is stable.
+9. Run `python scripts/sync_hermes_tap.py` to refresh the Hermes mirror.
+10. Update `skillsplace` only after the plugin path is stable.
 
 ## Review Checklist
 
@@ -307,6 +341,7 @@ Before publishing a new or changed skill:
 - [ ] Reusable templates or files are under `assets/`.
 - [ ] No secrets, local paths, or private data are present.
 - [ ] The plugin boundary is coherent.
+- [ ] The Hermes `skills/` mirror matches plugin skill sources.
 - [ ] Marketplace entries point to plugin directories, not draft folders.
 - [ ] The skill has been tested with realistic prompts.
 
@@ -319,6 +354,7 @@ Before registering or updating a plugin in `skillsplace`:
 3. Confirm platform plugin manifests are present when needed.
 4. Confirm repository visibility matches the intended audience.
 5. Tag or pin a release if consumers need reproducible installs.
-6. Update `skillsplace` marketplace metadata.
-7. Run `npm run validate` in `skillsplace`.
-8. Install from the marketplace in a clean environment and test the skill trigger.
+6. Run `python scripts/sync_hermes_tap.py --check`.
+7. Update `skillsplace` marketplace metadata.
+8. Run `npm run validate` in `skillsplace`.
+9. Install from the marketplace in a clean environment and test the skill trigger.
