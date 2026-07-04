@@ -1,27 +1,29 @@
 {
   "name": "writing-tools",
-  "version": "0.1.3",
-  "description": "Writing skills for clarity, tone, humanization, general writing polish, academic writing support, summarization, and reusable text transformation.",
+  "version": "0.1.4",
+  "description": "Writing skills for clarity, tone, humanization, general writing polish, academic writing coaching, protected-fact preservation, and summarization.",
   "author": {
     "name": "jxpeng98",
     "url": "https://github.com/jxpeng98"
   },
   "repository": "https://github.com/jxpeng98/skills",
   "license": "MIT",
-  "keywords": ["skills", "writing", "editing", "humanizer", "summarization"],
+  "keywords": ["skills", "writing", "editing", "humanizer", "academic-writing", "summarization"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Writing Tools",
-    "shortDescription": "Editing, clarity, humanization, and summarization helpers.",
-    "longDescription": "Reusable writing skills for improving clarity, preserving meaning, coaching and polishing general or academic writing, making text sound more natural, and summarizing source material.",
+    "shortDescription": "Editing, clarity, humanization, coaching, and summarization helpers.",
+    "longDescription": "Reusable writing skills for improving clarity, preserving meaning, coaching and polishing general or academic writing, protecting claims and evidence, making text sound more natural, and summarizing source material.",
     "developerName": "jxpeng98",
     "category": "Writing",
     "capabilities": ["Read", "Write"],
     "defaultPrompt": [
       "Rewrite this for clarity.",
-      "Make this sound more human.",
+      "Make this sound clearer and more human.",
       "Polish this message for everyday clarity.",
-      "Improve this essay paragraph without changing my argument.",
+      "Coach this essay paragraph without changing my argument.",
+      "Diagnose and polish this academic paragraph while preserving my claims and evidence.",
+      "Polish this report section while preserving my evidence.",
       "Summarize this material into decisions."
     ]
   }

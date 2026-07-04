@@ -1,7 +1,7 @@
 {
   "name": "writing-tools",
-  "description": "Writing skills for clarity, tone, humanization, general writing polish, academic writing support, summarization, and reusable text transformation.",
-  "version": "0.1.3",
+  "description": "Writing skills for clarity, tone, humanization, general writing polish, academic writing coaching, protected-fact preservation, and summarization.",
+  "version": "0.1.4",
   "author": {
     "name": "jxpeng98"
   },

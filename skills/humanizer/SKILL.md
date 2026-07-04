@@ -64,6 +64,64 @@ Check:
 - Citation, data, and example preservation
 - Academic integrity limits for assessed work
 
+## Preflight Diagnosis
+
+Before editing, identify:
+
+- Direction: `General Writing Direction` or `Academic Writing Direction`
+- Mode: `Coach Mode` or `Polisher Mode`
+- Edit intensity: `light`, `standard`, or `deep`
+- Goal and desired result
+- Audience, channel, and stakes
+- Text type and section type
+- Claims, evidence, citations, data, terminology, and conclusions that must not change
+- Whether the task is assessed academic work
+
+If any item materially changes the edit, use `grill-me` before rewriting.
+
+## AI-Feel Diagnosis
+
+Use this as a writing-quality diagnosis, not as detector evasion.
+
+Look for:
+
+- Macro opening that says little
+- Template structure that hides the writer's actual point
+- Mechanical transitions
+- Abstract noun stacks
+- Over-neutral or over-formal tone
+- Repeated sentence shapes
+- "process bleed" from prompts, outlines, planning notes, or previous drafts
+- "clean but empty" prose that is polished but does not say a specific thing
+- Generic claims without concrete context
+
+No detector-evasion objective: do not mention AI scores, bypass rates, Turnitin,
+GPTZero, Originality.ai, or similar systems as success criteria.
+
+## Protected Facts
+
+Preserve these exactly unless the user explicitly asks to change them:
+
+- Numbers, dates, names, course titles, institution names, and assignment terms
+- Citations, source references, authors, years, quotations, and page numbers
+- Research questions, variables, methods, datasets, sample sizes, and findings
+- Claims, caveats, limitations, conclusions, and disciplinary terminology
+- Legal, medical, financial, policy, grade, or assessment details
+
+If a protected fact appears wrong, flag it as "needs verification" instead of
+silently correcting or replacing it.
+
+## Edit Intensity
+
+- `light`: fix grammar, sentence flow, wordiness, and local clarity only.
+- `standard`: improve paragraph flow, transitions, emphasis, and register while
+  preserving structure.
+- `deep`: restructure sentences or paragraph order for clarity. Use only when
+  the user permits deeper changes. Report what was preserved and what changed.
+
+Default to `standard` for ordinary polish and `light` for assessed academic work
+unless the user asks for deeper coaching.
+
 ## Modes
 
 Choose one mode after choosing the direction. If the user has not chosen, use
@@ -100,22 +158,17 @@ Focus on:
 
 ## Workflow
 
-1. Clarify the direction and mode. If the task direction is underspecified, use
-   `grill-me` before rewriting: ask for goal, audience, desired result,
-   constraints, whether this is General Writing Direction or Academic Writing
-   Direction, and whether the user wants coaching notes or a polished version.
-2. Identify the writing context: essay, report, email, statement, post,
-   application text, feedback, or personal note.
-3. Preserve claims, facts, commitments, caveats, citations, and technical
-   meaning.
-4. Improve the path of thought: paragraph order, sentence logic, transitions,
-   emphasis, and reader expectations.
-5. Replace generic or awkward phrasing with plain, specific language from the
-   user's own context.
-6. For university writing, keep an appropriate academic register: precise,
-   direct, and evidence-aware, not grand or artificially native-sounding.
-7. If authenticity depends on details the user has not provided, ask for those
-   details or leave a clear placeholder.
+1. Run Preflight Diagnosis. If the task direction is underspecified, use
+   `grill-me` before rewriting. Identify the writing context: essay, report,
+   email, statement, post, application text, feedback, or personal note.
+2. Choose direction, mode, and edit intensity.
+3. Identify Protected Facts before changing wording or structure.
+4. Run AI-Feel Diagnosis for writing-quality issues, not detector issues.
+5. For academic writing, run Section-Aware Academic Checks.
+6. Rewrite or coach according to the selected mode. Improve the path of thought:
+   paragraph order, sentence logic, transitions, emphasis, reader expectations,
+   and plain wording from the user's own context.
+7. Run Post-Edit Audit before final output.
 
 ## Output
 
@@ -123,17 +176,21 @@ For quick polishing, output only the revised text if the user asks for that.
 
 For Coach Mode, include:
 
-- Revised text or targeted excerpts
-- What changed
-- Why it improves clarity or argument flow
-- Remaining issues the writer should decide
-- Academic integrity notes when the text is assessed work
+- Preflight Diagnosis
+- AI-Feel Diagnosis
+- Revision Priorities
+- Suggested Revision or Targeted Excerpts
+- Why These Changes Help
+- What was preserved
+- Author decision needed
+- Academic integrity note when relevant
 
 For Polisher Mode, include:
 
 - Revised text
 - Key edits made
-- Meaning or evidence that needs user confirmation
+- What was preserved
+- Meaning, evidence, or citation items needing confirmation
 
 Use these combinations:
 
@@ -145,6 +202,17 @@ Use these combinations:
   register; teach the writer what to revise and why.
 - Academic + Polisher: improve sentence flow, paragraph logic, transitions, and
   academic tone without inventing claims, evidence, citations, or conclusions.
+
+## Post-Edit Audit
+
+After rewriting, check:
+
+- What was preserved: claims, evidence, citations, data, methods, conclusions,
+  and key terminology
+- What changed: structure, transitions, sentence flow, word choice, and tone
+- Whether any claim became stronger or broader than the source supports
+- Whether any missing evidence, citation, or author decision is still needed
+- Whether the edit stayed within the selected direction, mode, and intensity
 
 ## Style Moves
 
@@ -167,6 +235,23 @@ Avoid:
 - Fake vulnerability or forced casualness
 - Fancy synonyms that make the text less precise
 - Rewriting student work so aggressively that the author's reasoning disappears
+
+## Section-Aware Academic Checks
+
+- `Introduction`: thesis, scope, motive, roadmap, and why the issue matters.
+- `Body Paragraph`: topic sentence, claim-evidence fit, analysis, transition,
+  and paragraph closer.
+- `Report Methods`: procedure clarity, variables, materials, limits, and
+  reproducibility.
+- `Results or Findings`: result-first phrasing, evidence boundary, comparison,
+  and no unsupported interpretation.
+- `Discussion`: interpretation, limitation, implication, and connection back to
+  the question.
+- `Conclusion`: synthesis, answer to the original task, and no new unsupported
+  claim.
+
+If a section lacks the information needed for a stronger edit, mark it as
+author decision needed instead of inventing support.
 
 ## University Writing Checks
 

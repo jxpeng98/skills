@@ -96,7 +96,7 @@ transformation.
 
 | Skill | Use When |
 | --- | --- |
-| `humanizer` | Coach or polish general writing and academic writing, including essay/report improvement with academic integrity boundaries. |
+| `humanizer` | Coach or polish general and academic writing with preflight diagnosis, protected-fact preservation, edit-intensity control, and academic integrity boundaries. |
 | `rewrite-for-clarity` | Rewrite, edit, tighten, or adapt text while preserving meaning. |
 | `summarize-material` | Summarize notes, articles, transcripts, documents, meetings, or long context into useful decisions and actions. |
 

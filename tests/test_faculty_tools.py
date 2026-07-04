@@ -92,6 +92,69 @@ class FacultyToolsTests(unittest.TestCase):
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, text)
 
+    def test_humanizer_has_preflight_diagnosis_and_audit_contract(self) -> None:
+        text = (
+            ROOT
+            / "plugins"
+            / "writing-tools"
+            / "skills"
+            / "humanizer"
+            / "SKILL.md"
+        ).read_text(encoding="utf-8")
+
+        required_phrases = [
+            "## Preflight Diagnosis",
+            "## AI-Feel Diagnosis",
+            "## Protected Facts",
+            "## Edit Intensity",
+            "## Post-Edit Audit",
+            "light",
+            "standard",
+            "deep",
+            "process bleed",
+            "clean but empty",
+            "No detector-evasion objective",
+            "What was preserved",
+        ]
+        for phrase in required_phrases:
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, text)
+
+    def test_humanizer_has_section_aware_academic_checks(self) -> None:
+        text = (
+            ROOT
+            / "plugins"
+            / "writing-tools"
+            / "skills"
+            / "humanizer"
+            / "SKILL.md"
+        ).read_text(encoding="utf-8")
+
+        required_phrases = [
+            "## Section-Aware Academic Checks",
+            "Introduction",
+            "Body Paragraph",
+            "Report Methods",
+            "Results or Findings",
+            "Conclusion",
+            "claim-evidence fit",
+            "author decision needed",
+        ]
+        for phrase in required_phrases:
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, text)
+
+    def test_writing_tools_version_bumped_for_humanizer_contract(self) -> None:
+        paths = [
+            ROOT / "plugins" / "writing-tools" / ".codex-plugin" / "plugin.json",
+            ROOT / "plugins" / "writing-tools" / ".claude-plugin" / "plugin.json",
+            ROOT / "plugins" / "writing-tools" / "skillsplace.json",
+        ]
+
+        for path in paths:
+            with self.subTest(path=path.as_posix()):
+                self.assertIn('"version": "0.1.4"', path.read_text(encoding="utf-8"))
+
 
 if __name__ == "__main__":
     unittest.main()
