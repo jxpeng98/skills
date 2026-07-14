@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humanizer"
+  short_description: "Polish natural writing while preserving the author's voice."
+  default_prompt: "Use $humanizer to make this draft sound natural and specific without changing its facts or voice."

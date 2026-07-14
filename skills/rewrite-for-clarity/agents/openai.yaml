@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rewrite for Clarity"
+  short_description: "Rewrite text clearly while preserving meaning."
+  default_prompt: "Use $rewrite-for-clarity to make this text clearer and more direct while preserving its meaning."

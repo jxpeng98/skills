@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Message"
+  short_description: "Draft evidence-based Conventional Commit messages."
+  default_prompt: "Use $commit-message to draft a Conventional Commit message from the current diff."

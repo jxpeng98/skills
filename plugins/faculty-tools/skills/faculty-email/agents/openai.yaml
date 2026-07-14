@@ -1,0 +1,4 @@
+interface:
+  display_name: "Faculty Email"
+  short_description: "Draft clear, professional university emails."
+  default_prompt: "Use $faculty-email to draft a professional university email for this situation."

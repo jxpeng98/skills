@@ -1,20 +1,23 @@
 ---
 name: assignment-brief
-description: Use when creating or improving university assignment prompts, essay briefs, report instructions, submission requirements, grading criteria, rubrics, or student-facing task descriptions.
+description: "Create or improve university assignment prompts, essay and report briefs, submission requirements, grading criteria, rubrics, and student-facing task descriptions. Trigger for assessment design or brief revision; preserve supplied course policy and mark missing policy decisions instead of inventing them."
 ---
 
 # Assignment Brief
 
-## Purpose
+## Outcome
 
 Create student-facing assignment instructions that make the task, standards,
 scope, and deliverables concrete.
 
-## Before Drafting
+## Inputs And Defaults
 
-Use `grill-me` when the goal, desired result, assessment weight, student level,
-or grading basis is unclear. Clarify what the assignment should teach, what
-evidence students must produce, and what quality looks like.
+Inspect the syllabus, learning outcomes, existing brief, rubric, and policy text
+when available. Infer low-risk presentation choices and proceed. Ask one focused
+question only when a missing decision would materially change the assessment;
+otherwise mark it `[Instructor to confirm]`. If the user wants an interactive
+design review, resolve one highest-impact decision at a time and recommend a
+default with each question.
 
 ## Workflow
 
@@ -61,6 +64,17 @@ Use this structure:
 
 - [ ] <student check>
 ```
+
+Adapt the structure to the institution's existing template. Omit sections that
+do not apply; do not fill unknown policy fields with plausible defaults.
+
+## Completion Check
+
+- A student can identify the task, required evidence, deliverables, constraints,
+  submission route, and basis of evaluation without hidden assumptions.
+- Rubric criteria are observable and align with the stated learning outcomes.
+- All dates, weights, penalties, and AI/collaboration rules are supplied or
+  clearly marked for instructor confirmation.
 
 ## Boundaries
 

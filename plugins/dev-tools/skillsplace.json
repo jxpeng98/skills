@@ -1,7 +1,7 @@
 {
   "name": "Dev Tools",
   "slug": "dev-tools",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Developer skills for repository boundaries, validation, and release readiness.",
   "manifest": ".codex-plugin/plugin.json",
   "category": {

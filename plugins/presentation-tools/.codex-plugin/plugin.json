@@ -1,26 +1,26 @@
 {
   "name": "presentation-tools",
-  "version": "0.1.0",
-  "description": "Presentation skills for creating engineering and project slides with Slidev.",
+  "version": "0.2.0",
+  "description": "Presentation skills for routing, creating, reviewing, and exporting Slidev, PPTX, and LaTeX Beamer decks.",
   "author": {
     "name": "jxpeng98",
     "url": "https://github.com/jxpeng98"
   },
   "repository": "https://github.com/jxpeng98/skills",
   "license": "MIT",
-  "keywords": ["skills", "presentations", "slidev", "slides"],
+  "keywords": ["skills", "presentations", "slidev", "pptx", "powerpoint", "latex", "beamer", "slides"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Presentation Tools",
-    "shortDescription": "Slidev and engineering presentation helpers.",
-    "longDescription": "Reusable presentation skills for creating Markdown-based Slidev decks for engineering reviews, technical talks, and project updates.",
+    "shortDescription": "Slidev, PPTX, and LaTeX presentation helpers.",
+    "longDescription": "Reusable presentation skills for choosing the right deck format, building Slidev decks, creating template-aware PowerPoint files, and producing LaTeX Beamer presentations for technical talks and project updates.",
     "developerName": "jxpeng98",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
     "defaultPrompt": [
-      "Create a Slidev deck for this project.",
-      "Turn these notes into technical slides.",
-      "Export this Slidev deck for sharing."
+      "Create a presentation and choose the right output format.",
+      "Build this deck using the supplied PowerPoint template.",
+      "Turn these notes into a Beamer or Slidev technical talk."
     ]
   }
 }

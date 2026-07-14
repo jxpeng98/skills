@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slidev Slides"
+  short_description: "Create and verify practical Slidev presentations."
+  default_prompt: "Use $slidev-slides to create and verify a practical Slidev deck from this material."

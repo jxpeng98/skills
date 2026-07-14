@@ -133,8 +133,9 @@ together:
 - `dev-tools`: debugging, repository maintenance, and release automation helpers.
 - `faculty-tools`: university teaching, assignment design, student feedback,
   faculty communication, meetings, and light academic-service writing helpers.
-- `presentation-tools`: Slidev decks, engineering presentations, technical
-  talks, project reviews, and architecture walkthroughs.
+- `presentation-tools`: format routing, Slidev decks, editable PPTX decks,
+  LaTeX Beamer slides, engineering presentations, technical talks, project
+  reviews, and architecture walkthroughs.
 
 Create separate plugins when:
 
@@ -152,20 +153,23 @@ Each skill should live in its own directory:
 ```text
 skills/<skill-name>/
 ├── SKILL.md
+├── agents/
+│   └── openai.yaml
 ├── references/
 ├── scripts/
 └── assets/
 ```
 
-Only `SKILL.md` is required. Add the other folders only when the skill needs
-them.
+Only `SKILL.md` is required by the cross-platform skill format. This repository
+also requires `agents/openai.yaml` for Codex UI metadata. Add references,
+scripts, and assets only when the skill needs them.
 
 `SKILL.md` must start with YAML frontmatter:
 
 ```markdown
 ---
 name: skill-name
-description: Use when the user needs ...
+description: Create or review <artifact> from <evidence>. Trigger for <specific requests>; do not <important boundary>.
 ---
 ```
 
@@ -173,13 +177,47 @@ Rules:
 
 - Use lowercase kebab-case for skill names.
 - Keep skill names short and stable.
-- Put the most important trigger terms in `description`.
+- Front-load the action, artifact, and trigger terms in `description`; do not
+  spend the first words on generic phrases such as `Use when`.
+- Keep descriptions between 80 and 320 characters so scope and boundaries are
+  clear without exhausting the skill-discovery budget.
 - Keep `SKILL.md` concise.
 - Move long examples, policies, API notes, and domain references into
   `references/`.
 - Add scripts only when deterministic behavior or repeated execution justifies
   them.
 - Add assets only when the skill needs templates or reusable files.
+- Include `## Outcome` and `## Completion Check` so the agent knows both the
+  destination and when to stop.
+- Add `agents/openai.yaml` with `display_name`, a 25-64 character
+  `short_description`, and a one-sentence `default_prompt` that explicitly
+  mentions `$skill-name`.
+
+## Codex And GPT-5.6 Optimization Profile
+
+Keep skill behavior model-family neutral: select the model and reasoning effort
+in Codex configuration, not inside every skill. The current authoring profile is
+optimized for GPT-5.6 Sol and follows these rules:
+
+- Describe the user-visible outcome, material constraints, evidence, output
+  contract, and completion bar; leave routine path selection to the model.
+- Inspect available files and context before asking. Infer low-risk choices and
+  ask only for the smallest missing fact that would materially change the result.
+- State permission boundaries once. Review and diagnostic skills must not imply
+  authorization to mutate, publish, send, tag, or push.
+- Route tools by dependency: parallelize independent reads, keep dependent work
+  sequential, and synthesize retrieved evidence before acting.
+- Validate the actual deliverable before declaring completion. Report checks not
+  run and residual uncertainty instead of treating absence of evidence as a pass.
+- Keep the always-loaded body lean. Move conditional domain checks, long
+  examples, schemas, and tool-specific guidance into directly linked
+  `references/` files.
+- Avoid repeated style instructions, generic exhortations, keyword maps, and
+  rigid templates that add tokens without changing behavior.
+
+Re-check this profile against current official Codex and model guidance during a
+major model-family upgrade; do not hard-code `gpt-5.6-sol` into individual skill
+instructions.
 
 ## Supporting Resources
 

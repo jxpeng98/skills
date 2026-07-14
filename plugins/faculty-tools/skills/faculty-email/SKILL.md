@@ -1,20 +1,21 @@
 ---
 name: faculty-email
-description: Use when writing university faculty emails to students, colleagues, administrators, committees, supervisors, external partners, or teaching teams.
+description: "Draft university faculty emails to students, colleagues, administrators, committees, supervisors, external partners, and teaching teams, with tone and action matched to the relationship and stakes. Trigger for email drafting or revision; do not invent policy exceptions, authority, or confidential facts."
 ---
 
 # Faculty Email
 
-## Purpose
+## Outcome
 
 Draft university email that is clear, bounded, professional, and appropriate to
 the relationship and stakes.
 
-## Before Drafting
+## Inputs And Defaults
 
-Use `grill-me` when the goal, desired result, recipient relationship, authority
-level, or sensitivity is unclear. Clarify what the recipient should understand,
-decide, or do after reading.
+Use the supplied thread, policy text, names, dates, and relationship context.
+Infer ordinary tone and formatting choices. Ask one focused question only when
+recipient authority, confidentiality, or the requested commitment materially
+changes the message; otherwise use a neutral placeholder or flag the uncertainty.
 
 ## Workflow
 
@@ -33,7 +34,7 @@ decide, or do after reading.
 
 ## Output
 
-Use this structure:
+Return only the send-ready draft by default:
 
 ```markdown
 Subject: <specific subject>
@@ -48,13 +49,17 @@ Dear <recipient>,
 
 Best,
 <sender>
-
-## Notes
-
-- Goal: <goal>
-- Desired result: <desired result>
-- Risk or policy item to confirm: <item or "None">
 ```
+
+Add a short `Notes to sender` section only when wording depends on an unresolved
+policy, promise, recipient detail, or attachment.
+
+## Completion Check
+
+- The purpose and requested action are clear in the opening and closing.
+- Names, dates, links, commitments, confidentiality, and authority match the
+  supplied context.
+- The draft is ready to review but is not sent or posted by the skill.
 
 ## Boundaries
 

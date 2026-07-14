@@ -1,20 +1,22 @@
 ---
 name: meeting-synthesizer
-description: Use when summarizing university meetings, committee notes, department discussions, teaching-team meetings, action items, decisions, and follow-up emails.
+description: "Synthesize university meetings, committee notes, department discussions, and teaching-team records into confirmed decisions, action items, risks, open questions, and optional follow-up messages. Trigger for minutes or decision logs; preserve uncertainty and do not invent consensus, owners, or dates."
 ---
 
 # Meeting Synthesizer
 
-## Purpose
+## Outcome
 
 Convert messy meeting notes into decisions, action items, risks, and a useful
 follow-up record.
 
-## Before Drafting
+## Inputs And Defaults
 
-Use `grill-me` when the goal, desired result, audience, confidentiality level, or
-decision status is unclear. Ask whether the output is private notes, minutes, a
-follow-up email, or a decision log.
+Inspect all supplied notes, transcript segments, agenda items, and prior action
+logs. Infer a concise internal record unless the user requests formal minutes or
+an email. Ask one focused question only when audience or confidentiality changes
+what can safely be included; otherwise label ambiguous status, owners, and dates
+as `Needs confirmation`.
 
 ## Workflow
 
@@ -58,6 +60,16 @@ Use this structure:
 
 <email-ready summary if requested>
 ```
+
+Omit the follow-up message unless requested. Preserve the organization's minute
+template when one is supplied.
+
+## Completion Check
+
+- Decisions are separated from proposals, discussion, and inference.
+- Every action has an owner, due date, and dependency, or an explicit missing
+  value rather than an invented one.
+- Sensitive detail is limited to what the audience needs.
 
 ## Boundaries
 

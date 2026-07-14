@@ -102,10 +102,12 @@ transformation.
 
 ### `presentation-tools`
 
-Presentation skills for Slidev-based engineering and project slides.
+Presentation skills for routing and building Slidev, PowerPoint/PPTX, and
+LaTeX Beamer decks.
 
 | Skill | Use When |
 | --- | --- |
+| `presentation-tool` | Choose and build the right presentation format across Slidev, PPTX, LaTeX Beamer, Marp, Quarto, PDF, or multiple deliverables. |
 | `slidev-slides` | Create, edit, review, present, build, or export Markdown-based Slidev decks. |
 
 ## Development
@@ -193,5 +195,6 @@ upstream guidance changes.
 | `grill-me` | Inspired by Matt Pocock's [`grill-me` skill](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md). |
 | `commit-message` | Based on [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/). |
 | `pr-description` | Informed by GitHub Docs on [helping others review your changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/helping-others-review-your-changes). |
+| `presentation-tool` | Informed by GitHub projects and skill patterns from [`ghanemja/stencil`](https://github.com/ghanemja/stencil), [`scanny/python-pptx`](https://github.com/scanny/python-pptx), [`gitbrent/PptxGenJS`](https://github.com/gitbrent/PptxGenJS), [`josephwright/beamer`](https://github.com/josephwright/beamer), [`marp-team/marp`](https://github.com/marp-team/marp), and [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli). |
 | `slidev-slides` | Based on official Slidev documentation: [Getting Started](https://sli.dev/guide/), [CLI](https://sli.dev/builtin/cli), and [Exporting](https://sli.dev/guide/exporting). |
 | `faculty-tools`, `decide-between-options`, `repo-boundary-review`, `release-readiness`, `humanizer`, `rewrite-for-clarity`, `summarize-material` | Original local workflow skills derived from day-to-day teaching, engineering, repository maintenance, and communication practice. |

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Statement Drafter"
+  short_description: "Draft evidence-based faculty statements and narratives."
+  default_prompt: "Use $statement-drafter to draft this faculty statement from the supplied evidence and criteria."

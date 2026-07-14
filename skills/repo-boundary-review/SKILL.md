@@ -1,13 +1,24 @@
 ---
 name: repo-boundary-review
-description: Use when changes touch a skills repository, plugin layout, marketplace integration, repository boundaries, installable skill packaging, or files that may belong in a separate marketplace catalog.
+description: "Review changed files for correct placement across a skills repository, plugin directories, draft areas, generated mirrors, and a separate marketplace catalog. Trigger for repository-boundary, packaging, or marketplace-layout questions; report findings without moving files unless asked."
 ---
 
 # Repo Boundary Review
 
-## Purpose
+## Outcome
 
 Check whether repository changes belong in the skills repository, a plugin directory, a draft area, or a separate marketplace catalog.
+
+## Workflow
+
+1. Read repository boundary guidance and inspect the actual changed and untracked
+   files before judging placement.
+2. Identify the source of truth, generated mirrors, installable plugin roots,
+   draft locations, and external marketplace repository.
+3. Compare each questionable file with those ownership rules. Distinguish a
+   boundary violation from an ordinary packaging or sync failure.
+4. Lead with actionable findings. Do not move, delete, publish, or rewrite files
+   during a review-only request.
 
 ## Review Checklist
 
@@ -34,3 +45,9 @@ Lead with findings by severity. For each finding include:
 - Concrete fix
 
 If no boundary issues are found, say so and list any remaining publishing checks.
+
+## Completion Check
+
+- Every finding names a real file and a documented ownership rule.
+- Generated and canonical copies are not mistaken for two independent sources.
+- Secrets or private data are called out without reproducing their contents.

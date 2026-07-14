@@ -1,23 +1,34 @@
 ---
 name: commit-message
-description: Use when the user asks for a Git commit message, wants staged or unstaged changes summarized into a Conventional Commit, or needs commit scope and type chosen from a diff.
+description: "Generate evidence-grounded Conventional Commit messages from staged or unstaged Git diffs, including type, optional scope, breaking-change footers, and split-commit advice. Trigger for commit-message drafting or commit type/scope selection; do not create the commit unless explicitly asked."
 ---
 
 # Commit Message
 
-## Purpose
+## Outcome
 
-Produce a precise Conventional Commit message from the actual repository changes.
+Produce a paste-ready Conventional Commit message whose claims are supported by
+the actual repository changes.
 
 ## Workflow
 
-1. Inspect the relevant diff before writing the message. Prefer staged changes when the user says the commit is ready.
-2. Identify the primary intent. If the diff contains unrelated changes, call that out and recommend splitting commits.
-3. Choose the most specific Conventional Commit type: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, or `revert`.
-4. Add a scope only when the changed module is clear.
-5. Write the subject in English, imperative mood, lowercase first word, no trailing period, and under 72 characters when practical.
-6. Include a body only when it adds useful why/what context.
-7. Include `BREAKING CHANGE:` or issue footers only when supported by evidence.
+1. Read repository guidance that defines commit conventions, then inspect the
+   relevant diff. Prefer the staged diff when staged changes exist or the user
+   says the commit is ready; otherwise inspect the unstaged diff and state the
+   scope used.
+2. Identify the primary intent, not merely the largest changed file. If the diff
+   mixes independent intents, recommend the smallest sensible commit split.
+3. Choose the most specific type: `feat`, `fix`, `docs`, `style`, `refactor`,
+   `perf`, `test`, `build`, `ci`, `chore`, or `revert`.
+4. Add a scope only when one stable module, package, or domain clearly owns the
+   change.
+5. Write an imperative subject with no trailing period and keep it under 72
+   characters when practical. Follow repository language conventions; default
+   to English only when no convention or user preference is available.
+6. Add a body only when the reason, behavior change, migration note, or split
+   rationale would help a future reader.
+7. Add `BREAKING CHANGE:` and issue footers only when the diff or supplied
+   context supports them.
 
 ## Output
 
@@ -28,3 +39,10 @@ When the user asks for help choosing, include:
 - Selected type and scope
 - Split-commit concerns
 - Final commit message
+
+## Completion Check
+
+- Every subject/body claim is traceable to the inspected diff or supplied issue.
+- The type describes intent, the scope is not guessed, and no issue ID or
+  breaking change is invented.
+- Do not stage, commit, amend, or push unless the user explicitly requests it.

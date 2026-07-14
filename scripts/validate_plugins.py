@@ -13,6 +13,18 @@ SEMVER_RE = re.compile(r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$")
 NAME_RE = re.compile(r"^[a-z0-9-]+$")
 DISALLOWED_PLUGIN_NAMES = {"research-tools"}
 EXCLUDE_DIRS = {"__pycache__"}
+ALLOWED_FRONTMATTER_KEYS = {"name", "description"}
+GENERIC_DESCRIPTION_PREFIXES = ("Use when", "Use this skill", "This skill")
+DESCRIPTION_MIN_CHARS = 80
+DESCRIPTION_MAX_CHARS = 320
+MAX_SKILL_LINES = 500
+REQUIRED_BODY_HEADINGS = ("## Outcome", "## Completion Check")
+DISALLOWED_SKILL_FILES = {
+    "CHANGELOG.md",
+    "INSTALLATION_GUIDE.md",
+    "QUICK_REFERENCE.md",
+    "README.md",
+}
 
 
 def main() -> None:
@@ -51,6 +63,7 @@ def validate_plugin(plugin_dir: Path, errors: list[str]) -> None:
     codex = load_json(plugin_dir / ".codex-plugin" / "plugin.json", errors)
     claude = load_json(plugin_dir / ".claude-plugin" / "plugin.json", errors)
     antigravity = load_json(plugin_dir / "plugin.json", errors)
+    skillsplace = load_json(plugin_dir / "skillsplace.json", errors)
 
     if codex is not None:
         validate_common_manifest(codex, name, plugin_dir / ".codex-plugin" / "plugin.json", errors)
@@ -62,6 +75,16 @@ def validate_plugin(plugin_dir: Path, errors: list[str]) -> None:
 
     if antigravity is not None and antigravity.get("name") != name:
         errors.append(f"{plugin_dir}/plugin.json name must match directory name")
+
+    versions = {
+        payload.get("version")
+        for payload in (codex, claude, skillsplace)
+        if payload is not None and isinstance(payload.get("version"), str)
+    }
+    if len(versions) > 1:
+        errors.append(
+            f"{plugin_dir} versions must match across Codex, Claude, and skillsplace manifests"
+        )
 
     skills_dir = plugin_dir / "skills"
     if not skills_dir.is_dir():
@@ -103,12 +126,114 @@ def validate_skill(skill_dir: Path, errors: list[str]) -> None:
         errors.append(f"{skill_md} must start with YAML frontmatter")
         return
 
+    unexpected_keys = set(frontmatter) - ALLOWED_FRONTMATTER_KEYS
+    missing_keys = ALLOWED_FRONTMATTER_KEYS - set(frontmatter)
+    if unexpected_keys:
+        keys = ", ".join(sorted(unexpected_keys))
+        errors.append(f"{skill_md} has unsupported frontmatter keys: {keys}")
+    if missing_keys:
+        keys = ", ".join(sorted(missing_keys))
+        errors.append(f"{skill_md} is missing frontmatter keys: {keys}")
+
     name = frontmatter.get("name")
     if name != skill_dir.name:
         errors.append(f"{skill_md} frontmatter name must match directory name")
+    if not isinstance(name, str) or NAME_RE.fullmatch(name) is None:
+        errors.append(f"{skill_md} name must be lowercase kebab-case")
     description = frontmatter.get("description")
-    if not isinstance(description, str) or not description.startswith("Use when"):
-        errors.append(f"{skill_md} description must start with 'Use when'")
+    if not isinstance(description, str) or not description.strip():
+        errors.append(f"{skill_md} must include a non-empty description")
+    else:
+        if description.startswith(GENERIC_DESCRIPTION_PREFIXES):
+            errors.append(
+                f"{skill_md} description must front-load trigger terms, not a generic prefix"
+            )
+        if not DESCRIPTION_MIN_CHARS <= len(description) <= DESCRIPTION_MAX_CHARS:
+            errors.append(
+                f"{skill_md} description must be {DESCRIPTION_MIN_CHARS}-"
+                f"{DESCRIPTION_MAX_CHARS} characters (got {len(description)})"
+            )
+
+    line_count = len(text.splitlines())
+    if line_count > MAX_SKILL_LINES:
+        errors.append(
+            f"{skill_md} must stay under {MAX_SKILL_LINES} lines (got {line_count})"
+        )
+    for heading in REQUIRED_BODY_HEADINGS:
+        if heading not in text:
+            errors.append(f"{skill_md} must include {heading}")
+
+    for filename in sorted(DISALLOWED_SKILL_FILES):
+        if (skill_dir / filename).exists():
+            errors.append(f"{skill_dir}/{filename} is extraneous skill documentation")
+
+    validate_openai_yaml(skill_dir, name if isinstance(name, str) else skill_dir.name, errors)
+    validate_references(skill_dir, text, errors)
+
+
+def validate_openai_yaml(
+    skill_dir: Path,
+    skill_name: str,
+    errors: list[str],
+) -> None:
+    path = skill_dir / "agents" / "openai.yaml"
+    if not path.is_file():
+        errors.append(f"{skill_dir} is missing agents/openai.yaml")
+        return
+
+    text = path.read_text(encoding="utf-8")
+    if not text.startswith("interface:\n"):
+        errors.append(f"{path} must start with an interface mapping")
+
+    values: dict[str, str] = {}
+    for key in ("display_name", "short_description", "default_prompt"):
+        pattern = re.compile(
+            rf'^  {re.escape(key)}:\s*("(?:[^"\\]|\\.)*")\s*$',
+            re.MULTILINE,
+        )
+        match = pattern.search(text)
+        if match is None:
+            errors.append(f"{path} must include a quoted interface.{key}")
+            continue
+        try:
+            value = json.loads(match.group(1))
+        except json.JSONDecodeError:
+            errors.append(f"{path} interface.{key} must be a valid quoted string")
+            continue
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"{path} interface.{key} must be non-empty")
+            continue
+        values[key] = value
+
+    short_description = values.get("short_description")
+    if short_description is not None and not 25 <= len(short_description) <= 64:
+        errors.append(
+            f"{path} interface.short_description must be 25-64 characters "
+            f"(got {len(short_description)})"
+        )
+
+    default_prompt = values.get("default_prompt")
+    if default_prompt is not None and f"${skill_name}" not in default_prompt:
+        errors.append(
+            f"{path} interface.default_prompt must explicitly mention ${skill_name}"
+        )
+
+
+def validate_references(skill_dir: Path, skill_text: str, errors: list[str]) -> None:
+    referenced = set(
+        re.findall(r"`(references/[A-Za-z0-9._/-]+\.md)`", skill_text)
+    )
+    for relative in sorted(referenced):
+        path = skill_dir / relative
+        if not path.is_file():
+            errors.append(f"{skill_dir}/SKILL.md references missing {relative}")
+
+    references_dir = skill_dir / "references"
+    if references_dir.is_dir():
+        for path in sorted(references_dir.rglob("*.md")):
+            relative = path.relative_to(skill_dir).as_posix()
+            if relative not in referenced:
+                errors.append(f"{path} is not routed from SKILL.md")
 
 
 def validate_hermes_tap(root: Path, plugins_root: Path, errors: list[str]) -> None:

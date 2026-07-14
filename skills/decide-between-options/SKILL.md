@@ -1,25 +1,32 @@
 ---
 name: decide-between-options
-description: Use when the user has multiple approaches, tools, architectures, designs, vendors, workflows, or plans and needs a recommendation with explicit tradeoffs, assumptions, and decision criteria.
+description: "Compare competing approaches, tools, architectures, designs, vendors, workflows, or plans and recommend one using explicit criteria, evidence, tradeoffs, assumptions, and reversal conditions. Trigger when the user needs a decision rather than a neutral list of options."
 ---
 
 # Decide Between Options
 
-## Purpose
+## Outcome
 
 Turn competing options into a concrete recommendation that the user can accept, reject, or revise.
 
 ## Workflow
 
-1. Identify the decision, options, constraints, and irreversible consequences.
-2. If the options or constraints are discoverable from files or prior context, inspect that evidence before asking.
-3. Choose 3-6 decision criteria that actually matter for this case.
-4. Compare each option against those criteria.
-5. Recommend one option, explain why, and state what would change the recommendation.
+1. State the decision, viable options, hard constraints, time horizon, and costly
+   or irreversible consequences.
+2. Inspect available files, prior context, and current authoritative sources when
+   the decision depends on them. Ask only for a missing fact that would
+   materially change the recommendation; otherwise state a reasonable
+   assumption and proceed.
+3. Select 3-6 decision criteria that distinguish the options. Weight them only
+   when weighting changes the result.
+4. Compare options against the same criteria. Separate observed evidence from
+   inference and unknowns.
+5. Recommend one option, name its main cost, and state the evidence or condition
+   that would reverse the choice.
 
 ## Output
 
-Use this structure:
+Lead with the recommendation. Use this structure when it improves scanability:
 
 ```markdown
 Recommendation: <option>
@@ -36,4 +43,12 @@ What would change my mind:
 - <condition or evidence>
 ```
 
-If a missing fact would materially change the answer, ask one targeted question before making the recommendation.
+For a simple decision, omit empty sections and answer in a compact paragraph.
+
+## Completion Check
+
+- The recommendation follows from the stated criteria rather than preference or
+  option order.
+- Material uncertainty, switching costs, and downside risk are visible.
+- The user can tell both what to choose now and what new evidence would change
+  the decision.

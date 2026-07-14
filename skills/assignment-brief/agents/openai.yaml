@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assignment Brief"
+  short_description: "Build clear assignments, requirements, and rubrics."
+  default_prompt: "Use $assignment-brief to create a clear assignment brief and rubric from these requirements."

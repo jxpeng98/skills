@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Boundary Review"
+  short_description: "Check skill, plugin, and marketplace boundaries."
+  default_prompt: "Use $repo-boundary-review to check whether these files belong in the correct repository locations."

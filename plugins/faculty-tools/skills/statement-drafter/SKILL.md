@@ -1,20 +1,22 @@
 ---
 name: statement-drafter
-description: Use when drafting or improving teaching statements, service statements, grant-support text, award nominations, bios, annual review narratives, or faculty activity summaries.
+description: "Draft or improve teaching and service statements, grant-support text, award nominations, bios, annual-review narratives, and faculty activity summaries from verifiable evidence. Trigger for professional faculty narratives; expose evidence gaps instead of inventing achievements, impact, or endorsement."
 ---
 
 # Statement Drafter
 
-## Purpose
+## Outcome
 
 Help faculty turn real experience into structured professional narratives for
 teaching, service, funding, review, or recognition contexts.
 
-## Before Drafting
+## Inputs And Defaults
 
-Use `grill-me` when the goal, desired result, audience, evidence, length, or
-evaluation criteria are unclear. Ask what the statement must prove and what
-examples the user can truthfully support.
+Inspect the call, criteria, CV, activity record, prior draft, and supplied
+examples before writing. Infer ordinary organization and tone. Ask one focused
+question only when audience, word limit, or the central claim would materially
+change the draft. If evidence is too thin, produce a structured outline and
+evidence requests rather than polished unsupported prose.
 
 ## Workflow
 
@@ -55,6 +57,16 @@ Use this structure:
 
 - <what to strengthen next>
 ```
+
+For a straightforward revision, return the draft first and keep evidence notes
+brief. Follow any supplied application headings or word limits exactly.
+
+## Completion Check
+
+- Every substantive claim has supplied evidence or is listed as an evidence gap.
+- The narrative connects claim, example, contribution, and impact without
+  overstating causality or sole credit.
+- Requirements, length, voice, and evaluation criteria are satisfied.
 
 ## Boundaries
 

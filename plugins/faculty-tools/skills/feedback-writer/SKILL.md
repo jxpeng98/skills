@@ -1,20 +1,22 @@
 ---
 name: feedback-writer
-description: Use when writing constructive feedback on student essays, reports, assignments, drafts, presentations, reflections, or project work.
+description: "Write evidence-based, constructive feedback on student essays, reports, assignments, drafts, presentations, reflections, and project work, tied to the prompt or rubric when available. Trigger for formative or summative feedback; do not invent grades, evidence, or student characteristics."
 ---
 
 # Feedback Writer
 
-## Purpose
+## Outcome
 
 Write feedback that helps students understand what worked, what to improve, and
 what concrete next step to take.
 
-## Before Drafting
+## Inputs And Defaults
 
-Use `grill-me` when the goal, desired result, rubric, grade status, or feedback
-tone is unclear. Ask whether the feedback is formative, summative, rubric-based,
-or for office-hour follow-up.
+Inspect the student's work, task prompt, rubric, and instructor notes before
+making evaluative claims. If the work itself is missing, request it rather than
+fabricating evidence. Infer a supportive, direct tone and prioritize the few
+changes with the highest learning value. Ask only when grade status or feedback
+purpose would materially change the output.
 
 ## Workflow
 
@@ -56,6 +58,16 @@ Use this structure:
 
 - <location>: <comment>
 ```
+
+Use the instructor's required format when one exists. For short work, return a
+compact paragraph plus priority actions instead of forcing every section.
+
+## Completion Check
+
+- Each praise or criticism points to observable evidence in the submitted work.
+- Priority improvements explain what to change, where, and why.
+- Tone addresses the work rather than diagnosing the student, and no grade or
+  policy consequence is added without authority.
 
 ## Boundaries
 

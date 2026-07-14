@@ -1,22 +1,29 @@
 ---
 name: grill-me
-description: Use when the user wants to stress-test a plan, design, argument, product idea, discovery direction, or implementation strategy; asks to be grilled; or needs assumptions, tradeoffs, risks, and missing decisions exposed before committing.
+description: "Stress-test a plan, design, argument, product idea, discovery direction, or implementation strategy through focused decision questions with recommended answers. Trigger when the user asks to be grilled or wants assumptions, risks, tradeoffs, and missing decisions exposed before committing."
 ---
 
 # Grill Me
 
-## Purpose
+## Outcome
 
 Interrogate a plan until the important decisions are explicit, defensible, and shared. Be rigorous without being performative: the goal is better judgment, not winning an argument.
 
 ## Operating Rules
 
-1. Ask one question at a time.
-2. If the answer can be found by inspecting available files, code, docs, logs, or prior conversation context, inspect that evidence instead of asking the user.
-3. For every question, include your recommended answer and the reason you recommend it.
-4. Keep walking the decision tree until dependencies are resolved or the next unresolved decision is clearly blocked on information only the user can provide.
-5. Track resolved decisions briefly so later questions do not reopen settled ground unless new information changes the conclusion.
-6. Match the user's language unless they ask otherwise.
+1. Read the plan and inspect available files, code, docs, logs, or prior context
+   before asking questions. Do not ask the user to retrieve evidence already
+   available in the current environment.
+2. Keep a compact decision ledger: goal, constraints, resolved decisions,
+   assumptions, risks, and open decisions.
+3. Ask one highest-leverage question at a time. Resolve upstream decisions before
+   dependent details.
+4. Include a recommended answer and concise rationale with every question. Use
+   2-4 mutually exclusive options only when they make the decision easier.
+5. Challenge claims in proportion to stakes and evidence. Do not manufacture
+   objections after the core plan is coherent.
+6. Do not reopen a resolved decision unless new evidence changes it. Match the
+   user's language unless asked otherwise.
 
 ## Question Format
 
@@ -59,3 +66,12 @@ When stopping, summarize:
 - Remaining open questions
 - Highest-risk assumption
 - Recommended next step
+
+## Completion Check
+
+- The goal, non-goals, success criteria, key constraints, and next action are
+  explicit.
+- High-impact assumptions and failure modes have either evidence, a mitigation,
+  or a named owner for follow-up.
+- Remaining questions are truly user-only or external; do not continue merely
+  to lengthen the interrogation.

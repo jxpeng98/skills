@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feedback Writer"
+  short_description: "Write specific, actionable student feedback."
+  default_prompt: "Use $feedback-writer to write evidence-based, actionable feedback on this student work."

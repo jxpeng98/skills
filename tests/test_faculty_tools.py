@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class FacultyToolsTests(unittest.TestCase):
-    def test_faculty_tools_plugin_has_concrete_daily_skill_set(self) -> None:
+    def test_faculty_tools_plugin_has_codex_ready_daily_skill_set(self) -> None:
         plugin = ROOT / "plugins" / "faculty-tools"
         expected_skills = {
             "course-planner",
@@ -36,12 +36,14 @@ class FacultyToolsTests(unittest.TestCase):
             skill_md = plugin / "skills" / skill_name / "SKILL.md"
             text = skill_md.read_text(encoding="utf-8")
             self.assertRegex(text, rf"^---\nname: {re.escape(skill_name)}\n")
-            self.assertIn("description: Use when", text)
+            self.assertIn('description: "', text)
+            self.assertNotIn("description: Use when", text)
+            self.assertIn("## Outcome", text)
+            self.assertIn("## Inputs And Defaults", text)
             self.assertIn("## Workflow", text)
             self.assertIn("## Output", text)
-            self.assertIn("grill-me", text)
-            self.assertIn("goal", text.lower())
-            self.assertIn("desired result", text.lower())
+            self.assertIn("## Completion Check", text)
+            self.assertTrue((skill_md.parent / "agents" / "openai.yaml").is_file())
 
     def test_humanizer_supports_coach_and_polisher_modes_for_university_writing(self) -> None:
         text = (
@@ -58,93 +60,65 @@ class FacultyToolsTests(unittest.TestCase):
             "Polisher Mode",
             "essay",
             "report",
-            "academic integrity",
-            "not to make the text sound like a native speaker",
-            "grill-me",
+            "assessed academic work",
+            "detector evasion",
+            "protected-content ledger",
             "desired result",
         ]
         for phrase in required_phrases:
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, text)
 
-    def test_humanizer_has_general_and_academic_directions(self) -> None:
+    def test_humanizer_uses_progressive_disclosure(self) -> None:
+        skill = (
+            ROOT / "plugins" / "writing-tools" / "skills" / "humanizer"
+        )
         text = (
-            ROOT
-            / "plugins"
-            / "writing-tools"
-            / "skills"
-            / "humanizer"
-            / "SKILL.md"
+            skill / "SKILL.md"
         ).read_text(encoding="utf-8")
 
         required_phrases = [
-            "General Writing Direction",
-            "Academic Writing Direction",
-            "Direction Selection",
-            "General + Coach",
-            "General + Polisher",
-            "Academic + Coach",
-            "Academic + Polisher",
-            "audience and channel",
-            "argument, evidence, structure, and academic register",
-        ]
-        for phrase in required_phrases:
-            with self.subTest(phrase=phrase):
-                self.assertIn(phrase, text)
-
-    def test_humanizer_has_preflight_diagnosis_and_audit_contract(self) -> None:
-        text = (
-            ROOT
-            / "plugins"
-            / "writing-tools"
-            / "skills"
-            / "humanizer"
-            / "SKILL.md"
-        ).read_text(encoding="utf-8")
-
-        required_phrases = [
-            "## Preflight Diagnosis",
-            "## AI-Feel Diagnosis",
-            "## Protected Facts",
-            "## Edit Intensity",
-            "## Post-Edit Audit",
+            "## Inputs And Defaults",
+            "## Completion Check",
             "light",
             "standard",
             "deep",
-            "process bleed",
-            "clean but empty",
-            "No detector-evasion objective",
-            "What was preserved",
+            "references/academic-editing.md",
+            "references/style-diagnostics.md",
         ]
         for phrase in required_phrases:
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, text)
+        self.assertLess(len(text.splitlines()), 140)
+        self.assertTrue((skill / "references" / "academic-editing.md").is_file())
+        self.assertTrue((skill / "references" / "style-diagnostics.md").is_file())
 
-    def test_humanizer_has_section_aware_academic_checks(self) -> None:
+    def test_humanizer_academic_reference_has_section_aware_checks(self) -> None:
         text = (
             ROOT
             / "plugins"
             / "writing-tools"
             / "skills"
             / "humanizer"
-            / "SKILL.md"
+            / "references"
+            / "academic-editing.md"
         ).read_text(encoding="utf-8")
 
         required_phrases = [
-            "## Section-Aware Academic Checks",
+            "## Section Checks",
             "Introduction",
-            "Body Paragraph",
-            "Report Methods",
-            "Results or Findings",
+            "Body paragraph",
+            "Methods",
+            "Results or findings",
             "Conclusion",
             "claim-evidence fit",
-            "author decision needed",
+            "author decisions",
         ]
         for phrase in required_phrases:
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, text)
 
-    def test_writing_tools_version_bumped_for_humanizer_contract(self) -> None:
+    def test_writing_tools_version_bumped_for_codex_optimization(self) -> None:
         paths = [
             ROOT / "plugins" / "writing-tools" / ".codex-plugin" / "plugin.json",
             ROOT / "plugins" / "writing-tools" / ".claude-plugin" / "plugin.json",
@@ -153,7 +127,7 @@ class FacultyToolsTests(unittest.TestCase):
 
         for path in paths:
             with self.subTest(path=path.as_posix()):
-                self.assertIn('"version": "0.1.4"', path.read_text(encoding="utf-8"))
+                self.assertIn('"version": "0.2.0"', path.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
