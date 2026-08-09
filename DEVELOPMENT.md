@@ -169,7 +169,7 @@ scripts, and assets only when the skill needs them.
 ```markdown
 ---
 name: skill-name
-description: Create or review <artifact> from <evidence>. Trigger for <specific requests>; do not <important boundary>.
+description: Create or review <artifact> from <evidence> for <specific requests>; use <adjacent-skill> instead for <boundary>.
 ---
 ```
 
@@ -179,45 +179,47 @@ Rules:
 - Keep skill names short and stable.
 - Front-load the action, artifact, and trigger terms in `description`; do not
   spend the first words on generic phrases such as `Use when`.
-- Keep descriptions between 80 and 320 characters so scope and boundaries are
-  clear without exhausting the skill-discovery budget.
-- Keep `SKILL.md` concise.
+- Name the nearest non-trigger or sibling skill when users could reasonably
+  confuse them.
+- Keep descriptions and `SKILL.md` as short as the workflow allows.
 - Move long examples, policies, API notes, and domain references into
   `references/`.
 - Add scripts only when deterministic behavior or repeated execution justifies
   them.
 - Add assets only when the skill needs templates or reusable files.
-- Include `## Outcome` and `## Completion Check` so the agent knows both the
-  destination and when to stop.
 - Add `agents/openai.yaml` with `display_name`, a 25-64 character
   `short_description`, and a one-sentence `default_prompt` that explicitly
   mentions `$skill-name`.
 
-## Codex And GPT-5.6 Optimization Profile
+## Minimal Skill Profile
 
-Keep skill behavior model-family neutral: select the model and reasoning effort
-in Codex configuration, not inside every skill. The current authoring profile is
-optimized for GPT-5.6 Sol and follows these rules:
+Keep model choice and general agent behavior outside individual skills. Before
+adding instructions or resources, stop at the first option that works:
 
-- Describe the user-visible outcome, material constraints, evidence, output
-  contract, and completion bar; leave routine path selection to the model.
-- Inspect available files and context before asking. Infer low-risk choices and
-  ask only for the smallest missing fact that would materially change the result.
-- State permission boundaries once. Review and diagnostic skills must not imply
-  authorization to mutate, publish, send, tag, or push.
-- Route tools by dependency: parallelize independent reads, keep dependent work
-  sequential, and synthesize retrieved evidence before acting.
-- Validate the actual deliverable before declaring completion. Report checks not
-  run and residual uncertainty instead of treating absence of evidence as a pass.
-- Keep the always-loaded body lean. Move conditional domain checks, long
-  examples, schemas, and tool-specific guidance into directly linked
-  `references/` files.
-- Avoid repeated style instructions, generic exhortations, keyword maps, and
-  rigid templates that add tokens without changing behavior.
+1. Do not create a skill for a one-off prompt or existing `AGENTS.md` rule.
+2. Reuse an existing skill, resource, standard library, or native tool.
+3. Prefer a few instructions over a script; add a script only for repeated,
+   deterministic work.
+4. Keep only domain knowledge, routing, safety boundaries, output contracts, and
+   validation that change behavior. Delete generic agent advice and repetition.
+5. Use directly linked references only when conditional detail would otherwise
+   burden every invocation.
+6. Validate the actual deliverable. Add one small runnable check for non-trivial
+   scripts; do not test Markdown phrasing.
 
-Re-check this profile against current official Codex and model guidance during a
-major model-family upgrade; do not hard-code `gpt-5.6-sol` into individual skill
-instructions.
+## Precision Contract
+
+Include only the clauses that prevent wrong behavior:
+
+- **Trigger:** define the direct request and the nearest adjacent non-trigger.
+- **Evidence:** name authoritative inputs and mark missing evidence as unknown.
+- **Route:** add branches only when different inputs require different methods.
+- **Output:** state the exact deliverable and useful default shape.
+- **Stop:** state verification and external-write boundaries.
+
+Test each description with one direct prompt, one paraphrase, and one adjacent
+negative prompt. Simple skills can express the contract in a short sequence;
+complex or fragile workflows may use explicit sections and deterministic scripts.
 
 ## Supporting Resources
 

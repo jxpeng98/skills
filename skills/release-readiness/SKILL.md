@@ -1,70 +1,26 @@
 ---
 name: release-readiness
-description: "Assess a skill, plugin, repository change, or marketplace update for release, publication, installation testing, or reviewer handoff using fresh validation evidence. Trigger for readiness checks and release gates; report blockers without publishing, tagging, or pushing unless explicitly asked."
+description: "Verify release readiness for skill, plugin, repository, or marketplace changes using fresh validation and packaging evidence. Use for readiness gates; never tag, push, publish, or count unrun checks as passed."
 ---
 
 # Release Readiness
 
-## Outcome
-
-Verify that a skill or plugin is ready to publish or hand off without relying on assumptions.
-
-## Workflow
-
-1. Read repository release guidance and identify the exact artifact, intended
-   release surface, changed files, and applicable version.
-2. Inspect before mutating. Run the cheapest targeted checks first; run
-   independent checks in parallel when safe, then run broader packaging or
-   installation checks only when they add confidence.
-3. Classify findings as blockers, warnings, or residual risks. A missing check is
+1. Read release guidance and identify the artifact, release surface, changed
+   files, and version.
+2. Run the cheapest relevant checks first; run broader package or install checks
+   only when they add confidence.
+3. Classify results as blockers, warnings, or residual risks. A missing check is
    not a pass.
-4. Re-read the final diff and status so generated files, mirrors, version bumps,
-   or unrelated changes are not missed.
+4. Re-read the final diff and status.
 
-## Checks
+Check what applies:
 
-Run or request evidence for:
+- canonical plugin layout and synced `skills/` mirror;
+- matching manifest versions and valid skill/agent metadata;
+- no placeholders, secrets, local paths, or unused resources;
+- fresh tests, validation, packaging, and installation evidence;
+- marketplace changes live only in the marketplace repository;
+- Git status contains only intended changes.
 
-- Clean intended file layout under `plugins/<plugin-name>/skills/<skill-name>/`
-- Synced Hermes tap mirror under repository-level `skills/<skill-name>/`
-- Valid `.codex-plugin/plugin.json` for installable plugins
-- `SKILL.md` frontmatter with `name` and a concise, trigger-front-loaded
-  `description`
-- `SKILL.md` with an explicit outcome and completion check
-- `agents/openai.yaml` with current display metadata and a default prompt that
-  explicitly invokes the skill
-- No leftover placeholders, TODO markers, secrets, or local paths
-- References, scripts, and assets included only when directly used
-- Relevant validation commands and their fresh output
-- `python scripts/sync_hermes_tap.py --check` when plugin skills changed
-- Marketplace metadata updated only in the marketplace repository
-- Git status showing only intended changes
-
-## Output
-
-Use this structure:
-
-```markdown
-Status: Ready | Not ready
-
-Blocking issues:
-- <issue or "None">
-
-Validation run:
-- <command>: <result>
-
-Remaining risks:
-- <risk>
-
-Recommended next step:
-- <action>
-```
-
-## Completion Check
-
-- Every applicable release gate has fresh evidence or is explicitly marked not
-  run with a reason.
-- Versions, manifests, mirrors, packaged contents, and documented install paths
-  agree.
-- `Ready` is used only when no blocker remains. Do not publish, tag, push, or
-  create a release unless the user explicitly requests that action.
+Return `Ready` or `Not ready`, blockers, checks run, remaining risks, and the next
+step. Do not publish, tag, or push unless explicitly asked.

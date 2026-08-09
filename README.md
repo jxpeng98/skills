@@ -72,8 +72,8 @@ readiness.
 
 | Skill | Use When |
 | --- | --- |
-| `repo-boundary-review` | Check whether changed files belong in this skills repo, a plugin, a draft area, or a marketplace catalog. |
-| `release-readiness` | Verify a skill, plugin, repository change, or marketplace update before publication or handoff. |
+| `repo-boundary-review` | Review file ownership and placement without moving files or approving a release. |
+| `release-readiness` | Verify readiness with fresh evidence before a separate publish, tag, or push action. |
 
 ### `faculty-tools`
 
@@ -86,7 +86,7 @@ meetings, and light academic-service writing.
 | `assignment-brief` | Create assignment prompts, essay or report briefs, submission requirements, and rubrics. |
 | `feedback-writer` | Write constructive feedback on student essays, reports, assignments, drafts, presentations, or projects. |
 | `faculty-email` | Draft emails to students, colleagues, administrators, committees, or teaching teams. |
-| `meeting-synthesizer` | Summarize university meetings, committee notes, department discussions, and action items. |
+| `meeting-synthesizer` | Extract confirmed decisions, owners, dates, risks, and unknowns from university meetings. |
 | `statement-drafter` | Draft or improve teaching statements, service statements, grant-support text, award nominations, bios, or review narratives. |
 
 ### `writing-tools`
@@ -96,9 +96,9 @@ transformation.
 
 | Skill | Use When |
 | --- | --- |
-| `humanizer` | Coach or polish general and academic writing with preflight diagnosis, protected-fact preservation, edit-intensity control, and academic integrity boundaries. |
-| `rewrite-for-clarity` | Rewrite, edit, tighten, or adapt text while preserving meaning. |
-| `summarize-material` | Summarize notes, articles, transcripts, documents, meetings, or long context into useful decisions and actions. |
+| `humanizer` | Improve natural voice and specificity without detector evasion or invented authorship. |
+| `rewrite-for-clarity` | Make direct clarity, tone, channel, or audience edits while preserving meaning. |
+| `summarize-material` | Summarize general notes, articles, transcripts, documents, or long context; route university meetings to `meeting-synthesizer`. |
 
 ### `presentation-tools`
 
@@ -107,8 +107,8 @@ LaTeX Beamer decks.
 
 | Skill | Use When |
 | --- | --- |
-| `presentation-tool` | Choose and build the right presentation format across Slidev, PPTX, LaTeX Beamer, Marp, Quarto, PDF, or multiple deliverables. |
-| `slidev-slides` | Create, edit, review, present, build, or export Markdown-based Slidev decks. |
+| `presentation-tool` | Choose and build across presentation formats when the format is not already fixed to Slidev. |
+| `slidev-slides` | Create, edit, review, build, or export a deck after Slidev has been chosen. |
 
 ## Development
 

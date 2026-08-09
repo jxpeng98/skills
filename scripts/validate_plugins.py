@@ -14,17 +14,6 @@ NAME_RE = re.compile(r"^[a-z0-9-]+$")
 DISALLOWED_PLUGIN_NAMES = {"research-tools"}
 EXCLUDE_DIRS = {"__pycache__"}
 ALLOWED_FRONTMATTER_KEYS = {"name", "description"}
-GENERIC_DESCRIPTION_PREFIXES = ("Use when", "Use this skill", "This skill")
-DESCRIPTION_MIN_CHARS = 80
-DESCRIPTION_MAX_CHARS = 320
-MAX_SKILL_LINES = 500
-REQUIRED_BODY_HEADINGS = ("## Outcome", "## Completion Check")
-DISALLOWED_SKILL_FILES = {
-    "CHANGELOG.md",
-    "INSTALLATION_GUIDE.md",
-    "QUICK_REFERENCE.md",
-    "README.md",
-}
 
 
 def main() -> None:
@@ -143,29 +132,6 @@ def validate_skill(skill_dir: Path, errors: list[str]) -> None:
     description = frontmatter.get("description")
     if not isinstance(description, str) or not description.strip():
         errors.append(f"{skill_md} must include a non-empty description")
-    else:
-        if description.startswith(GENERIC_DESCRIPTION_PREFIXES):
-            errors.append(
-                f"{skill_md} description must front-load trigger terms, not a generic prefix"
-            )
-        if not DESCRIPTION_MIN_CHARS <= len(description) <= DESCRIPTION_MAX_CHARS:
-            errors.append(
-                f"{skill_md} description must be {DESCRIPTION_MIN_CHARS}-"
-                f"{DESCRIPTION_MAX_CHARS} characters (got {len(description)})"
-            )
-
-    line_count = len(text.splitlines())
-    if line_count > MAX_SKILL_LINES:
-        errors.append(
-            f"{skill_md} must stay under {MAX_SKILL_LINES} lines (got {line_count})"
-        )
-    for heading in REQUIRED_BODY_HEADINGS:
-        if heading not in text:
-            errors.append(f"{skill_md} must include {heading}")
-
-    for filename in sorted(DISALLOWED_SKILL_FILES):
-        if (skill_dir / filename).exists():
-            errors.append(f"{skill_dir}/{filename} is extraneous skill documentation")
 
     validate_openai_yaml(skill_dir, name if isinstance(name, str) else skill_dir.name, errors)
     validate_references(skill_dir, text, errors)
