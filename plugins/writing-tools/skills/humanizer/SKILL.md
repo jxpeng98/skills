@@ -15,8 +15,16 @@ Defaults:
 
 - `Polisher Mode` for an existing draft; `Coach Mode` when the user asks to learn
   or the work is assessed.
-- `standard` editing for ordinary prose, `light` for assessed work, and `deep`
-  only when restructuring is authorized.
+- A humanizing request authorizes sentence and within-paragraph reconstruction,
+  not just synonym swaps. Use `light` editing for assessed work; reserve `deep`
+  editing for reordering ideas or paragraphs.
+
+Choose the voice anchor in this order: a supplied sample or stated preference,
+the writer's natural phrasing elsewhere in the draft, the relationship and
+genre, then plain contemporary language. Match the source language, regional
+variety, and punctuation conventions unless translation is requested. Do not
+preserve robotic patterns merely because they appear in the source, and do not
+invent quirks to simulate a person.
 
 1. Identify audience, genre, desired result, mode, intensity, and fixed length or
    structure.
@@ -25,12 +33,18 @@ Defaults:
 3. Read `references/academic-editing.md` for academic or coursework editing.
    Read `references/style-diagnostics.md` only for deep or robotic/generic style
    problems.
-4. Fix the smallest set of problems in logic, emphasis, paragraph purpose,
-   rhythm, register, repetition, or vague wording.
-5. Compare the revision with the source for meaning, evidence, certainty, voice,
-   genre, length, and structure.
+4. Identify each paragraph's job and essential content. Rewrite from that meaning
+   rather than editing the original sentence frame word by word. Restore protected
+   facts and necessary terminology after the sentence sounds natural.
+5. Cut generic setup, repeated conclusions, decorative transitions, and sentences
+   that add no fact, implication, feeling, or action. Let sentence and paragraph
+   length follow the thought instead of forcing polished symmetry.
+6. Read the revision as continuous prose. Compare it with the source for meaning,
+   evidence, certainty, voice, genre, length, and structure; rewrite any passage
+   that still sounds reusable in an unrelated document.
 
 For quick polish, return only the revision. In `Polisher Mode`, add notes only
 for material changes or uncertainties. In `Coach Mode`, give 1-3 priorities,
 targeted revisions, reasons, and author decisions. Avoid forced slang,
-vulnerability, ornate synonyms, or unsupported confidence.
+fragments, vulnerability, ornate synonyms, deliberate mistakes, or unsupported
+confidence.

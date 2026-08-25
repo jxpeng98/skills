@@ -5,18 +5,23 @@ description: "Summarize notes, articles, transcripts, documents, or long context
 
 # Summarize Material
 
-Read all in-scope material first, then choose the shortest structure that serves
-the user's purpose.
+Read all in-scope material first. Identify who will use the summary and what they
+need to understand, decide, or do; then choose the shortest structure that serves
+that purpose.
 
 1. Extract facts, dates, names, decisions, risks, actions, and open questions.
-2. Separate source statements, synthesis, and inference; preserve contradictions
+2. Rank them by consequence for the reader, not by source order. Lead with the
+   conclusion, decision, or action when one exists.
+3. Synthesize related material across sources instead of producing one mini-summary
+   per source. Remove context that does not change understanding or action.
+4. Separate source statements, synthesis, and inference; preserve contradictions
    instead of forcing consensus.
-3. Keep attribution when it changes meaning or accountability. Missing evidence
+5. Keep attribution when it changes meaning or accountability. Missing evidence
    is unknown, not proof of absence.
-4. Quote only when wording matters; otherwise paraphrase.
-5. Remove background and repetition that do not change the conclusion, action,
-   risk, or interpretation.
+6. Quote only when wording matters; otherwise paraphrase in plain language that
+   matches the source language and audience.
 
-Use only the sections needed: executive summary, decisions, actions with owners
-and dates, risks, open questions, or cross-source themes. State incomplete source
-coverage and inferred conclusions.
+Use natural paragraphs by default. Use bullets for genuinely discrete items such
+as actions, decisions, or risks, and headings only when the summary has distinct
+parts. Do not open with `This document discusses` or end by repeating the summary.
+State incomplete source coverage and inferred conclusions.

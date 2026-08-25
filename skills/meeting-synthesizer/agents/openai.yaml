@@ -1,4 +1,4 @@
 interface:
   display_name: "Meeting Synthesizer"
   short_description: "Extract decisions, actions, and risks from meetings."
-  default_prompt: "Use $meeting-synthesizer to turn these notes into decisions, actions, risks, and open questions."
+  default_prompt: "Use $meeting-synthesizer to turn this meeting record into traceable decisions, actions, risks, and open questions."

@@ -11,12 +11,17 @@ unsupported prose.
 
 1. Identify audience, length, deadline, criteria, and the claim the document must
    support.
-2. Build claim-evidence-impact paragraphs from real roles, methods, outcomes,
-   constraints, and reflection.
-3. Use concrete examples without overstating causality, credit, or impact.
-4. For teaching, connect philosophy to practice and learning evidence; for grants
+2. Map each criterion to verified evidence or an explicit evidence gap.
+3. Build claim-evidence-impact-reflection paragraphs from real roles, methods,
+   outcomes, and constraints.
+4. Distinguish personal contribution, team results, correlation, and demonstrated
+   impact; do not strengthen the evidence.
+5. For teaching, connect philosophy to practice and learning evidence; for grants
    or awards, preserve eligibility and submission requirements.
+6. Preserve the author's voice and use only the detail needed for the audience.
 
 Lead with the draft, followed only by material evidence gaps and revision notes.
-Do not fabricate achievements, outcomes, publications, grants, service roles,
-quotes, collaborators, metrics, eligibility, or institutional endorsement.
+Before returning it, verify that every material claim is traceable and every stated
+criterion is addressed or flagged. Do not fabricate achievements, outcomes,
+publications, grants, service roles, quotes, collaborators, metrics, eligibility,
+or institutional endorsement.

@@ -6,35 +6,48 @@ not detector-evasion targets.
 
 ## Diagnose
 
-Look for:
+Look for clusters, not isolated words:
 
 - an opening that announces a broad topic without making the writer's point;
-- template structure that obscures the real claim or request;
-- mechanical transitions and repeated sentence shapes;
+- paragraphs that repeat setup, explanation, and summary in the same tidy shape;
+- mechanical transitions, repeated sentence openings, and uniformly medium-length
+  sentences;
+- serial three-part lists, repeated `not X but Y` contrasts, rhetorical questions,
+  or dash-heavy asides used as a default pattern;
 - abstract noun stacks, vague verbs, and generic claims without context;
 - over-neutral, over-formal, promotional, or falsely balanced tone;
-- planning notes, prompt language, headings, or process commentary left in prose;
+- meta-commentary such as `this highlights`, `this underscores`, or `it is worth
+  noting` where the concrete implication should be stated directly;
+- in Chinese, chains of `首先/其次/此外/综上`, broad frames such as
+  `在当今……背景下`, and inflated defaults such as `值得注意的是`, `赋能`, or
+  `彰显` when the sentence can state the point plainly;
 - polished but empty sentences that add no evidence, decision, or meaning;
-- repeated conclusions, throat-clearing, and unnecessary hedging.
+- repeated conclusions, throat-clearing, and endings that recap instead of stop.
 
 ## Revise
 
-- Put the concrete point, action, or claim earlier.
-- Use specific nouns and active verbs supported by the source.
-- Combine repeated ideas and shorten sentences whose logic is crowded.
-- Vary rhythm only where it improves readability; do not manufacture quirks.
-- Replace decorative transitions with the actual relationship: cause, contrast,
-  sequence, condition, or example.
-- Keep warmth grounded in the relationship and situation rather than generic
-  reassurance.
+- Read the whole paragraph for meaning, then redraft it without copying its syntax.
+- Put the concrete point, action, or claim where the reader needs it and use
+  ordinary, specific words supported by the source.
+- Keep a transition only when the relationship is not already clear. Name the
+  actual relationship instead of adding a decorative signpost.
+- Break accidental symmetry. A short sentence or one-line paragraph is useful
+  when the thought is short; longer syntax is useful only when the logic needs it.
+- Delete generic evaluation and recap. Replace it with a concrete implication
+  when the source supports one.
+- Match contractions, pronouns, punctuation, warmth, and formality to the voice
+  anchor rather than applying one universal conversational style or importing
+  English cadence into Chinese (or the reverse).
 
 Avoid stock phrases such as `In today's fast-paced world`, `It is important to
 note`, `delve`, `leverage`, and `utilize` when plainer wording is more precise.
-Do not force slang, fragments, contractions, vulnerability, or cultural markers
-to simulate authenticity.
+Do not add slang, fragments, contractions, cultural markers, typos, or factual
+detail merely to look human.
 
 ## Verify
 
 Compare source and revision for facts, force, register, and implications. The
-revision should be more specific and easier to follow, not simply more casual or
-less grammatical.
+revision should sound like someone communicating a particular thought to a
+particular reader, not displaying polished prose. If a sentence could be pasted
+into many unrelated texts without changing, sharpen it from the source or delete
+it. Natural does not mean casual, quirky, or less grammatical.

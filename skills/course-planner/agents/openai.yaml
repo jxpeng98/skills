@@ -1,4 +1,4 @@
 interface:
   display_name: "Course Planner"
   short_description: "Plan teachable courses, sessions, and activities."
-  default_prompt: "Use $course-planner to turn these teaching goals into a practical course or session plan."
+  default_prompt: "Use $course-planner to turn these outcomes and constraints into an aligned, teachable course or session plan."

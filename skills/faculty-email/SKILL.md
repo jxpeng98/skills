@@ -9,13 +9,16 @@ Use the supplied thread, policy, names, dates, relationship, and requested actio
 Ask only when authority, confidentiality, or the requested commitment changes the
 message.
 
-1. Put the point or request early.
-2. Match tone to the relationship and stakes.
-3. Include only context the recipient needs.
-4. Make owner, deadline, link, meeting time, or decision explicit.
-5. Minimize sensitive student, health, or personal details.
+1. Separate confirmed facts, policy, and decisions from requests or interpretation.
+2. Put the point or request early in natural, direct language.
+3. Match tone to the relationship and stakes; preserve the sender's voice.
+4. Include only context the recipient needs.
+5. Make owner, deadline, link, meeting time, or decision explicit.
+6. Keep tentative language tentative; never turn discussion into approval.
+7. Minimize sensitive student, health, or personal details.
 
 Return only a send-ready subject and email by default. Add `Notes to sender` only
 for unresolved policy, promises, recipient details, or attachments. Do not send
 the email or invent policy exceptions, grades, accommodations, funding,
-references, approvals, or confidential facts.
+references, approvals, or confidential facts. Before returning it, verify that the
+recipient can tell why they are receiving it and what, if anything, happens next.

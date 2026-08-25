@@ -9,10 +9,13 @@ Use all supplied notes, transcript segments, agenda items, and prior action logs
 Preserve the organization's minutes template when supplied.
 
 1. Separate confirmed decisions from proposals, discussion, and inference.
-2. Extract each action with owner, due date, dependency, and checkpoint.
-3. Keep rationale that explains a decision; drop unrelated chatter.
-4. Limit sensitive detail to what the audience needs.
+2. Preserve the rationale and source context needed to understand each decision.
+3. Extract each action with status, owner, due date, dependency, and checkpoint;
+   carry forward relevant prior actions.
+4. Merge duplicates and surface contradictions instead of silently resolving them.
+5. Limit sensitive detail to what the audience needs.
 
 Return decisions, an action table, and open questions. Add a follow-up message
-only when requested. Mark missing or ambiguous status, owners, dates, consensus,
-or approvals as `Needs confirmation`; never invent them.
+only when requested. Before returning it, verify that every decision and action is
+traceable to the supplied record. Mark missing or ambiguous status, owners, dates,
+consensus, or approvals as `Needs confirmation`; never invent them.
