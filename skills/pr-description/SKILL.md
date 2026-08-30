@@ -5,6 +5,9 @@ description: "Draft reviewer-ready pull request or merge request descriptions fr
 
 # PR Description
 
+Use the language required by the repository or user. Write for a working reviewer:
+plain technical language, common verbs, and no promotional or corporate filler.
+
 1. Read repository PR guidance and inspect the intended base/head diff, commits,
    linked issue, and validation output. State the range if ambiguous.
 2. Explain why the change exists, what changed, how it was verified, remaining

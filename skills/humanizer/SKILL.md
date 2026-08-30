@@ -1,6 +1,6 @@
 ---
 name: humanizer
-description: "Polish user-authored writing when natural voice, specificity, or robotic phrasing is the problem. Preserve facts and authorship; use rewrite-for-clarity for direct clarity or tone edits, never for detector evasion."
+description: "Rewrite user-authored text when it sounds stiff, generic, or unlike normal fluent writing. Preserve facts and authorship; use rewrite-for-clarity for direct clarity or tone edits, never for detector evasion."
 ---
 
 # Humanizer
@@ -21,10 +21,16 @@ Defaults:
 
 Choose the voice anchor in this order: a supplied sample or stated preference,
 the writer's natural phrasing elsewhere in the draft, the relationship and
-genre, then plain contemporary language. Match the source language, regional
-variety, and punctuation conventions unless translation is requested. Do not
-preserve robotic patterns merely because they appear in the source, and do not
-invent quirks to simulate a person.
+genre, then the middle of everyday usage for that language and region. Prefer
+familiar words over formal synonyms. Do not make the writer sound more expert,
+formal, witty, or culturally idiomatic than the source supports. Match punctuation
+conventions unless translation is requested. Do not preserve robotic patterns
+merely because they appear in the source, and do not invent quirks to simulate a
+person.
+
+Infer missing style preferences from the draft and context. Ask one short, direct
+question only when the answer would change meaning, audience fit, or the integrity
+boundary; otherwise use the ordinary middle register and proceed.
 
 1. Identify audience, genre, desired result, mode, intensity, and fixed length or
    structure.

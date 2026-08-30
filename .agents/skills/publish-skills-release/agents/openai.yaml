@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Skills Release"
+  short_description: "Validate, publish, and verify this skills repository."
+  default_prompt: "Use $publish-skills-release to publish the next authorized version of this skills repository and verify its release assets."

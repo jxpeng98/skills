@@ -5,13 +5,20 @@ description: "Verify release readiness for skill, plugin, repository, or marketp
 
 # Release Readiness
 
+Use the language required by the user, audience, or repository. Prefer common
+words and familiar sentence patterns. Keep needed technical terms, but do not add
+formal or corporate wording just to sound polished.
+
 1. Read release guidance and identify the artifact, release surface, changed
    files, and version.
 2. Run the cheapest relevant checks first; run broader package or install checks
    only when they add confidence.
-3. Classify results as blockers, warnings, or residual risks. A missing check is
+3. Build the release artifact, then run clean-install or smoke checks from an
+   extracted archive or package in a temporary location, not only from the source
+   tree. Verify the expected asset list and checksums when they exist.
+4. Classify results as blockers, warnings, or residual risks. A missing check is
    not a pass.
-4. Re-read the final diff and status.
+5. Re-read the final diff and status.
 
 Check what applies:
 

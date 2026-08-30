@@ -11,11 +11,26 @@ university-writing helpers. It intentionally does not include academic research
 workflows, literature reviews, citation workflows, thesis planning, or
 paper-planning skills.
 
+## Current Release
+
+The current repository release is [v0.6.0](https://github.com/jxpeng98/skills/releases/tag/v0.6.0).
+It contains 20 distributable skills across five plugins.
+
+| Plugin | Version | v0.6.0 focus |
+| --- | --- | --- |
+| `dev-tools` | `0.4.0` | Adds systematic debugging, focused change review, and Apple Silicon Rust-to-Windows cross-build validation. |
+| `faculty-tools` | `0.5.0` | Makes clarification, feedback, planning, and faculty writing more natural and evidence-led. |
+| `presentation-tools` | `0.4.0` | Adds accessibility checks, source traceability, and static fallbacks for demos and interactive slides. |
+| `productivity` | `0.4.0` | Uses plainer prompts and adds reversible experiments when evidence cannot support a durable decision. |
+| `writing-tools` | `0.5.0` | Strengthens natural voice, factual preservation, clarity routing, and academic editing guidance. |
+
 ## Repository Layout
 
 ```text
 .
+├── .agents/skills/             # repository-local maintenance skills
 ├── DEVELOPMENT.md
+├── evals/                      # routing prompts for forward behavior checks
 ├── skills/                    # Hermes tap mirror, generated from plugins/*/skills
 └── plugins/
     ├── dev-tools/
@@ -67,11 +82,14 @@ Productivity skills for planning, critique, decisions, commits, and PR work.
 
 ### `dev-tools`
 
-Developer skills for repository hygiene, plugin boundaries, and release
-readiness.
+Developer skills for debugging, focused change review, Rust-to-Windows
+cross-builds, repository hygiene, plugin boundaries, and release readiness.
 
 | Skill | Use When |
 | --- | --- |
+| `systematic-debugging` | Reproduce a failure, identify its root cause, and verify the smallest justified repair. |
+| `change-review` | Review a fixed diff for request fidelity, correctness, regression, compatibility, and meaningful test gaps. |
+| `rust-windows-cross-build` | Cross-build a Rust app on Apple Silicon for Windows x64 and validate it in Parallels Windows 11 Arm. |
 | `repo-boundary-review` | Review file ownership and placement without moving files or approving a release. |
 | `release-readiness` | Verify readiness with fresh evidence before a separate publish, tag, or push action. |
 
@@ -130,6 +148,11 @@ Validate plugin manifests and skill frontmatter after changes:
 python scripts/validate_plugins.py
 ```
 
+The same validator checks that every distributable skill has one direct prompt,
+one paraphrase, and one adjacent negative prompt in
+`evals/skill-routing.json`. These are routing fixtures for independent forward
+behavior checks; they are not keyword assertions about generated prose.
+
 Check Markdown and whitespace before committing:
 
 ```bash
@@ -141,6 +164,10 @@ Build local release archives:
 ```bash
 python scripts/package_plugins.py --output dist
 ```
+
+For an explicitly authorized repository release, maintainers can use the local
+`$publish-skills-release` skill. It is intentionally excluded from public plugin
+packages and the generated Hermes mirror.
 
 ## Installation And Releases
 
@@ -187,7 +214,7 @@ upstream guidance changes.
 
 | Area | Reference |
 | --- | --- |
-| Skill structure and `SKILL.md` conventions | [Open Agent Skills specification](https://openagentskills.dev/docs/specification) and this repository's [DEVELOPMENT.md](DEVELOPMENT.md). |
+| Skill structure and `SKILL.md` conventions | [OpenAI: Build skills](https://learn.chatgpt.com/docs/build-skills), the [Open Agent Skills specification](https://openagentskills.dev/docs/specification), and this repository's [DEVELOPMENT.md](DEVELOPMENT.md). |
 | Codex plugin packaging | [OpenAI Academy: Plugins and skills](https://openai.com/academy/codex-plugins-and-skills/) and the local Codex plugin manifest conventions used by this repository. |
 | Claude Code plugin packaging | [Claude Code plugin docs](https://code.claude.com/docs/en/plugins) and [plugin reference](https://code.claude.com/docs/en/plugins-reference). |
 | Antigravity plugin packaging | [Google Antigravity plugins documentation](https://antigravity.google/docs/plugins) and [CLI plugins documentation](https://antigravity.google/docs/cli-plugins). |
@@ -195,6 +222,9 @@ upstream guidance changes.
 | `grill-me` | Inspired by Matt Pocock's [`grill-me` skill](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md). |
 | `commit-message` | Based on [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/). |
 | `pr-description` | Informed by GitHub Docs on [helping others review your changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/helping-others-review-your-changes). |
+| `systematic-debugging` | Inspired by [`obra/superpowers` systematic debugging](https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md) and Matt Pocock's [`diagnosing-bugs`](https://github.com/mattpocock/skills/blob/main/docs/engineering/diagnosing-bugs.md); rewritten as a compact local workflow. |
+| `change-review` | Inspired by Matt Pocock's [fixed-point, two-axis code review](https://github.com/mattpocock/skills/blob/main/docs/engineering/code-review.md) and GitHub's [review guidance](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/helping-others-review-your-changes). |
+| `rust-windows-cross-build` | Based on [Rust Windows MSVC target support](https://doc.rust-lang.org/rustc/platform-support/windows-msvc.html), [`cargo-xwin`](https://github.com/rust-cross/cargo-xwin), [Microsoft's Windows on Arm emulation guidance](https://learn.microsoft.com/windows/arm/apps-on-arm-x86-emulation), and [Parallels Windows 11 Arm guidance](https://kb.parallels.com/125375). |
 | `presentation-tool` | Informed by GitHub projects and skill patterns from [`ghanemja/stencil`](https://github.com/ghanemja/stencil), [`scanny/python-pptx`](https://github.com/scanny/python-pptx), [`gitbrent/PptxGenJS`](https://github.com/gitbrent/PptxGenJS), [`josephwright/beamer`](https://github.com/josephwright/beamer), [`marp-team/marp`](https://github.com/marp-team/marp), and [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli). |
 | `slidev-slides` | Based on official Slidev documentation: [Getting Started](https://sli.dev/guide/), [CLI](https://sli.dev/builtin/cli), and [Exporting](https://sli.dev/guide/exporting). |
 | `faculty-tools`, `decide-between-options`, `repo-boundary-review`, `release-readiness`, `humanizer`, `rewrite-for-clarity`, `summarize-material` | Original local workflow skills derived from day-to-day teaching, engineering, repository maintenance, and communication practice. |

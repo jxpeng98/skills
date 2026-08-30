@@ -1,4 +1,4 @@
 interface:
   display_name: "Feedback Writer"
   short_description: "Write specific, actionable student feedback."
-  default_prompt: "Use $feedback-writer to write prioritized, evidence-linked feedback on this student work against the supplied task and any rubric."
+  default_prompt: "Use $feedback-writer to write clear, useful feedback tied to this student work, the task, and any rubric."

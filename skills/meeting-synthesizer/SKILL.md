@@ -5,6 +5,10 @@ description: "Synthesize university meeting, committee, department, or teaching-
 
 # Meeting Synthesizer
 
+Use the language and regional variety normal for the group. Prefer common words,
+short sentences, and concrete verbs. Keep official terms where needed, but avoid
+bureaucratic wording and abstract nouns that hide who decided or will act.
+
 Use all supplied notes, transcript segments, agenda items, and prior action logs.
 Preserve the organization's minutes template when supplied.
 

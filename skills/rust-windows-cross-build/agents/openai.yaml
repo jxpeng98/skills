@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Windows Cross Build"
+  short_description: "Cross-build Rust and verify it in Parallels Windows."
+  default_prompt: "Use $rust-windows-cross-build to build this Rust app for Windows x64 on my Apple Silicon Mac and verify it in Parallels."

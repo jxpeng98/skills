@@ -1,8 +1,8 @@
 {
   "name": "Dev Tools",
   "slug": "dev-tools",
-  "version": "0.3.0",
-  "description": "Developer skills for repository boundaries, validation, and release readiness.",
+  "version": "0.4.0",
+  "description": "Developer skills for debugging, change review, Rust-to-Windows cross-builds, repository boundaries, and release readiness.",
   "manifest": ".codex-plugin/plugin.json",
   "category": {
     "codex": "Developer Tools",
@@ -10,6 +10,10 @@
   },
   "tags": [
     "development",
+    "debugging",
+    "code-review",
+    "rust",
+    "windows",
     "repository",
     "release"
   ],

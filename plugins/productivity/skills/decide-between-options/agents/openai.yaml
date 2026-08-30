@@ -1,4 +1,4 @@
 interface:
   display_name: "Decide Between Options"
-  short_description: "Compare options and recommend a defensible choice."
-  default_prompt: "Use $decide-between-options to compare these options and recommend one with explicit tradeoffs."
+  short_description: "Compare options and recommend one clearly."
+  default_prompt: "Use $decide-between-options to compare these options in plain language, recommend one, and explain the main tradeoffs."

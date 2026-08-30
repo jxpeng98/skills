@@ -5,6 +5,9 @@ description: "Draft Conventional Commit messages from staged or unstaged Git dif
 
 # Commit Message
 
+Use the language required by repository guidance. Prefer common verbs and direct
+sentences; do not make the subject or body sound more formal than the change.
+
 1. Read repository commit guidance and inspect the diff. Prefer staged changes;
    otherwise state which diff you used.
 2. Identify the primary intent. Recommend a split when changes have independent

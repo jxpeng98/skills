@@ -5,6 +5,10 @@ description: "Draft or improve teaching and service statements, grant-support te
 
 # Statement Drafter
 
+Use straightforward professional language in the author's regional variety.
+Prefer common words and natural sentences. Keep field-specific terms, but do not
+use prestige vocabulary, grand claims, or unusually polished phrasing.
+
 Use the call, criteria, CV, activity record, prior draft, and supplied examples.
 If evidence is thin, return an outline and evidence gaps instead of polished
 unsupported prose.
@@ -19,6 +23,9 @@ unsupported prose.
 5. For teaching, connect philosophy to practice and learning evidence; for grants
    or awards, preserve eligibility and submission requirements.
 6. Preserve the author's voice and use only the detail needed for the audience.
+
+Do not make the author sound more expert, formal, witty, or culturally idiomatic
+than the supplied material supports.
 
 Lead with the draft, followed only by material evidence gaps and revision notes.
 Before returning it, verify that every material claim is traceable and every stated

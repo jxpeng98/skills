@@ -5,6 +5,10 @@ description: "Create, edit, review, build, present, or export Markdown-based Sli
 
 # Slidev Slides
 
+Use the language and regional variety required by the audience. Write slide text
+as people normally speak: common words, natural phrases, and only the technical
+terms the subject needs. Avoid report prose, consultant headings, and showy wording.
+
 Inspect `slides.md`, `package.json`, components, layouts, assets, theme, and
 scripts. Reuse the project's package manager, Node version, commands, fonts, and
 paths.
@@ -16,7 +20,10 @@ paths.
    slide, short bullets, and readable code.
 4. Prefer diagrams, workflows, code, decisions, screenshots, and demo checkpoints
    that carry information; skip decorative slide volume.
-5. Build or export with existing scripts.
+5. Give informative images meaningful alt text, preserve a logical reading
+   order, use legible type and contrast, and provide a static fallback for every
+   live demo or interaction.
+6. Build or export with existing scripts.
 
 Common direct commands:
 
@@ -32,4 +39,5 @@ PPTX, and PNG export may require `playwright-chromium`; PPTX text is image-based
 and static exports can lose interactivity.
 
 Inspect the rendered result for overflow, cropping, assets, fonts, aspect ratio,
-code, notes, links, and lost interactive meaning. Report checks not run.
+code, speaker notes, links, talk time, reading order, contrast, and lost
+interactive meaning. Report checks not run.

@@ -14,6 +14,7 @@ NAME_RE = re.compile(r"^[a-z0-9-]+$")
 DISALLOWED_PLUGIN_NAMES = {"research-tools"}
 EXCLUDE_DIRS = {"__pycache__"}
 ALLOWED_FRONTMATTER_KEYS = {"name", "description"}
+ROUTING_CASE_FIELDS = {"direct", "paraphrase", "adjacent_negative"}
 
 
 def main() -> None:
@@ -29,7 +30,9 @@ def main() -> None:
     else:
         for plugin_dir in sorted(path for path in root.iterdir() if path.is_dir()):
             validate_plugin(plugin_dir, errors)
-        validate_hermes_tap(Path("."), root, errors)
+        skills = collect_plugin_skills(Path("."), root, errors)
+        validate_hermes_tap(Path("."), root, errors, skills)
+        validate_skill_routing_cases(Path("evals/skill-routing.json"), skills, errors)
 
     validate_repository_boundaries(Path("."), errors)
 
@@ -202,10 +205,16 @@ def validate_references(skill_dir: Path, skill_text: str, errors: list[str]) -> 
                 errors.append(f"{path} is not routed from SKILL.md")
 
 
-def validate_hermes_tap(root: Path, plugins_root: Path, errors: list[str]) -> None:
+def validate_hermes_tap(
+    root: Path,
+    plugins_root: Path,
+    errors: list[str],
+    skills: dict[str, Path] | None = None,
+) -> None:
     """Validate the top-level skills/ mirror consumed by Hermes taps."""
 
-    skills = collect_plugin_skills(root, plugins_root, errors)
+    if skills is None:
+        skills = collect_plugin_skills(root, plugins_root, errors)
     hermes_root = root / "skills"
 
     if not hermes_root.is_dir():
@@ -225,6 +234,50 @@ def validate_hermes_tap(root: Path, plugins_root: Path, errors: list[str]) -> No
         for mirror_dir in sorted(path for path in hermes_root.iterdir() if path.is_dir()):
             if mirror_dir.name not in skills:
                 errors.append(f"skills/{mirror_dir.name} has no matching plugin skill")
+
+
+def validate_skill_routing_cases(
+    path: Path,
+    skills: dict[str, Path],
+    errors: list[str],
+) -> None:
+    """Ensure every distributable skill has a small routing prompt set."""
+
+    payload = load_json(path, errors)
+    if payload is None:
+        return
+    cases = payload.get("skills")
+    if not isinstance(cases, dict):
+        errors.append(f"{path} must contain a skills object")
+        return
+
+    expected = set(skills)
+    actual = set(cases)
+    for name in sorted(expected - actual):
+        errors.append(f"{path} is missing routing cases for {name}")
+    for name in sorted(actual - expected):
+        errors.append(f"{path} has routing cases for unknown skill {name}")
+
+    for name, prompts in sorted(cases.items()):
+        if not isinstance(prompts, dict):
+            errors.append(f"{path} routing cases for {name} must be an object")
+            continue
+        missing = ROUTING_CASE_FIELDS - set(prompts)
+        extra = set(prompts) - ROUTING_CASE_FIELDS
+        if missing:
+            errors.append(
+                f"{path} routing cases for {name} are missing: "
+                + ", ".join(sorted(missing))
+            )
+        if extra:
+            errors.append(
+                f"{path} routing cases for {name} have unknown fields: "
+                + ", ".join(sorted(extra))
+            )
+        for field in sorted(ROUTING_CASE_FIELDS & set(prompts)):
+            prompt = prompts[field]
+            if not isinstance(prompt, str) or not prompt.strip():
+                errors.append(f"{path} {name}.{field} must be a non-empty string")
 
 
 def collect_plugin_skills(

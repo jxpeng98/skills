@@ -15,12 +15,16 @@ Look for clusters, not isolated words:
 - serial three-part lists, repeated `not X but Y` contrasts, rhetorical questions,
   or dash-heavy asides used as a default pattern;
 - abstract noun stacks, vague verbs, and generic claims without context;
+- formal synonyms where a common word would be more natural, or idioms and slang
+  added only to display fluency;
 - over-neutral, over-formal, promotional, or falsely balanced tone;
 - meta-commentary such as `this highlights`, `this underscores`, or `it is worth
   noting` where the concrete implication should be stated directly;
 - in Chinese, chains of `首先/其次/此外/综上`, broad frames such as
   `在当今……背景下`, and inflated defaults such as `值得注意的是`, `赋能`, or
   `彰显` when the sentence can state the point plainly;
+- grammar that is correct but still follows another language's word order,
+  emphasis, or paragraph rhythm;
 - polished but empty sentences that add no evidence, decision, or meaning;
 - repeated conclusions, throat-clearing, and endings that recap instead of stop.
 
@@ -29,6 +33,8 @@ Look for clusters, not isolated words:
 - Read the whole paragraph for meaning, then redraft it without copying its syntax.
 - Put the concrete point, action, or claim where the reader needs it and use
   ordinary, specific words supported by the source.
+- Default to the middle of everyday usage. Choose the word a fluent speaker would
+  normally reach for first, unless a technical or exact term is needed.
 - Keep a transition only when the relationship is not already clear. Name the
   actual relationship instead of adding a decorative signpost.
 - Break accidental symmetry. A short sentence or one-line paragraph is useful
@@ -42,7 +48,8 @@ Look for clusters, not isolated words:
 Avoid stock phrases such as `In today's fast-paced world`, `It is important to
 note`, `delve`, `leverage`, and `utilize` when plainer wording is more precise.
 Do not add slang, fragments, contractions, cultural markers, typos, or factual
-detail merely to look human.
+detail merely to look human. Use contractions, idioms, and local expressions only
+when they are normal for the writer, audience, and setting.
 
 ## Verify
 

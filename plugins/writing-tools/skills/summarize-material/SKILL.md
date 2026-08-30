@@ -7,7 +7,12 @@ description: "Summarize notes, articles, transcripts, documents, or long context
 
 Read all in-scope material first. Identify who will use the summary and what they
 need to understand, decide, or do; then choose the shortest structure that serves
-that purpose.
+that purpose. Infer the reader from context; ask one short, direct question only
+when the answer would materially change what belongs in the summary.
+
+Use the middle of everyday usage for the requested language and region. Prefer
+familiar words and natural sentence patterns. Keep necessary technical terms, but
+do not turn an ordinary summary into executive, academic, or promotional prose.
 
 1. Extract facts, dates, names, decisions, risks, actions, and open questions.
 2. Rank them by consequence for the reader, not by source order. Lead with the

@@ -5,9 +5,14 @@ description: "Plan university courses, classes, seminars, tutorials, reading ses
 
 # Course Planner
 
+Use the language and regional variety instructors and students normally use in
+this setting. Write prompts as an instructor could actually say them in class.
+Keep subject terms, but avoid pedagogical or administrative jargon.
+
 Use supplied syllabus, timetable, readings, assessments, and prior plans. Treat
 curriculum and assessment constraints as fixed; label proposed choices. Ask only
-when level, duration, modality, or assessed outcome would change the plan.
+when level, duration, modality, or assessed outcome would change the plan. Ask one
+short, direct question and explain only what the answer changes.
 
 1. Define 2-4 observable learning outcomes.
 2. Give every outcome practice and an observable check for learning.

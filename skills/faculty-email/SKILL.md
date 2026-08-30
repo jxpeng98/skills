@@ -5,9 +5,13 @@ description: "Draft or revise university emails to students, colleagues, adminis
 
 # Faculty Email
 
+Use the language and regional variety normal for the relationship. Prefer common
+words, direct sentences, and the usual level of politeness for that setting. Do
+not add ceremonial openings, corporate phrases, or stock warmth to sound polished.
+
 Use the supplied thread, policy, names, dates, relationship, and requested action.
 Ask only when authority, confidentiality, or the requested commitment changes the
-message.
+message. Ask one short, direct question without a formal clarification preamble.
 
 1. Separate confirmed facts, policy, and decisions from requests or interpretation.
 2. Put the point or request early in natural, direct language.

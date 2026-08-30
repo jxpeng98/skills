@@ -1,4 +1,4 @@
 interface:
   display_name: "Summarize Material"
-  short_description: "Synthesize sources into concise, reader-focused summaries."
-  default_prompt: "Use $summarize-material to prioritize what this reader needs to understand or do, then summarize it in natural prose with structure only where useful."
+  short_description: "Summarize sources clearly for the intended reader."
+  default_prompt: "Use $summarize-material to summarize what this reader needs to understand or do in plain, natural language, using headings or bullets only when helpful."

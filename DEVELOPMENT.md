@@ -41,6 +41,8 @@ This repository may contain:
 - Skill-specific `references/`, `scripts/`, and `assets/`.
 - Shared references or helper scripts when they are directly used by skills.
 - Repository-level development documentation.
+- Repository-local maintenance skills under `.agents/skills/` when they should
+  not ship in a public plugin.
 
 This repository should not contain:
 
@@ -105,6 +107,9 @@ directly. Edit `plugins/<plugin-name>/skills/<skill-name>/`, then run:
 ```bash
 python scripts/sync_hermes_tap.py
 ```
+
+Keep repository-only maintenance workflows in `.agents/skills/`. Do not package
+or mirror them unless they are deliberately redesigned as general public skills.
 
 Use `drafts/` or a temporary top-level category folder only for early local
 experiments. Before publishing through `skillsplace`, move the skill into:
@@ -217,9 +222,11 @@ Include only the clauses that prevent wrong behavior:
 - **Output:** state the exact deliverable and useful default shape.
 - **Stop:** state verification and external-write boundaries.
 
-Test each description with one direct prompt, one paraphrase, and one adjacent
-negative prompt. Simple skills can express the contract in a short sequence;
-complex or fragile workflows may use explicit sections and deterministic scripts.
+Record one direct prompt, one paraphrase, and one adjacent negative prompt for
+every distributable skill in `evals/skill-routing.json`. Use them for forward
+behavior checks; do not turn them into keyword tests for generated prose. Simple
+skills can express the contract in a short sequence; complex or fragile workflows
+may use explicit sections and deterministic scripts.
 
 ## Supporting Resources
 

@@ -1,7 +1,7 @@
 {
   "name": "dev-tools",
-  "description": "Developer skills for repository boundaries, validation, and release readiness.",
-  "version": "0.3.0",
+  "description": "Developer skills for debugging, change review, Rust-to-Windows cross-builds, repository boundaries, and release readiness.",
+  "version": "0.4.0",
   "author": {
     "name": "jxpeng98"
   },

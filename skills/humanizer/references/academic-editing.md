@@ -57,6 +57,11 @@ when they match the source. Use transitions to show reasoning rather than to
 decorate the prose. Avoid inflated vocabulary, abstract noun stacks, and claims
 of novelty or causality that the evidence does not support.
 
+Academic does not mean ornate. Use the most familiar wording that carries the
+disciplinary meaning, and keep ordinary verbs when they are accurate. Do not raise
+the writer's vocabulary or pack sentences with qualifications merely to make the
+draft sound more scholarly.
+
 ## Final Audit
 
 - Does every paragraph have a clear purpose?

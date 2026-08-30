@@ -5,9 +5,14 @@ description: "Write constructive, evidence-based feedback on student essays, rep
 
 # Feedback Writer
 
+Write as an instructor speaking to this student. Use familiar words, natural
+sentences, and the normal level of formality for the course. Keep useful rubric
+terms, but do not hide the point behind academic or administrative language.
+
 Read the work, task, rubric, and instructor notes before evaluating it. If the
-work is missing, request it. If no rubric or grading basis is supplied, give
-qualitative feedback without inventing a grade.
+work is missing, ask for it in one short sentence, along with any task or rubric
+needed to judge it. Do not use a form-like intake list. If no rubric or grading
+basis is supplied, give qualitative feedback without inventing a grade.
 
 1. Separate performance from the student's identity or intent.
 2. Lead with specific strengths and the 1-3 changes with the highest learning

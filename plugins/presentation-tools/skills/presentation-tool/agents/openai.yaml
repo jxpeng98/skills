@@ -1,4 +1,4 @@
 interface:
   display_name: "Presentation Tool"
   short_description: "Route and build Slidev, PPTX, and LaTeX presentations."
-  default_prompt: "Use $presentation-tool to create this presentation in the most suitable editable format."
+  default_prompt: "Use $presentation-tool to create this presentation in a suitable editable format, with slide text that sounds natural when spoken."

@@ -1,23 +1,26 @@
 {
   "name": "dev-tools",
-  "version": "0.3.0",
-  "description": "Developer skills for repository boundaries, validation, and release readiness.",
+  "version": "0.4.0",
+  "description": "Developer skills for debugging, change review, Rust-to-Windows cross-builds, repository boundaries, and release readiness.",
   "author": {
     "name": "jxpeng98",
     "url": "https://github.com/jxpeng98"
   },
   "repository": "https://github.com/jxpeng98/skills",
   "license": "MIT",
-  "keywords": ["skills", "development", "repository", "release"],
+  "keywords": ["skills", "development", "debugging", "code-review", "rust", "windows", "repository", "release"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Dev Tools",
-    "shortDescription": "Repository review and release-readiness helpers.",
-    "longDescription": "Reusable development skills for keeping skill repositories, plugin layouts, and release checks consistent.",
+    "shortDescription": "Debugging, review, cross-build, and release helpers.",
+    "longDescription": "Reusable development skills for root-cause debugging, focused change review, Apple Silicon Rust-to-Windows workflows, repository boundaries, and release checks.",
     "developerName": "jxpeng98",
     "category": "Developer Tools",
     "capabilities": ["Read", "Write"],
     "defaultPrompt": [
+      "Find the root cause of this failing test.",
+      "Review this diff against the requested behavior.",
+      "Cross-build this Rust app for Windows x64 and test it in Parallels.",
       "Review this repo against DEVELOPMENT.md.",
       "Check whether this plugin is ready to publish.",
       "Find boundary violations in these changes."

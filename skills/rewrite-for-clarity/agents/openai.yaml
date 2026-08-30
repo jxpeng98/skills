@@ -1,4 +1,4 @@
 interface:
   display_name: "Rewrite for Clarity"
-  short_description: "Rewrite text naturally and clearly without changing meaning."
-  default_prompt: "Use $rewrite-for-clarity to rewrite this around its intended message, not its original sentence frames, while preserving meaning and facts."
+  short_description: "Make text clear and natural without changing its meaning."
+  default_prompt: "Use $rewrite-for-clarity to make this text clear and natural in ordinary language while preserving its meaning and facts."

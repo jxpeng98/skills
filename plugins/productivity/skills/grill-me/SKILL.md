@@ -5,17 +5,19 @@ description: "Stress-test a plan, design, argument, product idea, or implementat
 
 # Grill Me
 
+Use the user's language and regional variety. Prefer common words and familiar
+sentence patterns. Keep needed technical terms, but do not turn the conversation
+into formal consulting language.
+
 Inspect available evidence first. Keep a short ledger of the goal, constraints,
 resolved decisions, assumptions, risks, and open decisions.
 
-Ask one highest-leverage question at a time:
+Ask one useful question at a time. Phrase it as a short, direct question, not a
+questionnaire. Then briefly say why it matters and what you would choose. Use
+labels only when the user asks for a structured interview.
 
-- `Question`: one unresolved decision
-- `Why it matters`: the dependency or risk it resolves
-- `Recommendation`: the answer you would choose and why
-
-Use 2-4 mutually exclusive options only when they help. Prioritize goal,
-success criteria, constraints, weak evidence, alternatives, failure modes,
+Use 2-4 mutually exclusive, plainly worded options only when they help. Prioritize
+goal, success criteria, constraints, weak evidence, alternatives, failure modes,
 rollback, and dependencies. Do not reopen settled decisions without new evidence
 or manufacture objections after the plan is coherent.
 

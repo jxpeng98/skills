@@ -1,0 +1,4 @@
+interface:
+  display_name: "Change Review"
+  short_description: "Review diffs for fidelity, regressions, and risk."
+  default_prompt: "Use $change-review to review these changes against the request and report only actionable findings."

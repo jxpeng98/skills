@@ -5,6 +5,10 @@ description: "Create or improve university assignment briefs, prompts, submissio
 
 # Assignment Brief
 
+Write as an instructor would explain the task to students, in the language and
+regional variety used in the course. Prefer common words and direct instructions.
+Keep exact policy wording only where changing it could change the rule.
+
 Use the syllabus, learning outcomes, existing brief, rubric, and policy text when
 available. Treat explicit institutional and course policy as authoritative. Surface
 source conflicts, and mark unknown policy `[Instructor to confirm]`.

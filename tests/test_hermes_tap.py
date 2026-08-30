@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.validate_plugins import validate_hermes_tap
+from scripts.validate_plugins import validate_hermes_tap, validate_skill_routing_cases
 
 
 class HermesTapValidationTests(unittest.TestCase):
@@ -60,6 +61,37 @@ class HermesTapValidationTests(unittest.TestCase):
 
             self.assertIn(
                 "skills/commit-message does not match plugins/productivity/skills/commit-message",
+                errors,
+            )
+
+
+class SkillRoutingValidationTests(unittest.TestCase):
+    def test_rejects_a_skill_without_all_routing_cases(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "skill-routing.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "skills": {
+                            "commit-message": {
+                                "direct": "Write a commit message.",
+                                "paraphrase": "Name this change.",
+                            }
+                        }
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            errors: list[str] = []
+            validate_skill_routing_cases(
+                path,
+                {"commit-message": Path("plugins/productivity/skills/commit-message")},
+                errors,
+            )
+
+            self.assertIn(
+                f"{path} routing cases for commit-message are missing: adjacent_negative",
                 errors,
             )
 

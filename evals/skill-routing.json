@@ -1,0 +1,104 @@
+{
+  "skills": {
+    "assignment-brief": {
+      "direct": "Create a university assignment brief and rubric from this course policy.",
+      "paraphrase": "Turn these module rules into a clear assessed task for students.",
+      "adjacent_negative": "Give the student feedback on this completed essay using the rubric."
+    },
+    "change-review": {
+      "direct": "Review this branch against the issue and report correctness or regression risks.",
+      "paraphrase": "Check whether this diff actually implements the requested behavior safely.",
+      "adjacent_negative": "Check whether these files belong in the correct plugin and repository."
+    },
+    "commit-message": {
+      "direct": "Write a Conventional Commit message for these staged changes.",
+      "paraphrase": "Give this diff a concise commit title and body.",
+      "adjacent_negative": "Write the full pull request description for this branch."
+    },
+    "course-planner": {
+      "direct": "Plan a twelve-week seminar from this curriculum and timetable.",
+      "paraphrase": "Turn these learning outcomes into a weekly teaching plan.",
+      "adjacent_negative": "Create the graded assignment prompt and rubric for this module."
+    },
+    "decide-between-options": {
+      "direct": "Compare these three database choices and recommend one for our constraints.",
+      "paraphrase": "Help us choose between these concrete implementation approaches.",
+      "adjacent_negative": "Brainstorm as many possible product directions as you can."
+    },
+    "faculty-email": {
+      "direct": "Draft an email to students explaining this verified timetable change.",
+      "paraphrase": "Turn these facts into a send-ready note to the teaching team.",
+      "adjacent_negative": "Write my annual faculty service statement from this evidence."
+    },
+    "feedback-writer": {
+      "direct": "Give evidence-based feedback on this student report using the supplied rubric.",
+      "paraphrase": "Write constructive comments on this draft without inventing a grade.",
+      "adjacent_negative": "Design the assignment brief students will receive next term."
+    },
+    "grill-me": {
+      "direct": "Stress-test this implementation plan and challenge its weakest assumptions.",
+      "paraphrase": "Interrogate this proposal before we commit to it.",
+      "adjacent_negative": "Compare these two settled options and recommend one."
+    },
+    "humanizer": {
+      "direct": "Make this draft sound like a normal person wrote it while preserving my facts.",
+      "paraphrase": "This reads like AI copy; give it a more natural voice.",
+      "adjacent_negative": "Shorten this paragraph and make the instructions clearer."
+    },
+    "meeting-synthesizer": {
+      "direct": "Turn these department meeting notes into decisions, owners, dates, and open questions.",
+      "paraphrase": "Extract what the committee agreed and who must do what next.",
+      "adjacent_negative": "Summarize this journal article in five bullets."
+    },
+    "pr-description": {
+      "direct": "Write a reviewer-ready pull request description from this branch diff.",
+      "paraphrase": "Summarize these changes, tests, risks, and review focus for a PR.",
+      "adjacent_negative": "Write a single Conventional Commit message for the staged diff."
+    },
+    "presentation-tool": {
+      "direct": "Choose the right presentation format and create the deck from these materials.",
+      "paraphrase": "I need a presentation but have not decided between PPTX, Slidev, or PDF.",
+      "adjacent_negative": "Edit this existing Slidev slides.md deck and export it."
+    },
+    "release-readiness": {
+      "direct": "Check whether these plugin changes are ready for release using fresh evidence.",
+      "paraphrase": "Run the release gates and tell me what still blocks publishing.",
+      "adjacent_negative": "Tag this version, push it, and publish the GitHub release now."
+    },
+    "repo-boundary-review": {
+      "direct": "Review whether these files belong in the correct repository and plugin paths.",
+      "paraphrase": "Find ownership or placement violations in this skills repo.",
+      "adjacent_negative": "Review this code diff for correctness and regression bugs."
+    },
+    "rewrite-for-clarity": {
+      "direct": "Rewrite this text so it is shorter and clearer for customers.",
+      "paraphrase": "Adapt this message to a direct, friendly support tone without changing facts.",
+      "adjacent_negative": "This is clear but still sounds machine-written; make the voice natural."
+    },
+    "rust-windows-cross-build": {
+      "direct": "On my Apple Silicon Mac, build this Rust app for Windows x64 and test it in Parallels.",
+      "paraphrase": "Set up a macOS to Windows MSVC Rust build and validate the result in my Windows 11 Arm VM.",
+      "adjacent_negative": "Build and test this Rust application only for the current macOS target."
+    },
+    "slidev-slides": {
+      "direct": "Create and export this Slidev deck from the existing slides.md project.",
+      "paraphrase": "Polish my Slidev presentation and check the rendered output.",
+      "adjacent_negative": "Choose whether this talk should use PowerPoint, Beamer, or Slidev."
+    },
+    "statement-drafter": {
+      "direct": "Draft my teaching statement from these verified examples and outcomes.",
+      "paraphrase": "Turn this evidence into a faculty promotion narrative without inventing achievements.",
+      "adjacent_negative": "Write a short email to my department chair about tomorrow's meeting."
+    },
+    "summarize-material": {
+      "direct": "Summarize these notes into a concise decision brief.",
+      "paraphrase": "Condense this long transcript into the main points and actions.",
+      "adjacent_negative": "Extract confirmed owners and deadlines from this faculty committee meeting."
+    },
+    "systematic-debugging": {
+      "direct": "Reproduce this failing test, find the root cause, and verify the fix.",
+      "paraphrase": "Diagnose why this build started failing and repair the shared cause.",
+      "adjacent_negative": "Review this otherwise working branch for possible regression risks."
+    }
+  }
+}
