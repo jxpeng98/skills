@@ -5,7 +5,11 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.validate_plugins import validate_hermes_tap, validate_skill_routing_cases
+from scripts.validate_plugins import (
+    validate_hermes_tap,
+    validate_skill_routing_cases,
+    validate_synchronized_plugin_versions,
+)
 
 
 class HermesTapValidationTests(unittest.TestCase):
@@ -93,6 +97,27 @@ class SkillRoutingValidationTests(unittest.TestCase):
             self.assertIn(
                 f"{path} routing cases for commit-message are missing: adjacent_negative",
                 errors,
+            )
+
+
+class PluginVersionValidationTests(unittest.TestCase):
+    def test_rejects_cross_plugin_version_drift(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for name, version in (("dev-tools", "0.6.1"), ("writing-tools", "0.5.0")):
+                path = root / name / ".codex-plugin" / "plugin.json"
+                path.parent.mkdir(parents=True)
+                path.write_text(json.dumps({"version": version}), encoding="utf-8")
+
+            errors: list[str] = []
+            validate_synchronized_plugin_versions(root, errors)
+
+            self.assertEqual(
+                errors,
+                [
+                    "plugin versions must be synchronized: "
+                    "dev-tools=0.6.1, writing-tools=0.5.0"
+                ],
             )
 
 

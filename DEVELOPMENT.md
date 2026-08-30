@@ -301,6 +301,13 @@ After changing marketplace metadata, validate from the `skillsplace` repository:
 npm run validate
 ```
 
+## Versioning Policy
+
+This repository uses synchronized releases. For a repository tag `vX.Y.Z`, every
+plugin must use `X.Y.Z` in its Codex manifest, Claude manifest, and
+`skillsplace.json`, including plugins whose behavior did not change in that
+release. `python scripts/validate_plugins.py` rejects cross-plugin version drift.
+
 ## Platform Compatibility
 
 Each publishable plugin should include these platform markers:
@@ -400,8 +407,9 @@ Before registering or updating a plugin in `skillsplace`:
 2. Confirm all included skills are ready for the target audience.
 3. Confirm platform plugin manifests are present when needed.
 4. Confirm repository visibility matches the intended audience.
-5. Tag or pin a release if consumers need reproducible installs.
-6. Run `python scripts/sync_hermes_tap.py --check`.
-7. Update `skillsplace` marketplace metadata.
-8. Run `npm run validate` in `skillsplace`.
-9. Install from the marketplace in a clean environment and test the skill trigger.
+5. Confirm every plugin manifest version matches the repository release tag.
+6. Tag or pin a release if consumers need reproducible installs.
+7. Run `python scripts/sync_hermes_tap.py --check`.
+8. Update `skillsplace` marketplace metadata.
+9. Run `npm run validate` in `skillsplace`.
+10. Install from the marketplace in a clean environment and test the skill trigger.

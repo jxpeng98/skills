@@ -12,9 +12,10 @@ plugin or the generated `skills/` mirror.
    Git status and diff, the latest tag, and the remote before changing release
    state.
 2. Confirm the intended files and semantic version. If the requested release
-   level is genuinely ambiguous, ask before changing every plugin version or tag.
-3. Update only the manifests that belong to the released plugin versions. Sync
-   the Hermes mirror with `python scripts/sync_hermes_tap.py`.
+   level is genuinely ambiguous, ask before creating the tag.
+3. This repository uses synchronized versions. For `vX.Y.Z`, set every plugin's
+   Codex, Claude, and skillsplace manifest to `X.Y.Z`, then sync the Hermes mirror
+   with `python scripts/sync_hermes_tap.py`.
 4. Run `python scripts/validate_plugins.py`, the repository tests,
    `git diff --check`, and `python scripts/package_plugins.py --output dist`.
    Inspect the archives, expected asset list, and `checksums.txt`; smoke-test an

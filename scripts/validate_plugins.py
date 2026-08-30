@@ -30,6 +30,7 @@ def main() -> None:
     else:
         for plugin_dir in sorted(path for path in root.iterdir() if path.is_dir()):
             validate_plugin(plugin_dir, errors)
+        validate_synchronized_plugin_versions(root, errors)
         skills = collect_plugin_skills(Path("."), root, errors)
         validate_hermes_tap(Path("."), root, errors, skills)
         validate_skill_routing_cases(Path("evals/skill-routing.json"), skills, errors)
@@ -104,6 +105,30 @@ def validate_common_manifest(
     version = payload.get("version")
     if not isinstance(version, str) or SEMVER_RE.fullmatch(version) is None:
         errors.append(f"{path} must include strict semver version")
+
+
+def validate_synchronized_plugin_versions(
+    plugins_root: Path,
+    errors: list[str],
+) -> None:
+    """Require one version across all bundled plugins."""
+
+    versions: dict[str, str] = {}
+    for plugin_dir in sorted(path for path in plugins_root.iterdir() if path.is_dir()):
+        path = plugin_dir / ".codex-plugin" / "plugin.json"
+        if not path.is_file():
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        version = payload.get("version") if isinstance(payload, dict) else None
+        if isinstance(version, str) and SEMVER_RE.fullmatch(version):
+            versions[plugin_dir.name] = version
+
+    if len(set(versions.values())) > 1:
+        summary = ", ".join(f"{name}={version}" for name, version in versions.items())
+        errors.append(f"plugin versions must be synchronized: {summary}")
 
 
 def validate_skill(skill_dir: Path, errors: list[str]) -> None:

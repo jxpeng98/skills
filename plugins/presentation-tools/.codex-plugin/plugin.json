@@ -1,6 +1,6 @@
 {
   "name": "presentation-tools",
-  "version": "0.4.0",
+  "version": "0.6.1",
   "description": "Presentation skills for routing, creating, reviewing, and exporting Slidev, PPTX, and LaTeX Beamer decks.",
   "author": {
     "name": "jxpeng98",

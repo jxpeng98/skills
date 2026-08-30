@@ -13,16 +13,17 @@ paper-planning skills.
 
 ## Current Release
 
-The current repository release is [v0.6.0](https://github.com/jxpeng98/skills/releases/tag/v0.6.0).
-It contains 20 distributable skills across five plugins.
+The current repository release is [v0.6.1](https://github.com/jxpeng98/skills/releases/tag/v0.6.1).
+It contains 20 distributable skills across five plugins. Starting with v0.6.1,
+the repository tag and every bundled plugin use the same synchronized version.
 
-| Plugin | Version | v0.6.0 focus |
+| Plugin | Version | Highlights |
 | --- | --- | --- |
-| `dev-tools` | `0.4.0` | Adds systematic debugging, focused change review, and Apple Silicon Rust-to-Windows cross-build validation. |
-| `faculty-tools` | `0.5.0` | Makes clarification, feedback, planning, and faculty writing more natural and evidence-led. |
-| `presentation-tools` | `0.4.0` | Adds accessibility checks, source traceability, and static fallbacks for demos and interactive slides. |
-| `productivity` | `0.4.0` | Uses plainer prompts and adds reversible experiments when evidence cannot support a durable decision. |
-| `writing-tools` | `0.5.0` | Strengthens natural voice, factual preservation, clarity routing, and academic editing guidance. |
+| `dev-tools` | `0.6.1` | Adds systematic debugging, focused change review, and Apple Silicon Rust-to-Windows cross-build validation. |
+| `faculty-tools` | `0.6.1` | Makes clarification, feedback, planning, and faculty writing more natural and evidence-led. |
+| `presentation-tools` | `0.6.1` | Adds accessibility checks, source traceability, and static fallbacks for demos and interactive slides. |
+| `productivity` | `0.6.1` | Uses plainer prompts and adds reversible experiments when evidence cannot support a durable decision. |
+| `writing-tools` | `0.6.1` | Strengthens natural voice, factual preservation, clarity routing, and academic editing guidance. |
 
 ## Repository Layout
 
