@@ -1,4 +1,4 @@
 interface:
   display_name: "Humanizer"
   short_description: "Make stiff writing sound natural while preserving voice."
-  default_prompt: "Use $humanizer to make this draft sound like normal writing from a fluent speaker, using familiar words while preserving its facts and the writer's voice."
+  default_prompt: "Use $humanizer to make this draft sound like natural writing by a capable native user of the requested language, at the right level of formality, while preserving its facts and the writer's voice."

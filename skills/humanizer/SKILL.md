@@ -1,6 +1,6 @@
 ---
 name: humanizer
-description: "Rewrite user-authored text when it sounds stiff, generic, or unlike normal fluent writing. Preserve facts and authorship; use rewrite-for-clarity for direct clarity or tone edits, never for detector evasion."
+description: "Rewrite user-authored text that sounds stiff, translated, generic, or machine-like into natural target-language prose at the right register. Preserve facts and authorship; use rewrite-for-clarity for direct clarity or tone edits, never for detector evasion."
 ---
 
 # Humanizer
@@ -21,12 +21,30 @@ Defaults:
 
 Choose the voice anchor in this order: a supplied sample or stated preference,
 the writer's natural phrasing elsewhere in the draft, the relationship and
-genre, then the middle of everyday usage for that language and region. Prefer
-familiar words over formal synonyms. Do not make the writer sound more expert,
-formal, witty, or culturally idiomatic than the source supports. Match punctuation
-conventions unless translation is requested. Do not preserve robotic patterns
-merely because they appear in the source, and do not invent quirks to simulate a
-person.
+genre, then the middle of everyday usage for that language and region. Without a
+stronger anchor, write as a capable native user of the target language would for
+that genre: fluent and slightly polished, but not literary, conspicuously
+sophisticated, or textbook-like. Treat the target language's normal information
+order, collocations, paragraph movement, and reader expectations as authoritative.
+Keep the diction composed and tasteful without confusing elegance with distance,
+formality, or rare vocabulary.
+
+For everyday, workplace, or administrative prose, use the conventional register
+for that setting. For academic prose, use a moderately formal disciplinary
+register while keeping the syntax readable. Formality should come from precision,
+structure, and warranted qualification, not rare synonyms.
+
+When source and output languages differ, carry over meaning and communicative
+effect rather than sentence form. Rebuild word order, emphasis, collocations,
+idioms, metaphors, transitions, punctuation, and paragraph flow for the target
+language. Preserve facts and force, but omit or replace source-language devices
+that would feel copied or unnatural to the intended reader.
+
+Prefer familiar words over formal synonyms. Do not make the writer sound more
+expert, formal, witty, or culturally marked than the source supports. Match the
+target language and region's punctuation and discourse conventions. Do not
+preserve robotic patterns merely because they appear in the source, and do not
+invent quirks to simulate a person.
 
 Infer missing style preferences from the draft and context. Ask one short, direct
 question only when the answer would change meaning, audience fit, or the integrity

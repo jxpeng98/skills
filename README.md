@@ -13,17 +13,17 @@ paper-planning skills.
 
 ## Current Release
 
-The current repository release is [v0.6.1](https://github.com/jxpeng98/skills/releases/tag/v0.6.1).
+The current repository release is [v0.6.2](https://github.com/jxpeng98/skills/releases/tag/v0.6.2).
 It contains 20 distributable skills across five plugins. Starting with v0.6.1,
 the repository tag and every bundled plugin use the same synchronized version.
 
 | Plugin | Version | Highlights |
 | --- | --- | --- |
-| `dev-tools` | `0.6.1` | Adds systematic debugging, focused change review, and Apple Silicon Rust-to-Windows cross-build validation. |
-| `faculty-tools` | `0.6.1` | Makes clarification, feedback, planning, and faculty writing more natural and evidence-led. |
-| `presentation-tools` | `0.6.1` | Adds accessibility checks, source traceability, and static fallbacks for demos and interactive slides. |
-| `productivity` | `0.6.1` | Uses plainer prompts and adds reversible experiments when evidence cannot support a durable decision. |
-| `writing-tools` | `0.6.1` | Strengthens natural voice, factual preservation, clarity routing, and academic editing guidance. |
+| `dev-tools` | `0.6.2` | Adds systematic debugging, focused change review, and Apple Silicon Rust-to-Windows cross-build validation. |
+| `faculty-tools` | `0.6.2` | Makes clarification, feedback, planning, and faculty writing more natural and evidence-led. |
+| `presentation-tools` | `0.6.2` | Adds accessibility checks, source traceability, and static fallbacks for demos and interactive slides. |
+| `productivity` | `0.6.2` | Uses plainer prompts and adds reversible experiments when evidence cannot support a durable decision. |
+| `writing-tools` | `0.6.2` | Calibrates natural target-language prose, genre-appropriate formality, and non-literal rewriting. |
 
 ## Repository Layout
 
@@ -115,7 +115,7 @@ transformation.
 
 | Skill | Use When |
 | --- | --- |
-| `humanizer` | Improve natural voice and specificity without detector evasion or invented authorship. |
+| `humanizer` | Rewrite stiff, translated, generic, or machine-like prose in a natural target-language voice. |
 | `rewrite-for-clarity` | Make direct clarity, tone, channel, or audience edits while preserving meaning. |
 | `summarize-material` | Summarize general notes, articles, transcripts, documents, or long context; route university meetings to `meeting-synthesizer`. |
 

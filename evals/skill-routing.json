@@ -41,7 +41,7 @@
       "adjacent_negative": "Compare these two settled options and recommend one."
     },
     "humanizer": {
-      "direct": "Make this draft sound like a normal person wrote it while preserving my facts.",
+      "direct": "Make this translated draft sound natural to a native Chinese reader while preserving every fact.",
       "paraphrase": "This reads like AI copy; give it a more natural voice.",
       "adjacent_negative": "Shorten this paragraph and make the instructions clearer."
     },

@@ -1,7 +1,7 @@
 {
   "name": "dev-tools",
   "description": "Developer skills for debugging, change review, Rust-to-Windows cross-builds, repository boundaries, and release readiness.",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "author": {
     "name": "jxpeng98"
   },

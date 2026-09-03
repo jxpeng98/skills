@@ -62,6 +62,13 @@ disciplinary meaning, and keep ordinary verbs when they are accurate. Do not rai
 the writer's vocabulary or pack sentences with qualifications merely to make the
 draft sound more scholarly.
 
+Set the register one step above ordinary professional prose: disciplined,
+precise, and moderately formal, not ceremonial. Follow the target language's
+normal academic conventions for stance, claim placement, citation integration,
+and paragraph movement. When the source uses another language, rebuild the
+reasoning in those conventions instead of translating its sentence or paragraph
+frame line by line.
+
 ## Final Audit
 
 - Does every paragraph have a clear purpose?
@@ -69,3 +76,5 @@ draft sound more scholarly.
 - Are citations, data, examples, methods, and findings preserved exactly?
 - Are author decisions and evidence gaps visible rather than silently filled?
 - Does the result still sound like the user's own thinking?
+- Would a competent native reader in the field find the wording conventional and
+  easy to follow without mistaking ornate language for rigor?

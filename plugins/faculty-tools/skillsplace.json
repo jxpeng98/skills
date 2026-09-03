@@ -1,7 +1,7 @@
 {
   "name": "Faculty Tools",
   "slug": "faculty-tools",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Daily university faculty skills for teaching, feedback, student communication, meetings, and light academic-service writing.",
   "manifest": ".codex-plugin/plugin.json",
   "category": {

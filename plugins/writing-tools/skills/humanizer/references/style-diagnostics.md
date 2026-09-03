@@ -23,8 +23,11 @@ Look for clusters, not isolated words:
 - in Chinese, chains of `首先/其次/此外/综上`, broad frames such as
   `在当今……背景下`, and inflated defaults such as `值得注意的是`, `赋能`, or
   `彰显` when the sentence can state the point plainly;
-- grammar that is correct but still follows another language's word order,
-  emphasis, or paragraph rhythm;
+- literal-translation residue: possible grammar but unusual collocations,
+  source-language word order or emphasis, copied idioms or metaphors, excessive
+  subjects or connectors, and foreign punctuation or paragraph rhythm;
+- a register that sounds like a language exercise, prestige performance, or
+  generic polished output rather than writing for this reader and setting;
 - polished but empty sentences that add no evidence, decision, or meaning;
 - repeated conclusions, throat-clearing, and endings that recap instead of stop.
 
@@ -33,8 +36,13 @@ Look for clusters, not isolated words:
 - Read the whole paragraph for meaning, then redraft it without copying its syntax.
 - Put the concrete point, action, or claim where the reader needs it and use
   ordinary, specific words supported by the source.
-- Default to the middle of everyday usage. Choose the word a fluent speaker would
-  normally reach for first, unless a technical or exact term is needed.
+- Default to capable native usage for the genre: natural and slightly polished,
+  not basic, literary, or showy. Choose the familiar word that fits first unless
+  a technical or exact term is needed. Raise academic formality through precise
+  reasoning and qualification, not ornate vocabulary.
+- When the output language differs from the source, translate the communicative
+  job rather than the words. Rebuild information order, collocations, idioms,
+  emphasis, transitions, and paragraph movement for the target language.
 - Keep a transition only when the relationship is not already clear. Name the
   actual relationship instead of adding a decorative signpost.
 - Break accidental symmetry. A short sentence or one-line paragraph is useful
@@ -57,4 +65,6 @@ Compare source and revision for facts, force, register, and implications. The
 revision should sound like someone communicating a particular thought to a
 particular reader, not displaying polished prose. If a sentence could be pasted
 into many unrelated texts without changing, sharpen it from the source or delete
-it. Natural does not mean casual, quirky, or less grammatical.
+it. A reader should not have to mentally translate the sentence back into another
+language to understand why it was phrased that way. Natural does not mean casual,
+quirky, or less grammatical.

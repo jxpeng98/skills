@@ -1,4 +1,4 @@
 interface:
   display_name: "Summarize Material"
   short_description: "Summarize sources clearly for the intended reader."
-  default_prompt: "Use $summarize-material to summarize what this reader needs to understand or do in plain, natural language, using headings or bullets only when helpful."
+  default_prompt: "Use $summarize-material to summarize what this reader needs to understand or do in natural target-language prose at the right level of formality, using headings or bullets only when helpful."
