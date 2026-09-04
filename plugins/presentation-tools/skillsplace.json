@@ -1,7 +1,7 @@
 {
   "name": "Presentation Tools",
   "slug": "presentation-tools",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Presentation skills for choosing, creating, reviewing, and exporting Slidev, PowerPoint/PPTX, and LaTeX Beamer decks.",
   "manifest": ".codex-plugin/plugin.json",
   "category": {

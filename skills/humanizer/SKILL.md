@@ -1,6 +1,6 @@
 ---
 name: humanizer
-description: "Rewrite user-authored text that sounds stiff, translated, generic, or machine-like into natural target-language prose at the right register. Preserve facts and authorship; use rewrite-for-clarity for direct clarity or tone edits, never for detector evasion."
+description: "Rewrite user-authored text that sounds stiff, translated, generic, or machine-like into natural target-language prose, including register-aware Chinese. Preserve facts and authorship; use rewrite-for-clarity for direct clarity or tone edits, never for detector evasion."
 ---
 
 # Humanizer
@@ -54,8 +54,9 @@ boundary; otherwise use the ordinary middle register and proceed.
    structure.
 2. Protect names, numbers, dates, citations, claims, methods, findings, caveats,
    commitments, and domain terms. Flag suspected errors as `Needs verification`.
-3. Read `references/academic-editing.md` for academic or coursework editing.
-   Read `references/style-diagnostics.md` only for deep or robotic/generic style
+3. Read `references/chinese-writing.md` whenever the output is Chinese. Also read
+   `references/academic-editing.md` for academic or coursework editing. Read
+   `references/style-diagnostics.md` only for deep or robotic/generic style
    problems.
 4. Identify each paragraph's job and essential content. Rewrite from that meaning
    rather than editing the original sentence frame word by word. Restore protected

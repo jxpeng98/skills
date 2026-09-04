@@ -1,7 +1,7 @@
 {
   "name": "Productivity",
   "slug": "productivity",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Productivity skills for planning, critique, decisions, commits, and pull requests.",
   "manifest": ".codex-plugin/plugin.json",
   "category": {

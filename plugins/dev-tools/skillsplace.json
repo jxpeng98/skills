@@ -1,7 +1,7 @@
 {
   "name": "Dev Tools",
   "slug": "dev-tools",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Developer skills for debugging, change review, Rust-to-Windows cross-builds, repository boundaries, and release readiness.",
   "manifest": ".codex-plugin/plugin.json",
   "category": {

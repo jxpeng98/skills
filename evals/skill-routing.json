@@ -41,7 +41,7 @@
       "adjacent_negative": "Compare these two settled options and recommend one."
     },
     "humanizer": {
-      "direct": "Make this translated draft sound natural to a native Chinese reader while preserving every fact.",
+      "direct": "这段中文像逐字翻译。请按普通工作文件的语气改得自然流畅，并保留全部事实。",
       "paraphrase": "This reads like AI copy; give it a more natural voice.",
       "adjacent_negative": "Shorten this paragraph and make the instructions clearer."
     },
