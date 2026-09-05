@@ -13,17 +13,17 @@ paper-planning skills.
 
 ## Current Release
 
-The current repository release is [v0.6.3](https://github.com/jxpeng98/skills/releases/tag/v0.6.3).
+The current repository release is [v0.6.4](https://github.com/jxpeng98/skills/releases/tag/v0.6.4).
 It contains 20 distributable skills across five plugins. Starting with v0.6.1,
 the repository tag and every bundled plugin use the same synchronized version.
 
 | Plugin | Version | Highlights |
 | --- | --- | --- |
-| `dev-tools` | `0.6.3` | Adds systematic debugging, focused change review, and Apple Silicon Rust-to-Windows cross-build validation. |
-| `faculty-tools` | `0.6.3` | Makes clarification, feedback, planning, and faculty writing more natural and evidence-led. |
-| `presentation-tools` | `0.6.3` | Adds accessibility checks, source traceability, and static fallbacks for demos and interactive slides. |
-| `productivity` | `0.6.3` | Uses plainer prompts and adds reversible experiments when evidence cannot support a durable decision. |
-| `writing-tools` | `0.6.3` | Adds faithful, idiomatic Chinese rewriting across everyday, document, and academic registers. |
+| `dev-tools` | `0.6.4` | Synchronized release; skill behavior unchanged. |
+| `faculty-tools` | `0.6.4` | Clarifies meeting-record routing and standalone fallback behavior. |
+| `presentation-tools` | `0.6.4` | Routes by requested output and adds PPTX and Beamer creation guidance. |
+| `productivity` | `0.6.4` | Synchronized release; skill behavior unchanged. |
+| `writing-tools` | `0.6.4` | Strengthens faithful English and Chinese prose, paragraph logic, and natural transitions. |
 
 ## Repository Layout
 
@@ -115,9 +115,9 @@ transformation.
 
 | Skill | Use When |
 | --- | --- |
-| `humanizer` | Rewrite stiff, translated, generic, or machine-like prose in a natural target-language voice, with dedicated Chinese register guidance. |
+| `humanizer` | Rewrite stiff or translated drafts with faithful meaning, coherent paragraphs, and natural transitions; includes English and Chinese register guidance. |
 | `rewrite-for-clarity` | Make direct clarity, tone, channel, or audience edits while preserving meaning. |
-| `summarize-material` | Summarize general notes, articles, transcripts, documents, or long context; route university meetings to `meeting-synthesizer`. |
+| `summarize-material` | Summarize sources, including brief meeting summaries; prefer an available `meeting-synthesizer` for university decision and action records, with a standalone fallback. |
 
 ### `presentation-tools`
 
@@ -126,7 +126,7 @@ LaTeX Beamer decks.
 
 | Skill | Use When |
 | --- | --- |
-| `presentation-tool` | Choose and build across presentation formats when the format is not already fixed to Slidev. |
+| `presentation-tool` | Choose and build across presentation formats, including native editable PPTX from Slidev sources and new PPTX/Beamer projects. |
 | `slidev-slides` | Create, edit, review, build, or export a deck after Slidev has been chosen. |
 
 ## Development
@@ -149,10 +149,19 @@ Validate plugin manifests and skill frontmatter after changes:
 python scripts/validate_plugins.py
 ```
 
-The same validator checks that every distributable skill has one direct prompt,
-one paraphrase, and one adjacent negative prompt in
-`evals/skill-routing.json`. These are routing fixtures for independent forward
-behavior checks; they are not keyword assertions about generated prose.
+The same validator checks direct, paraphrase, and adjacent negative prompts in
+`evals/skill-routing.json`, plus behavioral scenarios with available skills,
+expected routes, and observable checks. Structural validation does not execute a
+model or establish a behavioral pass. For a forward check, give an independent
+evaluator only the prompt, available skills, and raw inputs; assess its actual
+route and response against the withheld checks. Include mixed requests, missing
+sources, and standalone installations.
+
+Run repository tests (also run by release CI):
+
+```bash
+python -m unittest discover -s tests -v
+```
 
 Check Markdown and whitespace before committing:
 

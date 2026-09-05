@@ -304,6 +304,36 @@ def validate_skill_routing_cases(
             if not isinstance(prompt, str) or not prompt.strip():
                 errors.append(f"{path} {name}.{field} must be a non-empty string")
 
+    # These checks validate fixtures, not a model's routing or generated prose.
+    scenarios = payload.get("scenarios")
+    if not isinstance(scenarios, dict) or not scenarios:
+        errors.append(f"{path} must contain non-empty behavioral scenarios")
+        return
+    for name, case in sorted(scenarios.items()):
+        label = f"{path} scenario {name}"
+        if not isinstance(case, dict):
+            errors.append(f"{label} must be an object")
+            continue
+        available = case.get("available_skills")
+        if (
+            not isinstance(available, list)
+            or not available
+            or any(not isinstance(skill, str) or skill not in skills for skill in available)
+        ):
+            errors.append(f"{label} available_skills must list known skills")
+        elif case.get("expected_skill") not in available:
+            errors.append(f"{label} expected_skill must be available in this scenario")
+        prompt = case.get("prompt")
+        if not isinstance(prompt, str) or not prompt.strip():
+            errors.append(f"{label} prompt must be a non-empty string")
+        checks = case.get("checks")
+        if (
+            not isinstance(checks, list)
+            or not checks
+            or any(not isinstance(check, str) or not check.strip() for check in checks)
+        ):
+            errors.append(f"{label} checks must list observable behavior")
+
 
 def collect_plugin_skills(
     root: Path,

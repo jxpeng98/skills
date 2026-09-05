@@ -1,14 +1,21 @@
 ---
 name: summarize-material
-description: "Summarize notes, articles, transcripts, documents, or long context into a brief, decision record, action list, or synthesis. Use meeting-synthesizer for university meetings where decisions, owners, or dates matter."
+description: "Condense notes, articles, transcripts, documents, or long context into a brief or synthesis. For a traceable university meeting decision and action record, prefer meeting-synthesizer when available."
 ---
 
 # Summarize Material
 
+Choose by the requested output: a brief meeting summary stays here; a university
+decision and action record belongs in `meeting-synthesizer` when available. If it
+is unavailable, complete the record here: distinguish decisions from proposals,
+trace actions to the source, and mark missing status, owners, or dates as
+`Needs confirmation`. Do not assume another plugin is installed.
+
 Read all in-scope material first. Identify who will use the summary and what they
 need to understand, decide, or do; then choose the shortest structure that serves
 that purpose. Infer the reader from context; ask one short, direct question only
-when the answer would materially change what belongs in the summary.
+when the answer would materially change what belongs in the summary. If no source
+is available, ask for it instead of inventing a summary.
 
 Use capable native usage for the requested language and region: familiar words,
 natural sentence patterns, and the normal register for the setting. An academic

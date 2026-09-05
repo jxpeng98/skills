@@ -22,18 +22,9 @@ plausible fact.
 
 ## Editing Modes
 
-### Coach Mode
-
-Use for assessed work or when the writer wants to learn. Diagnose argument flow,
-paragraph purpose, claim-evidence fit, register, and transition logic. Give a
-small number of high-value revision actions and explain why each helps. Keep
-author decisions with the author.
-
-### Polisher Mode
-
-Use for the writer's complete draft when sentence-level help is permitted.
-Improve clarity, coherence, grammar, and academic register without supplying new
-substance or erasing the writer's reasoning.
+In `Coach Mode`, diagnose argument flow, paragraph purpose, claim-evidence fit,
+and transitions; leave substantive decisions with the author. In `Polisher Mode`,
+improve permitted sentence-level expression without supplying new substance.
 
 ## Section Checks
 
@@ -57,17 +48,9 @@ when they match the source. Use transitions to show reasoning rather than to
 decorate the prose. Avoid inflated vocabulary, abstract noun stacks, and claims
 of novelty or causality that the evidence does not support.
 
-Academic does not mean ornate. Use the most familiar wording that carries the
-disciplinary meaning, and keep ordinary verbs when they are accurate. Do not raise
-the writer's vocabulary or pack sentences with qualifications merely to make the
-draft sound more scholarly.
-
-Set the register one step above ordinary professional prose: disciplined,
-precise, and moderately formal, not ceremonial. Follow the target language's
-normal academic conventions for stance, claim placement, citation integration,
-and paragraph movement. When the source uses another language, rebuild the
-reasoning in those conventions instead of translating its sentence or paragraph
-frame line by line.
+Use the discipline and venue's conventional register, with familiar wording and
+only warranted qualifications. Follow the target language's academic conventions
+for stance, claim placement, citation integration, and paragraph movement.
 
 ## Final Audit
 
@@ -75,6 +58,4 @@ frame line by line.
 - Does each claim stay within its evidence?
 - Are citations, data, examples, methods, and findings preserved exactly?
 - Are author decisions and evidence gaps visible rather than silently filled?
-- Does the result still sound like the user's own thinking?
-- Would a competent native reader in the field find the wording conventional and
-  easy to follow without mistaking ornate language for rigor?
+- Does the result preserve the user's reasoning in conventional disciplinary language?

@@ -1,8 +1,41 @@
 # Style Diagnostics
 
-Read this reference for deep edits or when the user describes prose as robotic,
-generic, formulaic, stiff, or AI-like. Treat these as writing-quality symptoms,
-not detector-evasion targets.
+Read for multi-paragraph drafts, awkward flow, abrupt transitions, or prose
+described as robotic, generic, formulaic, stiff, or AI-like. Treat these as
+writing-quality symptoms, not detector-evasion targets.
+
+## Trace the reasoning
+
+Identify each paragraph's main point and the job of its sentences: explanation,
+evidence, example, qualification, consequence, or action. Use this silently to
+find gaps and repetition; do not impose these roles as a fixed paragraph template.
+
+Across sentence and paragraph boundaries, check:
+
+- **Continuity:** can the reader identify the topic and each pronoun's referent?
+  Carry a key term or a source-supported idea forward instead of relying on a
+  generic connector. Avoid synonym changes that suggest a new concept.
+- **Progression:** does the next sentence develop the point, or merely repeat it?
+  Remove genuine repetition while retaining distinct evidence, caveats, and actions.
+- **Relationship:** is the intended link addition, contrast, cause, sequence, or
+  a new topic? Do not turn adjacency into causation or simultaneous timing.
+- **Gaps:** is a premise, subject, comparison, or link actually missing? Smooth
+  wording around known facts, but leave substantive decisions with the author.
+  Flag material gaps in a brief note or ask when an answer is needed; do not
+  invent a rationale or silently replace the author's stated conclusion.
+
+## Choose the transition
+
+| Relationship | Useful treatment | Check before using it |
+| --- | --- | --- |
+| Elaboration or addition | Continue with the relevant subject; add a connector only if it helps. | The new sentence develops or adds to the same point. |
+| Contrast or concession | Keep a natural `but`, `although`, `however`, `但`, or `尽管` when needed. | There is a real opposition, limitation, or counterexpectation. |
+| Reason or consequence | Use `because`, `therefore`, `因为`, or `因此` when warranted. | The source supports that relationship; a missing premise cannot be supplied by a connector. |
+| Time or sequence | State the time or order clearly. | `Then` or `随后` does not by itself establish cause; `meanwhile` or `与此同时` requires overlap. |
+| Topic change | Introduce the new subject or start a paragraph within the allowed structure. | The reader needs a new frame, not a decorative `moreover` or `此外`. |
+
+If the relationship is already evident, direct adjacency may be smoother. If it
+is not evident, simply deleting the connector may make the passage less coherent.
 
 ## Diagnose
 
@@ -10,8 +43,8 @@ Look for clusters, not isolated words:
 
 - an opening that announces a broad topic without making the writer's point;
 - paragraphs that repeat setup, explanation, and summary in the same tidy shape;
-- mechanical transitions, repeated sentence openings, and uniformly medium-length
-  sentences;
+- mechanical transitions, abrupt topic changes, unclear references, repeated
+  sentence openings, and an imposed sentence-length pattern;
 - serial three-part lists, repeated `not X but Y` contrasts, rhetorical questions,
   or dash-heavy asides used as a default pattern;
 - abstract noun stacks, vague verbs, and generic claims without context;
@@ -20,9 +53,6 @@ Look for clusters, not isolated words:
 - over-neutral, over-formal, promotional, or falsely balanced tone;
 - meta-commentary such as `this highlights`, `this underscores`, or `it is worth
   noting` where the concrete implication should be stated directly;
-- in Chinese, chains of `首先/其次/此外/综上`, broad frames such as
-  `在当今……背景下`, and inflated defaults such as `值得注意的是`, `赋能`, or
-  `彰显` when the sentence can state the point plainly;
 - literal-translation residue: possible grammar but unusual collocations,
   source-language word order or emphasis, copied idioms or metaphors, excessive
   subjects or connectors, and foreign punctuation or paragraph rhythm;
@@ -33,25 +63,12 @@ Look for clusters, not isolated words:
 
 ## Revise
 
-- Read the whole paragraph for meaning, then redraft it without copying its syntax.
-- Put the concrete point, action, or claim where the reader needs it and use
-  ordinary, specific words supported by the source.
-- Default to capable native usage for the genre: natural and slightly polished,
-  not basic, literary, or showy. Choose the familiar word that fits first unless
-  a technical or exact term is needed. Raise academic formality through precise
-  reasoning and qualification, not ornate vocabulary.
-- When the output language differs from the source, translate the communicative
-  job rather than the words. Rebuild information order, collocations, idioms,
-  emphasis, transitions, and paragraph movement for the target language.
-- Keep a transition only when the relationship is not already clear. Name the
-  actual relationship instead of adding a decorative signpost.
 - Break accidental symmetry. A short sentence or one-line paragraph is useful
   when the thought is short; longer syntax is useful only when the logic needs it.
 - Delete generic evaluation and recap. Replace it with a concrete implication
   when the source supports one.
-- Match contractions, pronouns, punctuation, warmth, and formality to the voice
-  anchor rather than applying one universal conversational style or importing
-  English cadence into Chinese (or the reverse).
+- Match contractions, pronouns, and warmth to the voice anchor rather than
+  applying one universal conversational style.
 
 Avoid stock phrases such as `In today's fast-paced world`, `It is important to
 note`, `delve`, `leverage`, and `utilize` when plainer wording is more precise.
@@ -61,10 +78,10 @@ when they are normal for the writer, audience, and setting.
 
 ## Verify
 
-Compare source and revision for facts, force, register, and implications. The
-revision should sound like someone communicating a particular thought to a
-particular reader, not displaying polished prose. If a sentence could be pasted
-into many unrelated texts without changing, sharpen it from the source or delete
-it. A reader should not have to mentally translate the sentence back into another
-language to understand why it was phrased that way. Natural does not mean casual,
-quirky, or less grammatical.
+If a sentence could be pasted into many unrelated texts without changing,
+sharpen it from the source or delete it. A reader should not have to mentally
+translate a sentence back into another language to understand its phrasing.
+Read paragraph endings and the following openings together. Confirm the thread
+remains clear without abrupt shifts, false contrasts, or invented explanations.
+Keep a closing sentence when it contributes a real implication or requested action;
+remove it only when it merely repeats the paragraph.

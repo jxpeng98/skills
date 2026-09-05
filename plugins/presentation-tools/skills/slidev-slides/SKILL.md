@@ -13,6 +13,11 @@ Inspect `slides.md`, `package.json`, components, layouts, assets, theme, and
 scripts. Reuse the project's package manager, Node version, commands, fonts, and
 paths.
 
+If the requested deliverable changes to native editable PPTX or Beamer, use
+`presentation-tool` when available. If unavailable, preserve the required format
+with compatible tooling and report missing capabilities; an image-based Slidev
+export does not satisfy native editability.
+
 1. Identify audience, desired outcome, talk length, and target export.
 2. Outline the opening claim, core sections, demo or decision path, risks, and
    close.

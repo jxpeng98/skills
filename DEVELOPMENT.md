@@ -228,6 +228,14 @@ behavior checks; do not turn them into keyword tests for generated prose. Simple
 skills can express the contract in a short sequence; complex or fragile workflows
 may use explicit sections and deterministic scripts.
 
+For overlapping or environment-dependent workflows, add a behavioral scenario
+with `available_skills`, a self-contained `prompt`, `expected_skill`, and observable
+`checks`. Include raw source material in the prompt. Give forward evaluators only
+the available skills and prompt, withholding the expected route and checks; record
+actual outcomes separately from structural validation. A sibling skill may be
+absent in an independent plugin or Hermes installation, so provide a usable
+fallback instead of treating a routing hint as an installed dependency.
+
 ## Supporting Resources
 
 Use `references/` for detailed material the agent should load only when relevant:

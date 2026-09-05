@@ -1,4 +1,4 @@
 interface:
   display_name: "Meeting Synthesizer"
-  short_description: "Extract decisions, actions, and risks from meetings."
-  default_prompt: "Use $meeting-synthesizer to turn this meeting record into clear decisions, actions, risks, and points that still need checking."
+  short_description: "Record university meeting decisions and action owners."
+  default_prompt: "Use $meeting-synthesizer to turn this university meeting record into traceable decisions, action owners, deadlines, and points needing confirmation."

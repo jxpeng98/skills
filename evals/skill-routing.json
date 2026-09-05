@@ -48,7 +48,7 @@
     "meeting-synthesizer": {
       "direct": "Turn these department meeting notes into decisions, owners, dates, and open questions.",
       "paraphrase": "Extract what the committee agreed and who must do what next.",
-      "adjacent_negative": "Summarize this journal article in five bullets."
+      "adjacent_negative": "Summarize these department meeting notes in two sentences without an action table."
     },
     "pr-description": {
       "direct": "Write a reviewer-ready pull request description from this branch diff.",
@@ -99,6 +99,233 @@
       "direct": "Reproduce this failing test, find the root cause, and verify the fix.",
       "paraphrase": "Diagnose why this build started failing and repair the shared cause.",
       "adjacent_negative": "Review this otherwise working branch for possible regression risks."
+    }
+  },
+  "scenarios": {
+    "clarity-requested-tone": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "请把这封客服邮件改得更友好，最多两句，不要增加承诺，只返回改写：我们已收到申请。预计9月10日前完成审核，结果尚未确定。",
+      "expected_skill": "rewrite-for-clarity",
+      "checks": [
+        "Make the requested friendly tone change and return at most two sentences without commentary.",
+        "Preserve receipt of the application, the estimated September 10 deadline, and the unresolved outcome.",
+        "Do not guarantee approval, a completion date, or a new follow-up action."
+      ]
+    },
+    "clarity-requested-firmness": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Make this request firmer but preserve its meaning and add no penalties or promises. Return only the revision: We would like the signed form by Friday. An extension may be possible, but it has not been approved.",
+      "expected_skill": "rewrite-for-clarity",
+      "checks": [
+        "Make the request firmer while retaining Friday and the signed form.",
+        "Keep the possible extension unapproved; add no threats, penalties, or guarantees."
+      ]
+    },
+    "humanizer-mixed-request": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "这段意思已经清楚，主要问题是翻译腔。请改成自然的中文工作文件表达，顺便精简，只返回改稿：通过对流程进行优化，我们在响应速度层面取得了提升。试点中平均处理时间从5天降至3天，但样本只有12件，尚不能判断长期效果。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Use one primary humanizing workflow and return one revision without automatically invoking both skills.",
+        "Preserve the pilot, 5-to-3-day change, sample of 12, and uncertainty about long-term effects.",
+        "Use natural professional Chinese without inventing causal certainty or extra results."
+      ]
+    },
+    "humanizer-assessed-work": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "这是我准备提交评分的课程论文段落。请帮我改善翻译腔并告诉我如何修改，不要替我补论证：在本研究中，十位受访者中的六位报告了更高的满意度。这可能显示出该措施的价值，但访谈无法确定因果关系。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Coach with targeted language revisions and brief reasons rather than supplying missing intellectual work.",
+        "Preserve six of ten interviewees, reported satisfaction, and the inability to establish causation.",
+        "Invent no methods, citations, results, or missing argument."
+      ]
+    },
+    "humanizer-without-sibling": {
+      "available_skills": ["humanizer"],
+      "prompt": "请把这句话改得更短、更友好，只返回改写：请在周五之前发送签字表格。延期申请尚未批准。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Complete the edit using the available skill without requiring installation of another skill.",
+        "Preserve the Friday timing, signed form, and unapproved extension while applying the requested tone."
+      ]
+    },
+    "meeting-brief-summary": {
+      "available_skills": ["summarize-material", "meeting-synthesizer"],
+      "prompt": "请把系务会议记录概括为两句话，不需要行动表：委员会同意延长图书馆开放时间。王老师提出购买新设备，但预算未获批准。李老师将在9月12日前整理使用量数据。",
+      "expected_skill": "summarize-material",
+      "checks": [
+        "Return a two-sentence summary without an action table despite the university meeting source.",
+        "Preserve the confirmed hours decision, unapproved equipment budget, and Li's September 12 data task."
+      ]
+    },
+    "meeting-accountable-record": {
+      "available_skills": ["summarize-material", "meeting-synthesizer"],
+      "prompt": "请整理为系务会议的决策和行动记录，包含负责人、期限及待确认事项：周提出10月试行新排课方案，主任表示需等预算审批。陈承诺9月18日前收集学生意见。记录另写着9月20日，但没说明对应哪项任务。",
+      "expected_skill": "meeting-synthesizer",
+      "checks": [
+        "Keep the October timetable pilot as a proposal pending budget approval, not a confirmed decision.",
+        "Record Chen's student-feedback action and September 18 deadline.",
+        "Surface the unexplained September 20 date without assigning it to an action or silently resolving it."
+      ]
+    },
+    "meeting-writing-only-install": {
+      "available_skills": ["humanizer", "rewrite-for-clarity", "summarize-material"],
+      "prompt": "请把学院会议笔记整理成决策和行动记录：有人建议取消周五答疑，但未表决。赵老师负责统计参加人数，截止日期没有确定。",
+      "expected_skill": "summarize-material",
+      "checks": [
+        "Complete the record with available skills instead of attempting to load meeting-synthesizer or blocking on installation.",
+        "Keep the cancellation as an unvoted proposal; record Zhao's action with the deadline needing confirmation.",
+        "Do not invent approval, an action owner for the proposal, or a due date."
+      ]
+    },
+    "meeting-without-summary-sibling": {
+      "available_skills": ["meeting-synthesizer"],
+      "prompt": "请把院务会议记录概括成一句话，不要行动表：会议同意延长资料室开放时间，具体开始日期待定。",
+      "expected_skill": "meeting-synthesizer",
+      "checks": [
+        "Return one summary sentence without requiring another skill or adding an action table.",
+        "Preserve the decision and unknown start date."
+      ]
+    },
+    "summary-missing-source": {
+      "available_skills": ["summarize-material", "meeting-synthesizer"],
+      "prompt": "请总结我提到的那份报告，列出三个主要结论。本次消息没有附报告，当前上下文和工作区也没有报告内容。",
+      "expected_skill": "summarize-material",
+      "checks": [
+        "Ask for the report or its contents concisely.",
+        "Do not fabricate three conclusions or claim to have read unavailable material."
+      ]
+    },
+    "presentation-editable-from-slidev": {
+      "available_skills": ["presentation-tool", "slidev-slides"],
+      "prompt": "I have a Slidev source deck, but the required deliverable is a PowerPoint file whose text and charts my colleagues can edit natively. Explain the build route before creating files. The existing Slidev PPTX export produces slide images.",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Select the route by native PPTX editability rather than the existing Slidev source.",
+        "Propose native text and chart objects through compatible tooling, not slide-image export.",
+        "Do not create files or claim a completed or rendered artifact in this planning request."
+      ]
+    },
+    "presentation-new-beamer-no-engine": {
+      "available_skills": ["presentation-tool"],
+      "prompt": "I need a new Chinese Beamer PDF with speaker notes. There is no existing project. This environment has no TeX engine and installation is unavailable. Explain what you can deliver now and what remains before claiming completion; do not create files yet.",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Offer useful Beamer source and build instructions while marking the requested PDF incomplete.",
+        "Address Chinese font/CJK support and speaker notes without assuming installed fonts or an engine.",
+        "Do not silently switch format, install tools, or claim compilation or visual verification."
+      ]
+    },
+    "humanizer-en-paragraph-flow": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Make this draft sound like natural British English for an internal project update. The wording and transitions feel mechanical. Keep two paragraphs, all findings and uncertainties, and return only the revision.\n\nFirstly, the form was tested for four weeks with 18 members of staff. Furthermore, median processing time fell from five days to three days during the pilot. However, several staff could not submit the form from their phones. This issue was reported six times. The pilot did not measure whether the gains would last.\n\nMoreover, the team has proposed a second test using mobile devices. Consequently, this proposal has not yet been approved. The budget owner will review the request on 14 October. Until a decision is made, the current form remains in use.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Return two coherent professional paragraphs with findings and limitations together, followed by the proposed next step; avoid mechanical sentence-by-sentence signposting.",
+        "Preserve four weeks, 18 staff, the median change from five to three days, six reports of the phone issue, and unmeasured lasting gains; do not turn six reports into six people.",
+        "Preserve the unapproved proposal, the budget owner's 14 October review, and continued use of the current form; do not present lack of approval as a consequence of proposing the test."
+      ]
+    },
+    "humanizer-en-needed-connectors": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Give this notice a light natural-language polish in British English. Preserve wording that already works and return only the notice: Because the building is closed for repairs, the workshop has moved online. Attendance is optional, but registered participants still need to confirm by Friday. The organisers have not changed the start time.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Retain the repair-related reason for moving online and the contrast between optional attendance and confirmation required from registered participants.",
+        "Preserve Friday and the unchanged start time without inventing a date, time, or penalty.",
+        "Keep natural logical links where needed rather than stripping all connectors or turning the notice into disconnected fragments; retain British spelling."
+      ]
+    },
+    "humanizer-en-topic-shift": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Humanise this staff update in natural English. The topics jump around; you may regroup it into paragraphs without adding facts. Return only the revision: The library will stay open until 8 p.m. during exam week. Moreover, the proposed printer costs £900. The new opening schedule starts on 3 June. The printer budget has not been approved. However, the library returns to normal hours on 17 June. The equipment proposal will be reviewed at the next committee meeting.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Group the library schedule and equipment proposal into coherent topics rather than connecting unrelated facts with decorative transitions.",
+        "Preserve 8 p.m., 3 June, 17 June, £900, unapproved funding, and review at the next committee meeting.",
+        "Invent no relationship between opening hours and the printer proposal, and do not imply the printer has been purchased."
+      ]
+    },
+    "humanizer-en-academic-flow": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Polish my completed research-report paragraph into natural academic English. Preserve the claims, quotation, and citation exactly in substance; return only the revised paragraph: The survey received 40 responses. In this regard, 23 respondents selected “more confident” (Lee, 2024, p. 7). However, the responses came from volunteers. Furthermore, no baseline measure was collected. These results suggest a perceived benefit, but they do not establish that the training caused improvement.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Produce a cohesive academic paragraph connecting the reported finding to its methodological limits without generic signposting or inflated diction.",
+        "Preserve 40 responses, 23 selections, the exact quotation “more confident”, the supplied citation, voluntary participation, and absent baseline measurement.",
+        "Retain perceived benefit as tentative and the inability to establish causation; invent no methods, sources, findings, or certainty."
+      ]
+    },
+    "humanizer-zh-notice-flow": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "这段通知的连接词很生硬。请按日常工作文件的语气改成自然、连贯的中文，保留所有事项，只返回改稿：首先，我们已收到您的申请。此外，审核通常需要3至5个工作日。然而，审核结果将通过电子邮件通知您。综上所述，请勿重复提交申请。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Present receipt, review duration, notification, and the user's action in a natural sequence without a false contrast or a formulaic conclusion.",
+        "Preserve the usual 3-to-5-working-day duration, notification by email, and the instruction not to submit again.",
+        "Do not drop the final action merely because it follows a stock concluding phrase, guarantee approval, or turn the usual duration into a firm promise."
+      ]
+    },
+    "humanizer-zh-topic-shift": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "请把这段衔接突兀的工作消息改得自然流畅，允许按内容重新分段，只返回改稿：首先，本周完成了36份申请的核对。另一方面，9月15日的培训将改为线上进行。原始数据缺失的4份申请仍待补充。新的填表说明已放在内网。然而，培训时间仍为上午10点，已经报名的人不需要重新报名。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Organise the application update and training arrangements into clear topics with explicit referents and natural paragraph movement.",
+        "Preserve 36 checked applications, four awaiting missing data, and the instructions already on the intranet without inventing an overall application total.",
+        "Preserve the online training on September 15, unchanged 10 a.m. start, and no repeat registration; invent no reason for the format change."
+      ]
+    },
+    "humanizer-zh-needed-connectors": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "请检查这段通知是否自然，只做必要的行文润色，已经合适的表达可以保留。只返回通知：因设备检修，资料室周三暂停线下服务，但线上咨询照常。恢复时间另行通知。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Preserve maintenance as the reason for Wednesday's in-person closure and the contrast with continuing online consultation.",
+        "Keep the reopening time unspecified and the promise of a later notice; do not invent a date or broaden the closure to online services.",
+        "Accept already natural wording or make a light edit; do not remove useful causal and contrast links to satisfy a connector blacklist."
+      ]
+    },
+    "humanizer-zh-traditional-register": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "請將這段翻譯腔較重的工作報告改得自然連貫，維持臺灣用字與繁體字，保留「線上申請」這個名稱，只回傳改稿：本次試辦有24位同仁參與。此外，同仁反映「線上申請」的步驟較容易理解。然而，系統仍無法儲存尚未送出的資料。另一方面，資訊組已收到這項問題，但修正日期尚未確定。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Use natural Traditional Chinese suitable for a Taiwan workplace report without switching script or forcing literary or internet phrasing.",
+        "Preserve 24 participants, the exact term 「線上申請」, and easier-to-understand steps as participant feedback.",
+        "Keep the unsaved-draft limitation linked to the reported issue and the unknown fix date; do not invent data loss after submission or a repair commitment."
+      ]
+    },
+    "humanizer-zh-to-en-flow": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "请把这段中文通知改写成自然的英国英语，避免逐字翻译和公文腔，只返回英文通知：为配合系统维护，在线申请入口将于本周三15:00关闭。已提交的申请不受影响。入口恢复时间尚未确定。如需帮助，请联系课程办公室。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Rebuild the notice in idiomatic professional English, preserving the maintenance reason and a clear progression from closure to its impact and support.",
+        "Preserve this Wednesday at 15:00 or 3 p.m., unaffected submitted applications, unknown reopening time, and the course office as the support contact.",
+        "Invent no time zone, calendar date, reopening promise, or institution name, and do not copy the Chinese administrative sentence frame."
+      ]
+    },
+    "humanizer-unresolved-links": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Make this paragraph sound natural. If a pronoun or reasoning link cannot be resolved from the text, flag it without guessing: Alex discussed Riley's draft with Jordan. They asked for a rewrite. The survey's response rate increased, so the changes reduced costs.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Flag that the requester identified as They is ambiguous instead of assigning the request to Alex, Jordan, Riley, or a group without evidence.",
+        "Flag the missing support between the increased response rate, unspecified changes, and reduced costs without inventing a causal explanation.",
+        "Either ask a focused clarification or provide a cautious revision with material notes; do not silently remove or strengthen the author's cost claim under the guise of smoothing transitions."
+      ]
+    },
+    "presentation-new-pptx-no-renderer": {
+      "available_skills": ["presentation-tool"],
+      "prompt": "Create a new editable PPTX from supplied content. For this preflight only, explain the next steps without creating files: python-pptx is installed, there is no template, and there is no PowerPoint, LibreOffice, artifact renderer, or installation access.",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Use the installed PPTX generator for a new deck instead of requiring another dependency or a preexisting project.",
+        "Distinguish producing editable objects and structural checks from the unavailable visual verification.",
+        "State that layout remains unverified; do not claim to have created or rendered a file."
+      ]
     }
   }
 }

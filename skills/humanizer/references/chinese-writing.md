@@ -22,22 +22,6 @@ ambiguity needs confirmation. If legally fixed, institutional, or quoted wording
 must remain exact, preserve it even when it is less natural than surrounding
 prose.
 
-## Apply 信、达、雅
-
-Use this priority order:
-
-- **信 — faithful:** preserve facts, intent, emphasis, stance, certainty,
-  relationships, terminology, and the strength of requests or conclusions. Do
-  not improve style by adding implications, praise, criticism, or evidence.
-- **达 — clear and idiomatic:** express the meaning in natural Chinese
-  information order and familiar collocations. Rebuild the sentence or paragraph
-  when needed; the reader should not have to recover the source-language frame.
-- **雅 — apt and restrained:** make the wording composed, clean, and rhythmic for
-  the setting. Elegance comes from exact words and well-shaped sentences, not
-  literary display, four-character phrases, parallelism, or rare vocabulary.
-
-Never trade faithfulness or clarity for elegance.
-
 ## Rewrite as Chinese
 
 - Work from the paragraph's purpose rather than translating clause by clause.
@@ -52,6 +36,8 @@ Never trade faithfulness or clarity for elegance.
 - Keep connectors only when they express a real relationship. Do not add
   `首先／其次／此外／综上所述`, `一方面／另一方面`, or a closing recap merely to
   make the passage look organized.
+- Replace empty frames such as `在当今……背景下` and inflated uses of
+  `值得注意的是`, `赋能`, or `彰显` with the concrete point supported by the source.
 - Recast source-language idioms, metaphors, passive forms, and punctuation by
   function. Do not translate them literally or replace them with invented
   Chinese idioms.
@@ -60,6 +46,23 @@ Never trade faithfulness or clarity for elegance.
   banned forms. Keep them when they are the most accurate and natural choice.
 - Preserve necessary technical and institutional terms. Introduce an abbreviation
   or translated term only when the source, audience, or venue warrants it.
+
+## 衔接与转折
+
+- 先理清每段要说明什么，再检查后一句如何承接前一句：是在解释、补充、举例、
+  限定、转折，还是提出下一步。不要为了显得顺畅而补写原文没有的理由。
+- 主语可以省略，但读者必须知道谁在行动。人物或话题切换时，按原文恢复必要的
+  名称；不要让“这”“其”“该”指向不明，也不要为避免重复而随意更换关键术语。
+- “但是”“然而”“尽管”需要真实的对照或预期落差；“因此”“所以”需要原文支持的
+  推论；“与此同时”需要确有同时发生的关系。“此外”不能代替缺失的话题衔接。
+- 关系已经清楚时，可以直接承接；必要时用具体名词或简短提示接住上一句。
+  新话题可以另起一段，不必给每段加连接词，也不必删掉所有连接词。
+- 长短句随意思安排，保留正常的语气和节奏。不要把中文切成电报式短句，也不要
+  用四字短语、排比或整齐句式代替具体表达。
+
+例如，“申请已收到。然而，审核通常需要三个工作日”在没有真实转折时，可改为
+“申请已收到，审核通常需要三个工作日”；“流程缩短了，但差错率没有下降”中的
+“但”表达了有意义的对照，应保留这一关系。示例不是固定替换模板。
 
 ## Final Read
 
@@ -71,6 +74,8 @@ Read the result as continuous Chinese, then check:
   another language?
 - Is the register consistent without turning daily prose casual, documents
   bureaucratic, or academic prose ceremonial?
+- Can the reader follow topic changes and omitted subjects? Does each transition
+  express the intended relationship without inventing a cause or contrast?
 - Can any elevated phrase be replaced with a simpler one without losing meaning,
   precision, or tone?
 - Do the revision and source still match in facts, force, uncertainty, and

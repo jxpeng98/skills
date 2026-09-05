@@ -70,6 +70,41 @@ class HermesTapValidationTests(unittest.TestCase):
 
 
 class SkillRoutingValidationTests(unittest.TestCase):
+    def test_behavior_cases_require_available_routes_and_observable_checks(self) -> None:
+        skills = {"summarize-material": Path("unused")}
+        case = {
+            "available_skills": ["summarize-material"],
+            "expected_skill": "summarize-material",
+            "prompt": "Summarize these notes.",
+            "checks": ["Preserve uncertain decisions as uncertain."],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "skill-routing.json"
+            for changes, expected_error in (
+                ({}, None),
+                ({"expected_skill": "meeting-synthesizer"}, "expected_skill"),
+                ({"available_skills": ["missing-skill"]}, "available_skills"),
+                ({"available_skills": [{}]}, "available_skills"),
+                ({"prompt": " "}, "prompt"),
+                ({"checks": [""]}, "checks"),
+            ):
+                with self.subTest(changes=changes):
+                    path.write_text(json.dumps({
+                        "skills": {"summarize-material": {
+                            "direct": "Summarize these notes.",
+                            "paraphrase": "Condense the record.",
+                            "adjacent_negative": "Rewrite this email.",
+                        }},
+                        "scenarios": {"isolated-install": {**case, **changes}},
+                    }), encoding="utf-8")
+                    errors: list[str] = []
+                    validate_skill_routing_cases(path, skills, errors)
+                    if expected_error is None:
+                        self.assertEqual(errors, [])
+                    else:
+                        self.assertEqual(len(errors), 1)
+                        self.assertIn(expected_error, errors[0])
+
     def test_rejects_a_skill_without_all_routing_cases(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "skill-routing.json"

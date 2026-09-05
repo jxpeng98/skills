@@ -1,9 +1,13 @@
 ---
 name: meeting-synthesizer
-description: "Synthesize university meeting, committee, department, or teaching-team notes when decisions, owners, due dates, risks, or confirmation status matter. Use summarize-material for general non-meeting sources."
+description: "Create traceable decision and action records from university meeting, committee, department, or teaching-team notes. For a brief summary without an action record, prefer summarize-material when available."
 ---
 
 # Meeting Synthesizer
+
+Use this for a decision and action record, not merely because the source is a
+meeting. For a brief summary, use `summarize-material` if available; otherwise
+summarize here in the requested length without adding an unrequested action table.
 
 Use the language and regional variety normal for the group. Prefer common words,
 short sentences, and concrete verbs. Keep official terms where needed, but avoid
