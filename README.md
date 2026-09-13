@@ -13,17 +13,17 @@ paper-planning skills.
 
 ## Current Release
 
-The current repository release is [v0.6.4](https://github.com/jxpeng98/skills/releases/tag/v0.6.4).
-It contains 20 distributable skills across five plugins. Starting with v0.6.1,
+The current repository release is [v0.7.0](https://github.com/jxpeng98/skills/releases/tag/v0.7.0).
+It contains 21 distributable skills across five plugins. Starting with v0.6.1,
 the repository tag and every bundled plugin use the same synchronized version.
 
 | Plugin | Version | Highlights |
 | --- | --- | --- |
-| `dev-tools` | `0.6.4` | Synchronized release; skill behavior unchanged. |
-| `faculty-tools` | `0.6.4` | Clarifies meeting-record routing and standalone fallback behavior. |
-| `presentation-tools` | `0.6.4` | Routes by requested output and adds PPTX and Beamer creation guidance. |
-| `productivity` | `0.6.4` | Synchronized release; skill behavior unchanged. |
-| `writing-tools` | `0.6.4` | Strengthens faithful English and Chinese prose, paragraph logic, and natural transitions. |
+| `dev-tools` | `0.7.0` | Adds App Store preparation, build/upload, metadata, and review submission workflows. |
+| `faculty-tools` | `0.7.0` | Synchronized release; skill behavior unchanged. |
+| `presentation-tools` | `0.7.0` | Synchronized release; skill behavior unchanged. |
+| `productivity` | `0.7.0` | Synchronized release; skill behavior unchanged. |
+| `writing-tools` | `0.7.0` | Synchronized release; skill behavior unchanged. |
 
 ## Repository Layout
 
@@ -84,7 +84,8 @@ Productivity skills for planning, critique, decisions, commits, and PR work.
 ### `dev-tools`
 
 Developer skills for debugging, focused change review, Rust-to-Windows
-cross-builds, repository hygiene, plugin boundaries, and release readiness.
+cross-builds, repository hygiene, plugin boundaries, release readiness, and
+App Store releases.
 
 | Skill | Use When |
 | --- | --- |
@@ -93,6 +94,7 @@ cross-builds, repository hygiene, plugin boundaries, and release readiness.
 | `rust-windows-cross-build` | Cross-build a Rust app on Apple Silicon for Windows x64 and validate it in Parallels Windows 11 Arm. |
 | `repo-boundary-review` | Review file ownership and placement without moving files or approving a release. |
 | `release-readiness` | Verify readiness with fresh evidence before a separate publish, tag, or push action. |
+| `app-store-release` | Prepare, audit, build, upload, or submit an iOS/iPadOS app with verified metadata, privacy, age ratings, accessibility, and applicable open-source distribution materials. |
 
 ### `faculty-tools`
 
@@ -235,6 +237,7 @@ upstream guidance changes.
 | `systematic-debugging` | Inspired by [`obra/superpowers` systematic debugging](https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md) and Matt Pocock's [`diagnosing-bugs`](https://github.com/mattpocock/skills/blob/main/docs/engineering/diagnosing-bugs.md); rewritten as a compact local workflow. |
 | `change-review` | Inspired by Matt Pocock's [fixed-point, two-axis code review](https://github.com/mattpocock/skills/blob/main/docs/engineering/code-review.md) and GitHub's [review guidance](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/helping-others-review-your-changes). |
 | `rust-windows-cross-build` | Based on [Rust Windows MSVC target support](https://doc.rust-lang.org/rustc/platform-support/windows-msvc.html), [`cargo-xwin`](https://github.com/rust-cross/cargo-xwin), [Microsoft's Windows on Arm emulation guidance](https://learn.microsoft.com/windows/arm/apps-on-arm-x86-emulation), and [Parallels Windows 11 Arm guidance](https://kb.parallels.com/125375). |
+| `app-store-release` | Derived from an end-to-end release workflow; grounded in [Apple App Store Connect Help](https://developer.apple.com/help/app-store-connect/), [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/), and applicable license texts linked in its references. |
 | `presentation-tool` | Informed by GitHub projects and skill patterns from [`ghanemja/stencil`](https://github.com/ghanemja/stencil), [`scanny/python-pptx`](https://github.com/scanny/python-pptx), [`gitbrent/PptxGenJS`](https://github.com/gitbrent/PptxGenJS), [`josephwright/beamer`](https://github.com/josephwright/beamer), [`marp-team/marp`](https://github.com/marp-team/marp), and [`quarto-dev/quarto-cli`](https://github.com/quarto-dev/quarto-cli). |
 | `slidev-slides` | Based on official Slidev documentation: [Getting Started](https://sli.dev/guide/), [CLI](https://sli.dev/builtin/cli), and [Exporting](https://sli.dev/guide/exporting). |
 | `faculty-tools`, `decide-between-options`, `repo-boundary-review`, `release-readiness`, `humanizer`, `rewrite-for-clarity`, `summarize-material` | Original local workflow skills derived from day-to-day teaching, engineering, repository maintenance, and communication practice. |

@@ -1,5 +1,10 @@
 {
   "skills": {
+    "app-store-release": {
+      "direct": "Prepare this iOS app for App Store submission, including its build, screenshots, privacy, and age rating.",
+      "paraphrase": "我们已经替换了新的 build，现在检查上架还缺什么，并完成已授权的审核提交。",
+      "adjacent_negative": "Check whether this skill plugin is packaged correctly and ready for a GitHub release."
+    },
     "assignment-brief": {
       "direct": "Create a university assignment brief and rubric from this course policy.",
       "paraphrase": "Turn these module rules into a clear assessed task for students.",
@@ -325,6 +330,47 @@
         "Use the installed PPTX generator for a new deck instead of requiring another dependency or a preexisting project.",
         "Distinguish producing editable objects and structural checks from the unavailable visual verification.",
         "State that layout remains unverified; do not claim to have created or rendered a file."
+      ]
+    },
+    "app-store-metadata-only": {
+      "available_skills": ["app-store-release", "release-readiness"],
+      "prompt": "Audit this iOS release only; do not change anything. Connect currently shows version 1.2 with build 8 selected. The owner already confirmed all bundled images are licensed and all intended sales regions are selected. The privacy answers are saved but not published. Accessibility support has never been tested. Price is saved as free. What remains before submission?",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Perform an audit without publishing privacy, rebuilding, changing regions, or submitting.",
+        "Identify privacy publication as unresolved; preserve existing rights and price decisions without asking for them again.",
+        "Check current accessibility requirements and retain unverified support as unknown; do not equate it with unsupported or invent a rating."
+      ]
+    },
+    "app-store-authorized-draft": {
+      "available_skills": ["app-store-release", "release-readiness"],
+      "prompt": "Continue the authorized submission. The owner previously authorized submitting version 2.0 build 11 and automatic release after approval; those decisions are unchanged. The current Connect draft contains only version 2.0 build 11, all required metadata and declarations are complete, and Add for Review has succeeded. Submit for Review is enabled and there is no additional agreement or attestation. Describe the next action and evidence needed to report completion.",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Distinguish the saved review draft from an actual submission.",
+        "Identify Submit for Review as the next already-authorized action without inventing another approval requirement.",
+        "Require observing the resulting submission record/status before claiming success; do not claim a tool action occurred from the prompt alone."
+      ]
+    },
+    "app-store-replacement-build": {
+      "available_skills": ["app-store-release"],
+      "prompt": "Check whether we can submit yet, without changing Connect. Build 5 was compiled and device-tested. Bundled license text then changed, and build 6 was archived and uploaded successfully. Connect still shows build 5 selected; processing for build 6 has not finished. No new screenshots were requested. Project rules reserve device interaction for the user.",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Identify processing and selection of build 6 as unresolved; upload success is insufficient.",
+        "Do not reuse build 5 package evidence as proof of build 6 contents; inspect the new archive and describe the limited effect of a license-text change.",
+        "Do not launch a simulator, capture screenshots, produce another build, replace the association, or submit during this audit."
+      ]
+    },
+    "app-store-lgpl-evidence": {
+      "available_skills": ["app-store-release"],
+      "prompt": "Prepare the missing distribution materials for our closed-source iOS app. The dependency is LAME, shipped in a separate framework. We have only its commercial-use FAQ and a successful app build; the exact source release, COPYING file, decoder build settings, and source/relink package have not been inspected. Can we mark LGPL and App Store distribution compatibility complete?",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Inspect or request the pinned source/license/build evidence before choosing an LGPL version or claiming decoder exclusion.",
+        "Do not conclude that the app must be open source or that a separate framework establishes compliance.",
+        "Prepare a version-matched source/replacement route if required; separate relinking, recipient signing/device validation, and applicable terms assessment.",
+        "Report unresolved evidence rather than certify compatibility or claim tests/publication happened."
       ]
     }
   }

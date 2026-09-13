@@ -1,8 +1,8 @@
 {
   "name": "Dev Tools",
   "slug": "dev-tools",
-  "version": "0.6.4",
-  "description": "Developer skills for debugging, change review, Rust-to-Windows cross-builds, repository boundaries, and release readiness.",
+  "version": "0.7.0",
+  "description": "Developer skills for debugging, change review, cross-builds, repository boundaries, release readiness, and App Store releases.",
   "manifest": ".codex-plugin/plugin.json",
   "category": {
     "codex": "Developer Tools",
@@ -15,7 +15,9 @@
     "rust",
     "windows",
     "repository",
-    "release"
+    "release",
+    "ios",
+    "app-store"
   ],
   "platforms": {
     "codex": true,
