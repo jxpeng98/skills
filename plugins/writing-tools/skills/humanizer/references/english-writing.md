@@ -24,6 +24,9 @@ spelling preference.
 
 - Keep the subject and main verb easy to locate. Untangle stacked modifiers,
   noun chains, and long interruptions without stripping useful qualification.
+  Keep a modifier beside its target; preserve the scope of `only`, `not`, and
+  conditions such as `if` or `unless`. Rebuild the clause before polishing its
+  vocabulary; formal synonyms cannot fix an unclear action or broken syntax.
 - Where it helps continuity, begin with a recognisable topic or referent and move
   towards the new point. Avoid ambiguous `this`, `it`, `they`, or `such`; name the
   finding, process, or person when the source makes that reference clear.
@@ -58,9 +61,23 @@ Illustrations, not fixed replacement patterns:
 - `The new form was shorter, but users still needed help completing it.`
   already expresses a useful contrast; removing `but` is not an improvement.
 
+## Concrete explanation
+
+For a vague claim, use the supplied mechanism, condition, comparison, or example
+that makes it meaningful. Explain how that detail supports the point. More
+adjectives or a longer paragraph do not add depth; neither does a list of
+unexplained facts. Keep enough detail for this audience and format without
+inventing features, results, or reasons.
+
+For example, given that export uses the current filters, downloads a CSV, and
+does not email it, replace `Facilitate seamless data accessibility` with
+`Export the filtered results as a CSV file. The file downloads to your device;
+it is not sent by email.` This is illustrative, not a required wording pattern.
+
 ## Final read
 
 Check that the reader can follow who or what each sentence concerns, why the next
-sentence follows, and how the paragraph advances the point. Recheck idiomatic
-collocations and consistent spelling, tense, and register. Preserve necessary
-connectors and caveats; remove only wording that distorts or obscures the thought.
+sentence follows, and what concrete information the paragraph adds. Recheck
+idiomatic collocations and consistent spelling, tense, and register. Preserve
+necessary connectors and caveats; remove only wording that distorts or obscures
+the thought.

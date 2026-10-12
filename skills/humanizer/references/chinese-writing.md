@@ -33,6 +33,9 @@ prose.
 - Untangle stacked modifiers, repeated `的`, excessive nominalization, and long
   clause chains. Split only where the thought naturally changes; do not turn
   every sentence short.
+- 先找出“谁做什么”的主干，再安排时间、条件和修饰语。让“不”“仅”“可能”等
+  紧贴其限定的动作或判断，避免换语序时改变适用范围。必要时把一长串定语改成
+  独立分句；不要为保留一个高级词或四字短语而迁就别扭的搭配。
 - Keep connectors only when they express a real relationship. Do not add
   `首先／其次／此外／综上所述`, `一方面／另一方面`, or a closing recap merely to
   make the passage look organized.
@@ -64,6 +67,17 @@ prose.
 “申请已收到，审核通常需要三个工作日”；“流程缩短了，但差错率没有下降”中的
 “但”表达了有意义的对照，应保留这一关系。示例不是固定替换模板。
 
+## 把内容说具体
+
+“高效”“便捷”“深入”等评价需要素材中的动作、机制、条件或例子支撑。按读者
+需要展开其中有依据的部分，说明细节与观点的关系，不把更多形容词当作更多信息。
+深度不等于篇幅：按钮说明要让人知道操作及结果，技术解释则可能需要过程和限制。
+资料没有交代的机制或效果应指出缺口，不得自行补成产品功能、案例或量化收益。
+
+例如，若素材只确认“离线时保存在本机；联网后须点击同步；不会自动上传”，
+“打造高效无缝的数据协同闭环”可以改为：“离线时，记录保存在本机。联网后点击
+‘同步’才能上传，系统不会自动上传。”细节来自已知行为，没有额外承诺实时同步。
+
 ## Final Read
 
 Read the result as continuous Chinese, then check:
@@ -78,5 +92,6 @@ Read the result as continuous Chinese, then check:
   express the intended relationship without inventing a cause or contrast?
 - Can any elevated phrase be replaced with a simpler one without losing meaning,
   precision, or tone?
+- 是否保留了理解或操作所需的具体信息，而不只是把空泛句子润色得更顺口？
 - Do the revision and source still match in facts, force, uncertainty, and
   authorship?

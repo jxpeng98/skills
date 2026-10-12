@@ -12,8 +12,9 @@ and architecture-sensitive cases.
 1. Confirm the Mac is Apple Silicon, identify the Cargo workspace and expected
    Windows artifacts, and inspect `Cargo.toml`, `Cargo.lock`, `.cargo/config*`,
    `build.rs`, native dependencies, code generators, and packaging steps.
-2. Reuse installed Rust, LLVM, cargo-xwin, and Parallels tooling. Ask before
-   installing global tools or accepting the Microsoft SDK licence.
+2. Reuse installed Rust, LLVM, cargo-xwin, and Parallels tooling. Use existing
+   authorization for setup; obtain any missing permission before global installs
+   or Microsoft SDK licence acceptance, subject to the host's approval rules.
 3. Run the project's macOS checks for portable logic, then cross-build the
    Windows release with cargo-xwin. A successful build is not a runtime pass.
 4. Inspect each deliverable as PE/COFF x86-64 and collect required DLLs,

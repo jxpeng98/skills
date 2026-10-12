@@ -16,11 +16,13 @@ the project where possible.
    and save to a new output path. For a new deck, use its default presentation or
    create a PptxGenJS presentation, set the slide size, and add native objects.
    Do not assume a library for creating decks can import an existing template.
-3. Build a representative slide first, including the required chart, table, or
-   notes. Check that these remain editable before expanding the deck. A zip/XML
+3. For a new deck or redesign, build representative content-filled layouts,
+   including the required chart, table, or notes. Check that these remain editable
+   before expanding the deck. A zip/XML
    inspection or successful save alone does not verify rendered layout.
 4. Render a copy through an available PowerPoint, LibreOffice, or artifact
-   renderer, then inspect every slide. For an installed `soffice`, a PDF preview
+   renderer. Inspect every slide for creation or global changes, and affected
+   slides for a local edit. For an installed `soffice`, a PDF preview
    can be produced with:
 
    ```bash

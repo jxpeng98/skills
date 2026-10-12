@@ -1,53 +1,83 @@
 ---
 name: presentation-tool
-description: "Create, edit, review, or route PowerPoint/PPTX, Beamer, Marp, Quarto, PDF, or undecided presentation work. Prefer slidev-slides when Slidev remains the chosen output; use this for native editable PPTX even from Slidev sources."
+description: "Create, edit, review, or export presentations and accompanying handouts, including native editable PPTX and Beamer. Use slidev-slides when Slidev is the chosen output."
 ---
 
 # Presentation Tool
 
-Use the language and regional variety required by the audience. Write slide text
-as people normally speak: common words, natural phrases, and only the technical
-terms the subject needs. Avoid report prose, consultant headings, and showy wording.
+Choose by the requested artifact, not the source extension. Use `slidev-slides`
+for a Slidev workflow when available; otherwise complete it with compatible
+project tooling. Preserve supplied templates, fonts, engines, paths, and the
+package manager unless a requested change requires otherwise.
 
-Choose by the required output, not just the source extension. Use `slidev-slides`
-when Slidev remains the chosen workflow and that skill is available; otherwise
-use existing project scripts and the checks below. Inspect the deck, template,
-assets, and tooling before choosing a format.
+Match the operation:
+
+- **Create or redesign:** establish audience, purpose, talk length, required
+  artifact/editability, prior knowledge, and template constraints. Infer what is
+  clear. Plan the argument and visual hierarchy, then build and verify the deck.
+- **Edit:** inspect the affected slides and their layout dependencies. Make the
+  requested change without re-outlining or redesigning unrelated slides.
+- **Review:** inspect the source and available render; return findings with slide
+  locations, evidence, and fixes. Do not modify the deck unless asked.
+- **Export:** reuse the existing source and build route. Verify the requested
+  output without rewriting the content or replacing the design.
+
+When the output format is undecided, use this choice:
 
 | Format | Choose it when |
 | --- | --- |
 | Slidev | Source control, code, demos, or web delivery matter |
-| PPTX | PowerPoint editing, supplied templates, masters, or brand layouts matter |
+| PPTX | PowerPoint editing, supplied masters, or brand layouts matter |
 | Beamer | Reproducible PDF, math, citations, or TeX source matter |
 | Marp | Plain Markdown and simple export are enough |
-| Quarto | Executable code, notebooks, citations, or multi-output publishing matter |
+| Quarto | Executable code, notebooks, or multi-output publishing matter |
 
-1. Identify audience, talk length, final artifact, editability, template/brand
-   constraints, and notes or handout needs. Infer what is clear; if one missing
-   detail changes the format, ask one short, direct question.
-2. Draft a short format-neutral outline, then keep the existing project toolchain
-   unless it cannot produce the required artifact.
-   For new PPTX or Beamer projects, missing tooling, or rendering limitations,
-   read `references/format-workflows.md`.
-3. Build one primary idea per slide and preserve local paths, engines, themes,
-   fonts, and package manager.
-4. Keep important claims traceable to supplied sources. Give every live demo or
-   interactive step a static fallback that still communicates the result.
-5. Render the actual target artifact and inspect it before finishing.
+For new PPTX/Beamer projects, missing tools, or rendering limitations, read
+`references/format-workflows.md`. For new decks or changes to content depth,
+templates, visual hierarchy, or accompanying handouts, read
+`references/content-and-layout.md`.
+A typo fix or routine export does not need a fresh content/design planning pass.
 
-Format rules:
+Content and layout requirements:
 
-- PPTX: use supplied masters/layouts and tooling that preserves the required
-  editable text, tables, charts, notes, and media. Do not flatten Slidev output
-  into images when native editable objects are required.
-- Beamer: preserve the TeX project and engine; use semantic frames, sparse
-  overlays, and `fragile` for verbatim content; compile the PDF.
-- Marp/Quarto: choose Marp for simple decks and Quarto only when its executable or
-  publishing features are needed.
+- Give each substantive slide a clear point or question and enough concrete
+  support to understand it: a finding, mechanism, worked example, comparison,
+  or decision with its tradeoff. Keep essential explanation on the slide; notes
+  can extend it, but cannot rescue an empty body. Covers and section dividers
+  need not carry evidence. Do not equate short bullets with useful substance.
+- Use a supported takeaway title for a finding; use a specific topic title for
+  a process, definition, or setup. Avoid unsupported insight or generic labels.
+  Use natural English or Chinese clause order, with clear actors, actions, and
+  conditions. Keep technical distinctions; do not compress reasoning into noun
+  stacks or choose ornate terms at the cost of fluency. A compact title or label
+  is fine when its relationship to the explanation is clear.
+- Sequence ideas so the audience has the definitions and context needed for each
+  next step. Explain how an example or result supports the point; transitions
+  must express the actual relationship, not disguise a jump in reasoning.
+- Create only requested materials. Slides need visible support for their point;
+  speaker notes can add delivery cues and detail. A reading handout must explain
+  the topic without the speaker, using relevant definitions, worked reasoning,
+  examples, and limits. Keep shared facts and terms consistent across outputs.
+- Keep evidence, interpretation, and proposed action distinct. Preserve units,
+  time periods, denominators, comparison bases, caveats, and source anchors.
+  If evidence is thin, identify the specific gap or use a clearly labelled
+  illustration; do not fabricate numbers, explanations, or citations for depth.
+- Make the template concrete: consistent title, evidence/body, and source areas;
+  a readable type hierarchy, alignment, spacing, and color roles; a small set of
+  layouts selected for the content. Test them with real, dense material before
+  extending them. Repeated decorative panels are not a substitute for structure.
+- Preserve required native editable text, tables, charts, diagrams, and notes.
+  Image-only Slidev export cannot satisfy native editable PPTX. Give demos and
+  interactions a static fallback, and preserve accessible reading order,
+  contrast, and meaningful alt text or adjacent explanations.
 
-Check overflow, cropping, broken assets, aspect ratio, fonts, code readability,
-speaker notes, links, talk time, reading order, contrast, meaningful alt text or
-nearby explanations, static-export meaning, and format-specific editability.
-Report checks not run. Do not substitute image-only PPTX slides when editable
-objects are required. Distinguish artifact creation from successful rendering;
-an unrendered deliverable still has unverified layout.
+For creation or a deck-wide redesign, render and inspect every slide. For local
+edits, inspect affected slides and adjacent continuity; expand checks for global
+font, theme, master, or export changes. Check both argument coverage and visual
+legibility: unsupported claims, generic filler, missing explanation, overflow,
+cropping, assets, labels, fonts, editability, and static-export meaning.
+Check requested handouts separately for complete explanations and, for formatted
+documents, rendered legibility and page breaks.
+Repair failures caused by the work and rerun affected checks until the requested
+artifact is usable or a concrete blocker remains. Distinguish source creation,
+successful export, and inspected layout; report only checks actually performed.

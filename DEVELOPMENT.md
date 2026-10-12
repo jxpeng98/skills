@@ -261,8 +261,10 @@ assets/
 └── report-template.docx
 ```
 
-Do not duplicate the same large reference across multiple skills. Put shared
-material at the plugin level when practical and point individual skills to it.
+Keep required resources inside each skill so standalone Hermes installs work.
+Avoid duplicating large references; a short common invariant may be repeated when
+skills must work independently. Use plugin-level resources only when the actual
+distribution includes them and the standalone path has a usable fallback.
 
 ## Marketplace Integration
 

@@ -1,13 +1,11 @@
 ---
 name: release-readiness
-description: "Verify release readiness for skill, plugin, repository, or marketplace changes using fresh validation and packaging evidence. Use for readiness gates; never tag, push, publish, or count unrun checks as passed."
+description: "Check skill, plugin, or repository release readiness from validation and packaging evidence, on its own or as a gate within an authorized release."
 ---
 
 # Release Readiness
 
-Use the language required by the user, audience, or repository. Prefer common
-words and familiar sentence patterns. Keep needed technical terms, but do not add
-formal or corporate wording just to sound polished.
+Report in plain language appropriate to the user and repository.
 
 1. Read release guidance and identify the artifact, release surface, changed
    files, and version.
@@ -29,5 +27,7 @@ Check what applies:
 - marketplace changes live only in the marketplace repository;
 - Git status contains only intended changes.
 
-Return `Ready` or `Not ready`, blockers, checks run, remaining risks, and the next
-step. Do not publish, tag, or push unless explicitly asked.
+Report `Ready` or `Not ready` with blockers, checks run, and material remaining risks.
+An assessment alone does not authorize publishing. When this is a gate within an
+already authorized release, continue that workflow after the checks pass; do not
+treat the readiness report as its completion or request the same approval again.

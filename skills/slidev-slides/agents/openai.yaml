@@ -1,4 +1,4 @@
 interface:
   display_name: "Slidev Slides"
-  short_description: "Create and verify practical Slidev presentations."
-  default_prompt: "Use $slidev-slides to create and verify a practical deck from this material, with plain slide text that sounds natural when spoken."
+  short_description: "Build clear Slidev decks and self-contained handouts."
+  default_prompt: "Use $slidev-slides to create the requested deck and any requested handout with coherent explanations, concrete examples, clear layouts, and appropriate verification."

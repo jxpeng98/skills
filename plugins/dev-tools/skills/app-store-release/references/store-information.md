@@ -4,15 +4,26 @@ Use the project's existing facts and the current Connect form. A filled field is
 not evidence that its answer is correct. Record confirmed decisions once and
 reuse them while their scope and facts remain unchanged.
 
+Work only on the sections implicated by the request or a concrete validation
+error. An audit reads and reports; local preparation produces proposed values;
+authorized Connect edits save or publish only to the requested stage. Check each
+field's scope and editability before saving: a platform version can be separate
+while pricing or declarations affect the shared app record.
+
 ## App record and product page
 
 - Confirm the developer team, supported platforms, registered bundle ID, app name,
   primary language, SKU, and intended user access before creating a missing app.
   Team-wide Full Access is an access decision, not a required default.
+- Reuse the intended record for a new version or platform. Check Apple's
+  [app-record guidance](https://developer.apple.com/help/app-store-connect/create-an-app-record/add-a-new-app)
+  and [platform setup](https://developer.apple.com/help/app-store-connect/create-an-app-record/add-platforms)
+  before assuming one independent record per target: watch-only apps are managed
+  under iOS in Connect, and universal purchase shares a record across platforms.
 - Map prepared text to name, subtitle, promotional text, description, keywords,
   category, copyright, support URL, and applicable marketing URL. Verify current
-  limits and required localizations. Keep Chinese and English claims consistent
-  when both are supported; do not invent features or support promises.
+  limits and required localizations. Keep claims consistent across the requested
+  locales; do not add languages, invent features, or make support promises.
 - Review contact details go to Apple. Public support details and privacy URLs
   serve customers. Do not copy private reviewer details into public metadata.
   Supply a usable review account only if login is required, plus concise steps
@@ -21,13 +32,15 @@ reuse them while their scope and facts remain unchanged.
 
 ## Screenshots and previews
 
-1. Find the existing capture/export workflow and current candidate UI. Respect
+1. Reuse suitable existing screenshots when the relevant UI is unchanged. For new
+   captures, find the existing capture/export workflow and candidate UI. Respect
    project rules reserving simulator or device interaction for the user; explicit
    screenshot capture authorization applies only to the requested work.
 2. Use Apple's current [screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications)
    and the actual media manager to identify required device sizes and locales.
    Check dimensions, orientation, readability, order, and rights to shown content.
-   Use real app views; never fabricate UI or include personal data.
+   Use real app views; never fabricate UI or include personal data. A copy-only
+   change does not require new screenshots or simulator access.
 3. Prepare replacements before removing old images. For an authorized replacement,
    update the intended slots and verify processing, saved counts, order, and any
    inherited device/localization sets. Do not assume a thumbnail means every

@@ -1,6 +1,6 @@
 ---
 name: feedback-writer
-description: "Write constructive, evidence-based feedback on student essays, reports, assignments, drafts, presentations, reflections, or projects from the actual work and rubric. Use for feedback, not unsupported grading or student profiling."
+description: "Write actionable feedback on student work using the actual submission and rubric. Use for feedback, not assignment design or unsupported grading."
 ---
 
 # Feedback Writer

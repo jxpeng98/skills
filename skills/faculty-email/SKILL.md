@@ -1,6 +1,6 @@
 ---
 name: faculty-email
-description: "Draft or revise university emails to students, colleagues, administrators, committees, supervisors, partners, or teaching teams from supplied context. Use for send-ready drafts; never send or invent policy, approval, or commitments."
+description: "Draft or revise university emails from supplied context and policy. Use for send-ready drafts."
 ---
 
 # Faculty Email

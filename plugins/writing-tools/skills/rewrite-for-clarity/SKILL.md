@@ -24,13 +24,19 @@ source's tone. A tone change must not change facts, commitments, or certainty.
    output language differs, recast word order, collocations, idioms, emphasis,
    transitions, and paragraph movement for the target language.
 4. Put the point, request, decision, or conclusion where the reader needs it. Use
-   ordinary, specific wording a fluent speaker would normally choose and let
-   sentence length follow the logic.
+   a natural main clause, then place modifiers and qualifications where their
+   scope is clear. Preserve who acts, conditions, negation, and causal limits;
+   do not bend word order around elevated vocabulary.
+   Make vague wording specific using relevant actions, mechanisms, or examples
+   already in the supplied material. Explain their relevance instead of adding
+   adjectives or merely listing facts. Preserve the requested length and channel:
+   app copy needs the relevant action, state, or result, not a full technical essay.
 5. Remove filler, repeated conclusions, decorative transitions, vague phrasing,
    unnecessary hedging, and process language. Do not force parallel structure,
    extra headings, or a polished recap.
 6. Compare the rewrite with the source and requested changes. Do not invent
-   claims, names, numbers, promises, examples, policy, or stronger evidence.
+   claims, names, numbers, promises, examples, policy, or stronger evidence. If
+   requested depth needs missing substance, identify that gap; do not pad the text.
 
 For short text, return only the rewrite. For sensitive text, add only material
 changes or meaning that needs confirmation. Match the target language and region's

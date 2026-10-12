@@ -1,8 +1,8 @@
 # Style Diagnostics
 
-Read for multi-paragraph drafts, awkward flow, abrupt transitions, or prose
-described as robotic, generic, formulaic, stiff, or AI-like. Treat these as
-writing-quality symptoms, not detector-evasion targets.
+Read when reasoning, referents, or transitions remain unclear, or an initial
+revision still sounds unnatural. Routine polish does not need this extra pass.
+Treat these as writing-quality symptoms, not detector-evasion targets.
 
 ## Trace the reasoning
 
@@ -63,10 +63,15 @@ Look for clusters, not isolated words:
 
 ## Revise
 
+- If simpler vocabulary still leaves an awkward sentence, reconstruct its main
+  clause and modifier order. Check who acts and the scope of each condition or
+  negation before restoring supporting detail.
 - Break accidental symmetry. A short sentence or one-line paragraph is useful
   when the thought is short; longer syntax is useful only when the logic needs it.
-- Delete generic evaluation and recap. Replace it with a concrete implication
-  when the source supports one.
+- Replace generic evaluation with a supported action, mechanism, comparison, or
+  example and explain its relevance. Remove repetition, not the detail that lets
+  a reader understand how something works. Flag missing substance rather than
+  inventing an implication or quietly changing the author's conclusion.
 - Match contractions, pronouns, and warmth to the voice anchor rather than
   applying one universal conversational style.
 

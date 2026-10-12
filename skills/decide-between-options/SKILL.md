@@ -14,8 +14,8 @@ corporate, or showy wording just to sound polished.
 2. Inspect available evidence. If a missing fact could change the recommendation
    and cannot be inferred, ask one short, direct question without a preamble.
    Otherwise state the assumption and continue.
-3. Compare every option against the same 3-6 useful criteria. Weight criteria
-   only when weighting changes the result.
+3. Compare every option against the same decision-relevant criteria. Do not add
+   criteria merely to fill a table; weight them only when it changes the result.
 4. Recommend one option, name its main cost, and say what evidence would reverse
    the choice.
 5. If the evidence cannot support a durable choice, recommend the cheapest

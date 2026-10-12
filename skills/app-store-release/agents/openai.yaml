@@ -1,4 +1,4 @@
 interface:
   display_name: "App Store Release"
-  short_description: "Prepare builds, store information, and review submissions"
-  default_prompt: "Use $app-store-release to check this app's current release state and complete the requested App Store preparation, upload, or submission steps."
+  short_description: "Prepare Apple apps for TestFlight and App Store release"
+  default_prompt: "Use $app-store-release to assess this Apple app's current state and complete the requested preparation, build, TestFlight, submission, or release work."

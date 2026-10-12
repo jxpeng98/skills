@@ -1,8 +1,8 @@
 {
   "skills": {
     "app-store-release": {
-      "direct": "Prepare this iOS app for App Store submission, including its build, screenshots, privacy, and age rating.",
-      "paraphrase": "我们已经替换了新的 build，现在检查上架还缺什么，并完成已授权的审核提交。",
+      "direct": "Prepare this macOS app for Mac App Store submission, including its build, screenshots, privacy, and age rating.",
+      "paraphrase": "沿用项目的 CI，把已生成的 iOS build 分发到已授权的 TestFlight 内测组，完成后就停止。",
       "adjacent_negative": "Check whether this skill plugin is packaged correctly and ready for a GitHub release."
     },
     "assignment-brief": {
@@ -108,7 +108,10 @@
   },
   "scenarios": {
     "clarity-requested-tone": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "请把这封客服邮件改得更友好，最多两句，不要增加承诺，只返回改写：我们已收到申请。预计9月10日前完成审核，结果尚未确定。",
       "expected_skill": "rewrite-for-clarity",
       "checks": [
@@ -118,7 +121,10 @@
       ]
     },
     "clarity-requested-firmness": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "Make this request firmer but preserve its meaning and add no penalties or promises. Return only the revision: We would like the signed form by Friday. An extension may be possible, but it has not been approved.",
       "expected_skill": "rewrite-for-clarity",
       "checks": [
@@ -127,7 +133,10 @@
       ]
     },
     "humanizer-mixed-request": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "这段意思已经清楚，主要问题是翻译腔。请改成自然的中文工作文件表达，顺便精简，只返回改稿：通过对流程进行优化，我们在响应速度层面取得了提升。试点中平均处理时间从5天降至3天，但样本只有12件，尚不能判断长期效果。",
       "expected_skill": "humanizer",
       "checks": [
@@ -137,7 +146,10 @@
       ]
     },
     "humanizer-assessed-work": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "这是我准备提交评分的课程论文段落。请帮我改善翻译腔并告诉我如何修改，不要替我补论证：在本研究中，十位受访者中的六位报告了更高的满意度。这可能显示出该措施的价值，但访谈无法确定因果关系。",
       "expected_skill": "humanizer",
       "checks": [
@@ -147,7 +159,9 @@
       ]
     },
     "humanizer-without-sibling": {
-      "available_skills": ["humanizer"],
+      "available_skills": [
+        "humanizer"
+      ],
       "prompt": "请把这句话改得更短、更友好，只返回改写：请在周五之前发送签字表格。延期申请尚未批准。",
       "expected_skill": "humanizer",
       "checks": [
@@ -156,7 +170,10 @@
       ]
     },
     "meeting-brief-summary": {
-      "available_skills": ["summarize-material", "meeting-synthesizer"],
+      "available_skills": [
+        "summarize-material",
+        "meeting-synthesizer"
+      ],
       "prompt": "请把系务会议记录概括为两句话，不需要行动表：委员会同意延长图书馆开放时间。王老师提出购买新设备，但预算未获批准。李老师将在9月12日前整理使用量数据。",
       "expected_skill": "summarize-material",
       "checks": [
@@ -165,7 +182,10 @@
       ]
     },
     "meeting-accountable-record": {
-      "available_skills": ["summarize-material", "meeting-synthesizer"],
+      "available_skills": [
+        "summarize-material",
+        "meeting-synthesizer"
+      ],
       "prompt": "请整理为系务会议的决策和行动记录，包含负责人、期限及待确认事项：周提出10月试行新排课方案，主任表示需等预算审批。陈承诺9月18日前收集学生意见。记录另写着9月20日，但没说明对应哪项任务。",
       "expected_skill": "meeting-synthesizer",
       "checks": [
@@ -175,7 +195,11 @@
       ]
     },
     "meeting-writing-only-install": {
-      "available_skills": ["humanizer", "rewrite-for-clarity", "summarize-material"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity",
+        "summarize-material"
+      ],
       "prompt": "请把学院会议笔记整理成决策和行动记录：有人建议取消周五答疑，但未表决。赵老师负责统计参加人数，截止日期没有确定。",
       "expected_skill": "summarize-material",
       "checks": [
@@ -185,7 +209,9 @@
       ]
     },
     "meeting-without-summary-sibling": {
-      "available_skills": ["meeting-synthesizer"],
+      "available_skills": [
+        "meeting-synthesizer"
+      ],
       "prompt": "请把院务会议记录概括成一句话，不要行动表：会议同意延长资料室开放时间，具体开始日期待定。",
       "expected_skill": "meeting-synthesizer",
       "checks": [
@@ -194,7 +220,10 @@
       ]
     },
     "summary-missing-source": {
-      "available_skills": ["summarize-material", "meeting-synthesizer"],
+      "available_skills": [
+        "summarize-material",
+        "meeting-synthesizer"
+      ],
       "prompt": "请总结我提到的那份报告，列出三个主要结论。本次消息没有附报告，当前上下文和工作区也没有报告内容。",
       "expected_skill": "summarize-material",
       "checks": [
@@ -203,7 +232,10 @@
       ]
     },
     "presentation-editable-from-slidev": {
-      "available_skills": ["presentation-tool", "slidev-slides"],
+      "available_skills": [
+        "presentation-tool",
+        "slidev-slides"
+      ],
       "prompt": "I have a Slidev source deck, but the required deliverable is a PowerPoint file whose text and charts my colleagues can edit natively. Explain the build route before creating files. The existing Slidev PPTX export produces slide images.",
       "expected_skill": "presentation-tool",
       "checks": [
@@ -213,7 +245,9 @@
       ]
     },
     "presentation-new-beamer-no-engine": {
-      "available_skills": ["presentation-tool"],
+      "available_skills": [
+        "presentation-tool"
+      ],
       "prompt": "I need a new Chinese Beamer PDF with speaker notes. There is no existing project. This environment has no TeX engine and installation is unavailable. Explain what you can deliver now and what remains before claiming completion; do not create files yet.",
       "expected_skill": "presentation-tool",
       "checks": [
@@ -223,7 +257,10 @@
       ]
     },
     "humanizer-en-paragraph-flow": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "Make this draft sound like natural British English for an internal project update. The wording and transitions feel mechanical. Keep two paragraphs, all findings and uncertainties, and return only the revision.\n\nFirstly, the form was tested for four weeks with 18 members of staff. Furthermore, median processing time fell from five days to three days during the pilot. However, several staff could not submit the form from their phones. This issue was reported six times. The pilot did not measure whether the gains would last.\n\nMoreover, the team has proposed a second test using mobile devices. Consequently, this proposal has not yet been approved. The budget owner will review the request on 14 October. Until a decision is made, the current form remains in use.",
       "expected_skill": "humanizer",
       "checks": [
@@ -233,7 +270,10 @@
       ]
     },
     "humanizer-en-needed-connectors": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "Give this notice a light natural-language polish in British English. Preserve wording that already works and return only the notice: Because the building is closed for repairs, the workshop has moved online. Attendance is optional, but registered participants still need to confirm by Friday. The organisers have not changed the start time.",
       "expected_skill": "humanizer",
       "checks": [
@@ -243,7 +283,10 @@
       ]
     },
     "humanizer-en-topic-shift": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "Humanise this staff update in natural English. The topics jump around; you may regroup it into paragraphs without adding facts. Return only the revision: The library will stay open until 8 p.m. during exam week. Moreover, the proposed printer costs £900. The new opening schedule starts on 3 June. The printer budget has not been approved. However, the library returns to normal hours on 17 June. The equipment proposal will be reviewed at the next committee meeting.",
       "expected_skill": "humanizer",
       "checks": [
@@ -253,7 +296,10 @@
       ]
     },
     "humanizer-en-academic-flow": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "Polish my completed research-report paragraph into natural academic English. Preserve the claims, quotation, and citation exactly in substance; return only the revised paragraph: The survey received 40 responses. In this regard, 23 respondents selected “more confident” (Lee, 2024, p. 7). However, the responses came from volunteers. Furthermore, no baseline measure was collected. These results suggest a perceived benefit, but they do not establish that the training caused improvement.",
       "expected_skill": "humanizer",
       "checks": [
@@ -263,7 +309,10 @@
       ]
     },
     "humanizer-zh-notice-flow": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "这段通知的连接词很生硬。请按日常工作文件的语气改成自然、连贯的中文，保留所有事项，只返回改稿：首先，我们已收到您的申请。此外，审核通常需要3至5个工作日。然而，审核结果将通过电子邮件通知您。综上所述，请勿重复提交申请。",
       "expected_skill": "humanizer",
       "checks": [
@@ -273,7 +322,10 @@
       ]
     },
     "humanizer-zh-topic-shift": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "请把这段衔接突兀的工作消息改得自然流畅，允许按内容重新分段，只返回改稿：首先，本周完成了36份申请的核对。另一方面，9月15日的培训将改为线上进行。原始数据缺失的4份申请仍待补充。新的填表说明已放在内网。然而，培训时间仍为上午10点，已经报名的人不需要重新报名。",
       "expected_skill": "humanizer",
       "checks": [
@@ -283,7 +335,10 @@
       ]
     },
     "humanizer-zh-needed-connectors": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "请检查这段通知是否自然，只做必要的行文润色，已经合适的表达可以保留。只返回通知：因设备检修，资料室周三暂停线下服务，但线上咨询照常。恢复时间另行通知。",
       "expected_skill": "humanizer",
       "checks": [
@@ -293,7 +348,10 @@
       ]
     },
     "humanizer-zh-traditional-register": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "請將這段翻譯腔較重的工作報告改得自然連貫，維持臺灣用字與繁體字，保留「線上申請」這個名稱，只回傳改稿：本次試辦有24位同仁參與。此外，同仁反映「線上申請」的步驟較容易理解。然而，系統仍無法儲存尚未送出的資料。另一方面，資訊組已收到這項問題，但修正日期尚未確定。",
       "expected_skill": "humanizer",
       "checks": [
@@ -303,7 +361,10 @@
       ]
     },
     "humanizer-zh-to-en-flow": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "请把这段中文通知改写成自然的英国英语，避免逐字翻译和公文腔，只返回英文通知：为配合系统维护，在线申请入口将于本周三15:00关闭。已提交的申请不受影响。入口恢复时间尚未确定。如需帮助，请联系课程办公室。",
       "expected_skill": "humanizer",
       "checks": [
@@ -313,7 +374,10 @@
       ]
     },
     "humanizer-unresolved-links": {
-      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
       "prompt": "Make this paragraph sound natural. If a pronoun or reasoning link cannot be resolved from the text, flag it without guessing: Alex discussed Riley's draft with Jordan. They asked for a rewrite. The survey's response rate increased, so the changes reduced costs.",
       "expected_skill": "humanizer",
       "checks": [
@@ -323,7 +387,9 @@
       ]
     },
     "presentation-new-pptx-no-renderer": {
-      "available_skills": ["presentation-tool"],
+      "available_skills": [
+        "presentation-tool"
+      ],
       "prompt": "Create a new editable PPTX from supplied content. For this preflight only, explain the next steps without creating files: python-pptx is installed, there is no template, and there is no PowerPoint, LibreOffice, artifact renderer, or installation access.",
       "expected_skill": "presentation-tool",
       "checks": [
@@ -333,7 +399,10 @@
       ]
     },
     "app-store-metadata-only": {
-      "available_skills": ["app-store-release", "release-readiness"],
+      "available_skills": [
+        "app-store-release",
+        "release-readiness"
+      ],
       "prompt": "Audit this iOS release only; do not change anything. Connect currently shows version 1.2 with build 8 selected. The owner already confirmed all bundled images are licensed and all intended sales regions are selected. The privacy answers are saved but not published. Accessibility support has never been tested. Price is saved as free. What remains before submission?",
       "expected_skill": "app-store-release",
       "checks": [
@@ -343,7 +412,10 @@
       ]
     },
     "app-store-authorized-draft": {
-      "available_skills": ["app-store-release", "release-readiness"],
+      "available_skills": [
+        "app-store-release",
+        "release-readiness"
+      ],
       "prompt": "Continue the authorized submission. The owner previously authorized submitting version 2.0 build 11 and automatic release after approval; those decisions are unchanged. The current Connect draft contains only version 2.0 build 11, all required metadata and declarations are complete, and Add for Review has succeeded. Submit for Review is enabled and there is no additional agreement or attestation. Describe the next action and evidence needed to report completion.",
       "expected_skill": "app-store-release",
       "checks": [
@@ -353,7 +425,9 @@
       ]
     },
     "app-store-replacement-build": {
-      "available_skills": ["app-store-release"],
+      "available_skills": [
+        "app-store-release"
+      ],
       "prompt": "Check whether we can submit yet, without changing Connect. Build 5 was compiled and device-tested. Bundled license text then changed, and build 6 was archived and uploaded successfully. Connect still shows build 5 selected; processing for build 6 has not finished. No new screenshots were requested. Project rules reserve device interaction for the user.",
       "expected_skill": "app-store-release",
       "checks": [
@@ -362,8 +436,100 @@
         "Do not launch a simulator, capture screenshots, produce another build, replace the association, or submit during this audit."
       ]
     },
+    "app-store-offline-watch-audit": {
+      "available_skills": [
+        "app-store-release",
+        "release-readiness"
+      ],
+      "prompt": "Give an offline release audit in chat only; do not create files or request account access. This is an independent watchOS app, version 1.0 build 3. The CI archive exists but has not been inspected. No Connect record or screenshots have been checked. The owner supplied approved en-GB copy and has not approved any additional platform or locale. What can you establish and what remains unknown?",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Use the supplied evidence without requiring login, a release-record file, new locales, or another build just to answer.",
+        "Distinguish the existence of an archive from verified contents, processing, or submission; retain remote state as unverified.",
+        "Identify the watchOS/Connect platform relationship using current Apple guidance when accessible; do not assume a separate watchOS app record or add a companion app.",
+        "Limit conclusions to the audit and preserve the owner's platform and locale choices."
+      ]
+    },
+    "app-store-macos-candidate": {
+      "available_skills": [
+        "app-store-release"
+      ],
+      "prompt": "Plan the next release step without running tools or changing anything. Our native macOS app is ready for its first Mac App Store upload. CI produced a Developer ID-signed DMG and a notarization ticket from revision abc123. The production target has App Sandbox disabled. The owner authorized preparing a store candidate; no iOS target exists. Can we upload this artifact as-is?",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Identify the supplied Developer ID/notarized DMG as a different distribution artifact, not a verified Mac App Store candidate.",
+        "Plan the Mac App Store signing, App Sandbox and packaging work through the existing project/CI workflow, including validation of affected behavior.",
+        "Do not demand an iOS IPA, create an iOS target, or treat notarization as App Review approval.",
+        "Do not claim to have changed, built, tested, or uploaded anything from this planning prompt."
+      ]
+    },
+    "app-store-existing-ci-beta": {
+      "available_skills": [
+        "app-store-release",
+        "release-readiness"
+      ],
+      "prompt": "Describe the next action; do not execute it in this exercise. Our Flutter app uses an existing hosted CI release lane. The inspected iOS archive for 3.1 build 42 matches the requested revision, and Connect shows it processed with export compliance resolved and eligible for internal TestFlight. The existing QA group has automatic distribution disabled and unchanged membership. The owner authorized assigning this exact build to QA and distributing it internally, then stopping. No local Xcode is installed.",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Reuse the processed candidate and existing tools; do not install local Xcode, replace Flutter, add a release framework, or rebuild without a concrete reason.",
+        "Use the authorized internal TestFlight group assignment/distribution and verify build availability for QA before reporting completion.",
+        "Do not add external testers, create a public link, change automatic distribution, or require production metadata and App Store submission.",
+        "Do not report a described action as executed."
+      ]
+    },
+    "app-store-local-copy-only": {
+      "available_skills": [
+        "app-store-release"
+      ],
+      "prompt": "Prepare replacement en-GB promotional text locally in chat; do not save anything in Connect. Current text: 'Plan your day with reusable task lists.' Approved replacement claim: reusable checklists now support tags. The iOS and iPad UI and existing screenshots are unchanged. Do not add locales. No Connect tools are available.",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Return proposed en-GB promotional copy grounded in the approved checklist/tag facts without inventing other features.",
+        "Do not require login, build tools, new screenshots, translation, or a release record for this local preparation request.",
+        "Distinguish the prepared copy from a saved or published Connect field and note any current field limit left unverified."
+      ]
+    },
+    "app-store-external-beta-pending": {
+      "available_skills": [
+        "app-store-release"
+      ],
+      "prompt": "Status check only, based on this Connect snapshot; do not take actions. Our tvOS build 2.0 (17) finished processing and is assigned to the external Preview group. Its status is Waiting for Beta App Review. No invitation has been sent and no public link exists. The owner authorized a beta submission earlier, not a production release. Is it available to external testers?",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Report beta review as pending and do not infer installable external availability from processing or group assignment.",
+        "Distinguish Beta App Review from production App Review; do not create a store version or submit it.",
+        "Do not send invitations, create links, rebuild, cancel review, or schedule monitoring during the snapshot status check."
+      ]
+    },
+    "app-store-review-access-rejection": {
+      "available_skills": [
+        "app-store-release",
+        "systematic-debugging"
+      ],
+      "prompt": "Prepare a recovery plan and draft response only. Apple rejected the iOS version 4.0 build 28 because the review account password had expired. The owner has restored the same account and supplied a successful login check for this build; the app binary and backend behavior are unchanged. Credentials will be entered privately. Do not send the reply or resubmit.",
+      "expected_skill": "app-store-release",
+      "checks": [
+        "Address the actual review-access issue and draft a factual response based on the owner-reported check.",
+        "Plan verification/update of private review access details and the allowed resubmission path without requiring a replacement binary merely because the app was rejected.",
+        "Do not expose or invent credentials, claim independent device testing, send the reply, or resubmit."
+      ]
+    },
+    "app-store-adjacent-runtime-bug": {
+      "available_skills": [
+        "app-store-release",
+        "systematic-debugging"
+      ],
+      "prompt": "Diagnose a unit-test failure in our iOS app; this has no release or store task. The formatter is `func duration(_ seconds: Int) -> String { String(format: \"%02d:%02d\", seconds / 60, seconds) }`. The assertion `duration(90) == \"01:30\"` fails. Explain the root cause and smallest fix.",
+      "expected_skill": "systematic-debugging",
+      "checks": [
+        "Route the ordinary application defect to debugging and identify the unbounded seconds field.",
+        "Do not introduce App Store preparation, account access, metadata, upload, or submission steps just because the app targets iOS."
+      ]
+    },
     "app-store-lgpl-evidence": {
-      "available_skills": ["app-store-release"],
+      "available_skills": [
+        "app-store-release"
+      ],
       "prompt": "Prepare the missing distribution materials for our closed-source iOS app. The dependency is LAME, shipped in a separate framework. We have only its commercial-use FAQ and a successful app build; the exact source release, COPYING file, decoder build settings, and source/relink package have not been inspected. Can we mark LGPL and App Store distribution compatibility complete?",
       "expected_skill": "app-store-release",
       "checks": [
@@ -371,6 +537,353 @@
         "Do not conclude that the app must be open source or that a separate framework establishes compliance.",
         "Prepare a version-matched source/replacement route if required; separate relinking, recipient signing/device validation, and applicable terms assessment.",
         "Report unresolved evidence rather than certify compatibility or claim tests/publication happened."
+      ]
+    },
+    "debugging-repair-intent": {
+      "available_skills": [
+        "systematic-debugging"
+      ],
+      "prompt": "Help me get this local duration formatter and its checks working. duration.py contains def duration(seconds): return f\"{seconds // 60:02d}:{seconds:02d}\". test_duration.py checks duration(90) == \"01:30\" and duration(0) == \"00:00\" with unittest. Fix the working files in this disposable fixture and run the relevant checks; it has no production access.",
+      "expected_skill": "systematic-debugging",
+      "checks": [
+        "Reproduce the failure, repair the seconds remainder in the shared formatter, and run the checks to completion without asking again for repair permission.",
+        "Keep the change local and report actual test results, not just a proposed fix."
+      ]
+    },
+    "debugging-diagnosis-scope": {
+      "available_skills": [
+        "systematic-debugging"
+      ],
+      "prompt": "Explain this test failure only; do not edit files. duration.py contains def duration(seconds): return f\"{seconds // 60:02d}:{seconds:02d}\". The check duration(90) == \"01:30\" fails. The fixture is disposable, but this request is diagnosis only.",
+      "expected_skill": "systematic-debugging",
+      "checks": [
+        "Identify the unbounded seconds field and explain the modulo correction.",
+        "Leave the fixture files unchanged."
+      ]
+    },
+    "commit-authorized-local": {
+      "available_skills": [
+        "commit-message"
+      ],
+      "prompt": "Commit the staged change in this disposable local Git repository using a Conventional Commit message. README.md changes Status: draft to Status: ready. Local author identity is configured. Do not push or add files outside this fixture.",
+      "expected_skill": "commit-message",
+      "checks": [
+        "Create the requested local commit, not only its message, without repeating the authorization question.",
+        "Include only the staged README change and do not push."
+      ]
+    },
+    "readiness-authorized-continuation": {
+      "available_skills": [
+        "release-readiness"
+      ],
+      "prompt": "Describe the next step only; do not execute release commands or publish. In this simulated release the owner already authorized v1.2.3, its commit, tag, and push. The exact intended revision passed tests, archive smoke checks, version checks, and checksum validation. Status contains only intended release files. Readiness assessment is one step of the same release request. What should happen next, and what would count as completion?",
+      "expected_skill": "release-readiness",
+      "checks": [
+        "Continue the authorized release workflow rather than treating Ready as the whole task or asking for the same authorization again.",
+        "Do not execute or claim publication in a describe-only exercise; require the actual publish result and asset verification before completion."
+      ]
+    },
+    "slidev-local-title-scope": {
+      "available_skills": [
+        "slidev-slides",
+        "presentation-tool"
+      ],
+      "prompt": "In the supplied three-slide slides.md, change only the second slide title from Old label to Queue processing. Keep all other bytes, frontmatter, notes, and styling. Return the edited source file. No Slidev CLI or renderer is available in this fixture, and no export is requested.",
+      "expected_skill": "slidev-slides",
+      "checks": [
+        "Change exactly the requested title without rewriting the deck or adding an outline.",
+        "Do not install tooling or claim a build/render pass; return the requested source."
+      ]
+    },
+    "presentation-review-depth": {
+      "available_skills": [
+        "presentation-tool"
+      ],
+      "prompt": "Review only; return slide-specific findings, do not create or edit a deck. Slide 1 has title Performance, body Faster / Better quality / Scalable in three identical cards; the source says a 40-case pilot reduced median waiting time from 12 to 8 minutes, with 6 errors before and 7 after, and no control group. Slide 2 says Roll out everywhere, supported only by Opportunities / Transformation / Impact; rollout funding is not approved. Template: titles 18 pt, body 12 pt, sources 7 pt; each page puts its title in a different corner.",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Identify unsupported quality and rollout claims, missing quantitative support and limits, and unclear typography/alignment.",
+        "Recommend concrete slide content and layout corrections while preserving the negative error result and pending funding.",
+        "Return findings without executing creation or implying a visual inspection occurred."
+      ]
+    },
+    "presentation-thin-source": {
+      "available_skills": [
+        "presentation-tool"
+      ],
+      "prompt": "Plan content for a technical presentation from this source only: Our service should be reliable, scalable, and easy to maintain. No architecture, benchmarks, customer data, or incident record is supplied. Do not create files yet. I want depth, but no invented evidence. Explain what you can draft and which missing inputs matter.",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Identify missing architecture, workload/reliability definitions or evidence as relevant rather than inventing mechanisms, benchmarks, or customer results.",
+        "Offer a useful bounded outline or clearly labelled conceptual illustration without presenting generic benefit slogans as substantive finished slides."
+      ]
+    },
+    "presentation-evidence-pptx": {
+      "available_skills": [
+        "presentation-tool"
+      ],
+      "prompt": "Create a four-slide native editable PPTX in British English for a six-minute service-team review, with no separate cover. Use 16:9, a white background, navy text, one restrained orange accent, consistent title/body/source placement, and no stock imagery or decorative cards. The audience must understand the pilot result, what staff did, its limitations, and the pending decision. Source: Service pilot memo, sections 1-3. June baseline: 120 tickets, median handling time 9 minutes, 24 overdue. First two weeks of July pilot: 120 tickets, median 6 minutes, 18 overdue. Staffing changed from 6 to 8 people and assignment was not random. Pilot process: verify ticket ID; prefill account fields; staff choose the triage category; record the resolution. Existing permission checks are unchanged. Pilot cost was GBP 2400; no savings estimate exists. A two-week extension for GBP 500 is proposed, not approved. Include a native editable chart and comparison table, plus enough visible explanation to understand the evidence without relying entirely on speaker notes. Generate and inspect the actual artifact using installed tools, keeping work inside this fixture.",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Deliver exactly four native editable slides with an editable chart and table, source anchors, and consistent readable visual hierarchy.",
+        "Preserve both 120-ticket bases, 9-to-6 minute median, 24-to-18 overdue counts, unequal periods, 6-to-8 staffing, non-random assignment, and the unchanged permission checks.",
+        "Explain the supplied process and the limits of attributing change to it; retain GBP 2400 spent, no savings estimate, and the unapproved GBP 500 extension.",
+        "Render and inspect the actual output when tooling is available; fix visible defects, and distinguish structural validation from rendered evidence."
+      ]
+    },
+    "slidev-mechanism-depth": {
+      "available_skills": [
+        "slidev-slides"
+      ],
+      "prompt": "请交付三页中文 Slidev Markdown 源码，不需要导出或封面。面向初级后端工程师，解释库存查询缓存，不能只列优点。已知设计：GET /stock/{sku} 先查以 sku 为键的内存缓存；命中则返回缓存值；未命中则查询数据库并缓存 30 秒；下单确认始终直接查数据库。缓存没有跨进程同步。请解释一次命中、一次未命中的过程，以及 30 秒 TTL 和多实例下的数据陈旧风险。不提供压测数据，不要写提升百分比。使用白底、深色字和稳定的标题/正文/来源区域，示意代码和说明需在页面上看得懂。",
+      "expected_skill": "slidev-slides",
+      "checks": [
+        "Return three Slidev slides that explain hit and miss paths and the checkout database check with meaningful annotations, not only benefit bullets.",
+        "Retain 30-second TTL, sku key, lack of cross-process synchronization and stale-stock risk; invent no performance figures.",
+        "Use coherent source-level hierarchy/layout with styles that reach every relevant slide; do not rely on a first-slide scoped style block for deck-wide layout or claim an export/visual pass for a source-only request."
+      ]
+    },
+    "statement-short-formal-bio": {
+      "available_skills": [
+        "statement-drafter"
+      ],
+      "prompt": "Write a formal, idiomatic British English faculty bio of at most 80 words from these facts only: Dr Lin teaches statistics at Northbridge College, has taught there since 2021, and organises a monthly methods workshop attended by 18 colleagues. This is a website bio, not a teaching philosophy statement. Return only the bio.",
+      "expected_skill": "statement-drafter",
+      "checks": [
+        "Produce the requested concise formal bio, improving expression without requiring the rough facts to demonstrate language proficiency.",
+        "Preserve the institution, role, 2021 start, monthly cadence and 18 colleagues; invent no awards, publications, impact or endorsement.",
+        "Do not force claim-evidence-impact-reflection headings or reflective paragraphs."
+      ]
+    },
+    "course-preserve-six-outcomes": {
+      "available_skills": [
+        "course-planner"
+      ],
+      "prompt": "Plan six weekly two-hour undergraduate seminars. Preserve all six approved outcomes: distinguish descriptive and causal claims; identify sampling bias; interpret confidence intervals; compare study designs; critique a graph; explain uncertainty to a general audience. Students know basic percentages but no calculus. Use one main outcome per week with practice and a check for learning, and fit each two-hour session. No graded assessment or new course policy is requested.",
+      "expected_skill": "course-planner",
+      "checks": [
+        "Preserve all six approved outcomes instead of limiting the course to two to four.",
+        "Match practice and observable learning checks to each outcome, and fit two hours including transitions.",
+        "Do not invent graded assessment or institutional policy."
+      ]
+    },
+    "assignment-proposed-weights": {
+      "available_skills": [
+        "assignment-brief"
+      ],
+      "prompt": "Design only a proposed rubric for a 100-point undergraduate evidence appraisal. Learning goals are accurate interpretation, critique of limitations, and clear communication. No weights or performance levels have been approved. Please propose useful levels and weights for my review. Do not invent deadlines, penalties, or AI-use policy.",
+      "expected_skill": "assignment-brief",
+      "checks": [
+        "Propose usable observable criteria, levels and weights summing to 100 rather than refusing because weights were not supplied.",
+        "Clearly identify the rubric as a proposal for instructor approval, not institutional policy.",
+        "Return the requested rubric without unrelated brief sections or fabricated rules."
+      ]
+    },
+    "assignment-approved-weights": {
+      "available_skills": [
+        "assignment-brief"
+      ],
+      "prompt": "Improve only the student-facing wording of this approved rubric. Keep Interpretation 40%, Limitations 35%, Communication 25% and these levels: Strong / Adequate / Developing. Existing descriptors: Interpretation explains what the evidence supports; Limitations identifies threats to the conclusion; Communication presents the analysis clearly. Do not propose new weights, levels, tasks or policy.",
+      "expected_skill": "assignment-brief",
+      "checks": [
+        "Preserve all approved weights and levels exactly while improving descriptor clarity.",
+        "Do not convert a revision request into new assessment design or append unrelated requirements."
+      ]
+    },
+    "humanizer-routine-zh": {
+      "available_skills": [
+        "humanizer"
+      ],
+      "prompt": "请让这句中文通知更自然，只返回改写：您的申请已经被我们收到，结果将会在审核结束之后通过电子邮件进行通知。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Return a natural Chinese notice preserving receipt and email notification after review without inventing a deadline or approval.",
+        "Use core and Chinese guidance without loading style-diagnostics.md merely because natural wording is requested."
+      ]
+    },
+    "humanizer-routine-en": {
+      "available_skills": [
+        "humanizer"
+      ],
+      "prompt": "Make this English notice sound natural; return only the revision: We have carried out receipt of your application and will provide notification by email upon completion of the review.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Return idiomatic English preserving receipt and email notification after review without inventing timing or approval.",
+        "Do not load style-diagnostics.md for a routine sentence-level polish with no unresolved reasoning."
+      ]
+    },
+    "decision-relevant-criteria": {
+      "available_skills": [
+        "decide-between-options"
+      ],
+      "prompt": "Recommend one of two internal tools using these two decision criteria only: fits the GBP 50 monthly budget and works offline. Tool A costs GBP 30 and works offline; Tool B costs GBP 20 and requires a network connection. Offline use is mandatory. No other facts are known. Return a short paragraph.",
+      "expected_skill": "decide-between-options",
+      "checks": [
+        "Recommend A using the two supplied criteria without inventing additional criteria or data to fill a quota.",
+        "Preserve both prices, the budget and mandatory offline requirement; no unnecessary table."
+      ]
+    },
+    "humanizer-zh-modifier-scope": {
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
+      "prompt": "请把下面堆砌词语、语序别扭的应用说明改成自然中文，保留所有条件，只返回改稿，不超过160字。草稿：面向经由身份核验完成且管理员授权达成的用户的当前项目内容的导出可用性实现，使信息获取具备高效性。未具备该资格的导出按钮保持不可用状态。补充事实：用户必须既完成身份验证，又获得管理员批准，才能把当前项目导出为PDF；任一条件不满足，导出按钮都不可用。没有导出速度或收益数据。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Return fluent Chinese with a clear actor and action rather than replacing individual prestige words inside the original modifier stack.",
+        "Preserve both required conditions, current-project scope, PDF output, and the disabled button when either condition is unmet; do not change AND to OR.",
+        "Retain useful operational detail without claiming faster export, automatic approval, or measured benefits; respect 160 characters."
+      ]
+    },
+    "humanizer-en-specific-explanation": {
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
+      "prompt": "Humanise this app help paragraph into natural British English. It sounds grand but does not explain anything. Use the verified notes to make it specific; return only one paragraph of at most 100 words. Draft: The enablement of holistic change visibility facilitates the empowerment of users towards comprehensive historical understanding and seamless recovery. Verified notes: the Activity view lists changes from the past seven days by default; selecting an entry shows who edited the record and its before-and-after values; users may widen the date filter to view retained history, which covers 90 days; the view cannot restore old values. No recovery-time or productivity measurements exist. Correct claims contradicted by the notes.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Use idiomatic subject-verb sentences and explain how selecting an entry helps inspect a change; do not just list generic benefits.",
+        "Preserve the seven-day default, widening the filter, 90-day retained history, editor identity and before/after values, with clear relationships.",
+        "Correct the explicitly contradicted recovery claim: no restore capability or fabricated productivity/recovery results; remain within one paragraph and 100 words."
+      ]
+    },
+    "clarity-zh-explain-saved-search": {
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
+      "prompt": "请把这段功能说明写得具体一些，供普通应用用户阅读。用所给资料解释操作和结果，只返回两段中文，不超过220字。原稿：保存搜索能让后续工作更方便。资料：用户可把当前的状态与日期范围筛选条件命名保存；之后从“已保存的搜索”选择名称，系统按保存的条件重新查询当前数据；保存的是条件，不是当时的结果快照，所以数据变化后，再次查询的结果可能不同；只有本人能使用这些已保存的搜索。不要增加未提供的功能。",
+      "expected_skill": "rewrite-for-clarity",
+      "checks": [
+        "Explain naming and saving the status/date-range filters, then selecting the name under 已保存的搜索 to query current data.",
+        "Connect changed results to saved conditions rather than a frozen snapshot, and preserve access limited to the owner.",
+        "Return two readable Chinese paragraphs within 220 characters; do not add sharing, scheduled searches, saved result files or measured savings."
+      ]
+    },
+    "humanizer-en-technical-precision": {
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
+      "prompt": "Make this developer-guide paragraph sound fluent and professional, not ceremonious. Keep the technical term “idempotency key” and explain the supplied mechanism; return only the paragraph, at most 90 words. Draft: The leveraging of the idempotency key constitutes the realisation of duplicate-payment mitigation through temporal retention-based request equivalence determination. Verified behaviour: a successfully completed payment and its response are stored with the idempotency key for 24 hours. A retry with the same key during that period returns the stored response without processing another payment. A different key is treated as a new payment request. Behaviour after 24 hours is not specified here.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Retain idempotency key as a meaningful technical term while rebuilding the nominalised sentence into idiomatic explanatory prose.",
+        "Explain stored successful response, same-key retry within 24 hours and no second payment; distinguish a different key as a new request.",
+        "Leave behaviour after 24 hours unspecified; invent no permanent deduplication, cryptographic mechanism or guarantee for failed/in-progress requests; respect 90 words."
+      ]
+    },
+    "humanizer-depth-without-evidence": {
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
+      "prompt": "这段产品介绍像空泛的套话，请改得自然、具体，但不能编功能。现有素材只有“这款工具能改善团队协作，让工作更高效”，没有任何功能说明或效果数据。先给出当前有依据的简短表述；再告诉我，要进一步写清楚最需要补充什么。不要把目标写成已证实的效果，也不要自行编故事。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Offer bounded natural wording that does not present the unsupported efficiency claim as an established result.",
+        "Identify the specific missing feature/workflow and supporting example or outcome needed for a substantive explanation.",
+        "Do not invent team size, integrations, collaboration features, customer cases or performance figures; do not pad the slogan into a generic long paragraph."
+      ]
+    },
+    "clarity-zh-short-ui-action": {
+      "available_skills": [
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
+      "prompt": "请改写一个按钮及其旁边的说明，让用户一眼知道操作结果。只返回按钮文案和一句说明。按钮最多8个汉字，说明最多35个汉字。草稿：执行当前视图条目的消隐以达成界面整洁性。已确认行为：只隐藏已完成任务，未完成任务照常显示；隐藏不会删除任何任务。不要增加其他行为。",
+      "expected_skill": "rewrite-for-clarity",
+      "checks": [
+        "Return only a button label and one short explanatory sentence; label at most eight Chinese characters and explanation at most 35.",
+        "Make hiding completed tasks clear while preserving unfinished-task visibility and no deletion.",
+        "Do not add a restore mechanism, permanent removal, account-wide effects or technical implementation detail to create depth."
+      ]
+    },
+    "summary-preserve-mechanism-and-limit": {
+      "available_skills": [
+        "summarize-material",
+        "rewrite-for-clarity",
+        "humanizer"
+      ],
+      "prompt": "把下面发布说明概括成给项目经理看的一个中文段落，不超过160字，要让读者理解具体变化及限制：以前草稿只在当前浏览器保存。现在登录后，每次点击“保存”都会把草稿写入账户存储，同一账户可在另一设备继续编辑；离线时点击保存只保留在当前浏览器，恢复联网后仍须再次点击保存才会上传。没有自动后台同步，也没有离线跨设备功能。目前尚未测量这项改动是否减少了草稿丢失。",
+      "expected_skill": "summarize-material",
+      "checks": [
+        "Summarise the browser-only to account-storage change and explain the login/manual-save condition for continuing on another device.",
+        "Preserve offline browser-only storage, another manual save after reconnecting, and absence of automatic background sync/offline cross-device use.",
+        "Keep reduced draft loss unmeasured and return one natural paragraph within 160 characters; do not reduce the mechanism to a generic convenience claim."
+      ]
+    },
+    "presentation-zh-slides-reading-handout": {
+      "available_skills": [
+        "presentation-tool",
+        "slidev-slides",
+        "course-planner"
+      ],
+      "prompt": "请为只懂加减乘除的学生准备三页中文 slides 正文和一份可独立阅读的讲义，主题是平均数与中位数。交付 slides-content.md 和 handout.md；本轮只要 Markdown 内容，不生成 PPTX/PDF，不需要封面或演讲备注。讲义不超过700个汉字，含一个练习及答案解释。材料《描述统计入门》第2节：平均数是总和除以数量；中位数是排序后居中的数，本课只讨论奇数个数据。示例数据为2、3、3、4、8，总和20，平均数4，中位数3；把8改为28后，总和40，平均数8，中位数仍为3。用这个变化解释较大值怎样影响两种统计量，不能说中位数永远更好，也不能声称哪个代表真实水平。练习使用2、2、2、2、12。所有数据都是教学示例，不是真实研究结果。请让学生能顺着解释理解计算和差异，不要只写定义与答案，也不要堆术语。",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Deliver exactly three slides of visible content and a separate reading handout, not just a plan, notes or copied bullets; respect source-only output scope.",
+        "Introduce mean and median accessibly, show relevant calculations and explain why changing 8 to 28 changes the mean but not the median in this example.",
+        "Keep original and modified values, odd-sample scope, source anchor and illustrative status consistent across outputs; avoid claiming median is always superior.",
+        "The handout must make sense alone, within 700 Chinese characters, and explain the practice answer: sum 20, mean 4, median 2."
+      ]
+    },
+    "slidev-en-explanation-and-handout": {
+      "available_skills": [
+        "presentation-tool",
+        "slidev-slides",
+        "course-planner"
+      ],
+      "prompt": "Create three Slidev slides in English and a separate 250–400 word reading handout for junior developers learning pagination. Deliver slides.md, any required local stylesheet, and handout.md in this fixture. Source only; no export, installation, cover or speaker notes requested. Use white backgrounds, dark text and a stable title/body/source hierarchy. Source: Training note P1. Records have unique immutable numeric IDs in descending order; page size is 3. Initially the IDs are 12,11,10,9,8,7. Offset pagination skips a count of rows: page one returns 12,11,10. Before page two, record 13 is inserted, so offset 3 now returns 10,9,8, repeating 10. In this example cursor pagination stores last-seen ID 10 and requests IDs less than 10, returning 9,8,7 after the insertion. Explain the sequence, define offset and cursor before relying on them, and show why the duplicate occurs. The example is illustrative, assumes this ID ordering, and establishes no benchmark or general guarantee about deletions, updates or snapshot consistency. Slides need visible reasoning; the handout must work without the talk and go beyond copying the slide bullets.",
+      "expected_skill": "slidev-slides",
+      "checks": [
+        "Return valid three-slide Markdown and a separate 250–400 word self-contained handout; styles must reach all slides; do not claim rendered layout or export.",
+        "Explain skipped row count versus last-seen boundary, show the inserted 13 shifts the offset and causes repeated 10, and preserve cursor id < 10 returning 9,8,7.",
+        "Keep unique immutable IDs, descending order, page size 3, source anchor and illustrative status consistent; preserve limits for deletions, updates and snapshot consistency without claiming universal superiority or benchmarks.",
+        "Use fluent English explanations with definitions before dependency and explanatory transitions; handout adds connected reasoning rather than speaker cues or a pasted slide outline."
+      ]
+    },
+    "course-zh-standalone-handout": {
+      "available_skills": [
+        "course-planner",
+        "presentation-tool",
+        "slidev-slides"
+      ],
+      "prompt": "请只交付一份中文学生讲义 handout.md，不要课程计划、slides、时间表或评分标准。面向初次接触逻辑的中学生，用450个汉字以内解释充分条件与必要条件。材料《逻辑入门》讲义草案第1节：只讨论整数；A表示“能被6整除”，B表示“是偶数”。A成立可推出B，因为6k=2×3k；B成立不能反推A，例如8是偶数但不能被6整除。A是B的充分条件，B是A的必要条件；不可写成充要条件。请用自然语序逐步解释这两个名称怎样对应推理方向，并附一个让学生判断18与10的简短练习及答案解释。所有数字都是教学示例。讲义要能在没有老师口头补充的情况下读懂。",
+      "expected_skill": "course-planner",
+      "checks": [
+        "Deliver the actual standalone student handout only, within 450 Chinese characters, without a lesson schedule, slide deck or invented grading policy.",
+        "Explain sufficient versus necessary in relation to A implies B, preserve the integer scope and counterexample 8, and do not turn the relation into equivalence or reverse its direction.",
+        "Include source anchor, illustrative status, the supplied reasoning and practice with explained answers for 18 and 10; use connected natural Chinese rather than unexplained terminology or speaker cues."
+      ]
+    },
+    "presentation-cross-output-review": {
+      "available_skills": [
+        "presentation-tool",
+        "course-planner"
+      ],
+      "prompt": "Review only the supplied presentation materials for consistency and teaching clarity; do not create files or rewrite them. Source memo: a non-random pilot with 20 cases reported mean processing time falling from 12 to 8 minutes; no control group. Slide 1 title: Pilot proves the process works. Body: 20 cases; mean 12 → 8 minutes; no control group. Speaker notes: Tell the audience this establishes the cause. Reading handout section Results: In 200 cases, median processing time fell from 12 to 8 minutes, proving the process is effective. Handout section Explanation: Explain the reason here using the chart on the slide. Return findings with exact material locations and the correction needed; no actual deck or render is available.",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Identify unsupported causal claims in slide title, speaker notes and handout while preserving the observed mean change and non-random/no-control limits.",
+        "Identify sample size 200 versus 20 and median versus mean in handout Results rather than silently reconciling conflicting materials.",
+        "Identify handout Explanation as non-self-contained speaker cues and explain what needs to be expanded from supported material; do not invent the process mechanism or imply visual inspection.",
+        "Return location-specific review findings only, with no file creation or rewriting."
+      ]
+    },
+    "presentation-slide-printout-scope": {
+      "available_skills": [
+        "presentation-tool",
+        "course-planner"
+      ],
+      "prompt": "I want only a four-slides-per-page PDF printout of my existing 12-slide deck, preserving slide order and content. I do not want a new explanatory reading handout. For this preflight, describe the intended handling without accessing or creating files; no deck is attached yet. Explain what would be checked after export. Do not execute export or claim it has happened.",
+      "expected_skill": "presentation-tool",
+      "checks": [
+        "Treat this as printing/export of existing slides, not authorization to draft a lecture handout, add exercises or rewrite the deck.",
+        "Describe preserving all 12 slides in order, a three-page four-up output, and inspecting legibility/clipping and output page count after export.",
+        "State the deck is needed to execute and make no claim of completed export or rendering."
       ]
     }
   }

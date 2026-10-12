@@ -27,7 +27,9 @@ academic, literary, or promotional prose.
 2. Rank them by consequence for the reader, not by source order. Lead with the
    conclusion, decision, or action when one exists.
 3. Synthesize related material across sources instead of producing one mini-summary
-   per source. Remove context that does not change understanding or action.
+   per source. Keep the mechanism, condition, example, or comparison needed to
+   understand the conclusion; do not compress it into generic praise or a topic
+   list. Remove detail that does not change understanding or action.
 4. Separate source statements, synthesis, and inference; preserve contradictions
    instead of forcing consensus.
 5. Keep attribution when it changes meaning or accountability. Missing evidence

@@ -1,6 +1,6 @@
 ---
 name: commit-message
-description: "Draft Conventional Commit messages from staged or unstaged Git diffs, including split advice. Use for message generation only; do not stage, commit, or push."
+description: "Draft a Conventional Commit message from a Git diff, either on its own or as part of an authorized commit task."
 ---
 
 # Commit Message
@@ -18,5 +18,7 @@ sentences; do not make the subject or body sound more formal than the change.
 5. Write an imperative subject with no trailing period, under 72 characters when
    practical. Add a body or footer only when the diff supports it.
 
-Output only the commit message unless the user asks for rationale or split advice.
-Never invent issue IDs or breaking changes, and do not commit unless asked.
+For a message-only request, return the message without changing Git state; include
+rationale or split advice only when requested. Within an authorized commit task,
+use the message and continue that task. Message generation does not grant new
+permission to stage, commit, or push. Never invent issue IDs or breaking changes.

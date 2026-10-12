@@ -5,9 +5,7 @@ description: "Review changed files for ownership and placement across canonical 
 
 # Repo Boundary Review
 
-Use the language required by the user, audience, or repository. Prefer common
-words and familiar sentence patterns. Keep needed technical terms, but do not add
-formal or corporate wording just to sound polished.
+Report in plain language appropriate to the user and repository.
 
 Read repository ownership guidance and inspect changed and untracked files.
 Identify the canonical source, generated mirrors, installable plugin roots,

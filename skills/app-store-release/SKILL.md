@@ -1,104 +1,90 @@
 ---
 name: app-store-release
-description: Prepare, audit, build, upload, or submit an iOS or iPadOS app through App Store Connect using project evidence and current Apple requirements. Use for App Store 上架, metadata, screenshots, privacy, age ratings, accessibility, export compliance, build replacement, and review submission; honor the requested stopping point. Use release-readiness for generic repository or plugin release gates.
+description: Prepare, audit, build, upload, distribute through TestFlight, submit, or release Apple-platform apps through App Store Connect. Use for App Store 上架, release configuration, store information, and review issues at the requested stage; not general feature development, other app stores, or direct macOS distribution.
 ---
 
 # App Store Release
 
-Move the existing app from its verified current state to the user's requested
-release stage. This workflow primarily covers iOS and iPadOS; check the relevant
-Apple documentation before extending it to other platforms.
+Move an app from its evidenced current state to the user's requested App Store
+or TestFlight stage. Apply the same workflow to iOS/iPadOS, macOS, tvOS, visionOS,
+and watchOS, adapting to the actual targets and Connect records. Preserve the
+project's framework, build system, locales, distribution choices, and tooling.
 
-## Establish scope and evidence
+## Establish the task
 
-1. Read project instructions, build configuration, release records, store copy,
-   screenshots, dependency locks, privacy files, and existing distribution scripts.
-   Identify the actual workspace and preserve unrelated changes.
-2. Inspect the current developer team, app record, platform, version, selected
-   build, and submission state using available authorized tools. Reuse existing
-   records. An uploaded build or review draft is not a new app to create.
-3. Match the requested stopping point: advice, audit, prepare/save, upload, or
-   submit. Earlier authorization and verified business decisions remain valid
-   unless the user changes them or the underlying facts change. An audit request
-   alone does not authorize submission; an authorized submission need not be
-   reconfirmed merely because the workflow reaches its final button.
-4. Keep a compact release record in the project's existing documentation location:
-   source revision and dirty inputs, app/version/build identifiers, artifacts and
-   checksums, metadata decisions and sources, checks actually run, unresolved
-   blockers, and the latest observed Connect state with time and URL.
-5. Resolve unknown business facts with a focused question while completing
-   independent preparation. Never infer ownership, pricing, sales territories,
-   team-wide access, privacy practices, or legal attestations from another app.
+Infer these from the request, project instructions, existing release records, and
+available artifacts; ask only for facts that materially block the next step:
 
-Prefer project tooling and supported Apple tools/APIs; use browser controls when
-needed and follow their current instructions. Re-read the visible form after a
-navigation or save. Do not reuse stale controls or recover login credentials from
-browser storage. Let the user complete authentication when required.
+- **Target:** developer team, app record/bundle IDs, platform and embedded targets,
+  version/build, and intended distribution channel or tester group.
+- **Outcome:** advice, audit, local preparation, saving Connect changes, build,
+  upload, beta distribution, review submission, release, or status/rejection work.
+  Combine only the stages needed for the requested outcome; uploading does not
+  imply inviting testers or submitting to App Review.
+- **Evidence and access:** source/configuration, candidate artifacts, metadata,
+  existing checks, available tools/account roles, and applicable test constraints.
+  For advice or an offline audit, use supplied evidence and label remote state
+  unverified; do not require account access or create files just to answer.
 
-## Prepare only the affected layers
+Reuse existing app records, builds, drafts, and unchanged confirmed decisions.
+Before Connect changes or a live status check, inspect the relevant current state.
+Distinguish app-wide fields from platform/version/build-specific fields before
+changing them. Never copy ownership, privacy, pricing, access, regions, or legal
+attestations from an unrelated app. Unknown is different from not applicable.
 
-| Change | Work to perform |
+Preserve authorization already given for this target and outcome. An audit alone
+authorizes no changes; local preparation alone authorizes no Connect writes. An
+authorized submission does not need another confirmation just because it reaches
+the final action. Complete independent work while a material fact is unresolved.
+
+## Choose the affected work
+
+| Task or change | Work and reference to load |
 | --- | --- |
-| Store text, review contact, age answers, privacy declaration, accessibility label, price or territories | Update the relevant Connect section and verify its saved or published state; these edits alone do not require a new binary. |
-| UI changes reflected in store screenshots | Build and capture the affected flows only when authorized; check the images against the candidate UI and replace the intended media slots. |
-| Code, bundled notices, icons, permission text, entitlements, frameworks or other packaged resources | Produce and validate a new build; refresh associated evidence and affected store materials. |
-| New build already uploaded or selected by the user | Inspect that build and association first; do not rebuild, upload again, or reset completed metadata without a reason. |
+| App record, store text/media, declarations, pricing or availability | Use `references/store-information.md`. Change only the relevant fields. Metadata alone needs no new binary, though its publication may depend on version state or review. |
+| Release configuration, code or packaged resources | Use `references/build-and-upload.md`. Make the needed change in the project's source of truth, then build and inspect the candidate; refresh evidence affected by the change. |
+| Existing artifact, upload, replacement build or TestFlight | Use `references/build-and-upload.md`. Inspect/reuse the candidate first; perform only the requested upload, association or beta distribution. |
+| Review draft, submission, rejection, release or live status | Use `references/review-and-release.md`. Resume at the observed state and stop at the requested outcome. |
+| Shipped dependency notices, source delivery or replacement obligations | Use `references/open-source-distribution.md` only for applicable components and obligations. Simple attribution does not require a relinking workflow. |
 
-Read `references/store-information.md` when creating the app
-record or preparing metadata, screenshots, questionnaires, and availability.
-Read `references/build-and-upload.md` when changing identifiers,
-archiving, uploading, or selecting a replacement build.
-Read `references/open-source-distribution.md` when a
-shipped dependency needs attribution, source delivery, or replacement/relinking
-support. Do not impose the LGPL workflow on apps without such a dependency.
+Load only references needed by the task. For an end-to-end release, cover the
+applicable build, store, and review work; for a narrow task, do not turn unrelated
+release checks into prerequisites. For general repository/plugin release gates,
+prefer `release-readiness` when available, otherwise follow the repository checks.
+Handle general feature development and other distribution channels with their
+own project workflows rather than applying Connect submission steps.
 
-## Complete the submission
+## Execute and verify
 
-Check Apple's current [submission flow](https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-app/)
-and [review guidelines](https://developer.apple.com/app-store/review/guidelines/)
-alongside the actual form. Required fields, policies, and account-specific prompts
-can change; an old checklist is not authoritative.
+Use existing project scripts/CI and available supported tools or APIs; use browser
+controls when needed. Do not require a particular connector, new release framework,
+or local Xcode when an existing remote build or supplied artifact covers the task.
+Let the user complete authentication when necessary; never recover credentials
+from browser storage or put them in source, commands, or public logs.
 
-1. Re-open the version. Verify the exact processed build, export-compliance state,
-   localized metadata and media, review access/instructions, contact information,
-   privacy publication, age rating, content rights, pricing, territories, and
-   chosen release mode. Resolve applicable agreements or account restrictions.
-   Include purchases, subscriptions, or other review items only when the app uses
-   them and their current submission requirements are satisfied.
-2. Save and re-read changed fields. A disabled Save button alone does not prove a
-   previous edit persisted. Verify the displayed values and media counts.
-3. If submission is in scope, use **Add for Review** and inspect the resulting
-   draft and all included items. This step prepares a submission; it does not send
-   it to Apple. Resolve concrete validation errors using project evidence.
-4. Before **Submit for Review**, match the draft to the intended version/build and
-   existing authorization. Inspect any actual new attestation or agreement under
-   the applicable tool/host approval rules. If a required fact or approval is
-   missing, present the completed draft and the exact remaining question.
-5. Submit when authorized, then verify the resulting submission record and status.
-   Record its ID/URL, version, build, and time. Report **Waiting for Review** when
-   observed; report **In Review** only when that state is actually shown.
+Verify changing Apple requirements against current official documentation and the
+actual platform/form: SDKs, media sizes, declarations, eligibility, and review
+rules are not fixed constants. If unavailable, identify the unverified requirement
+and continue work that does not depend on it.
 
-If an automatic approval review blocks an action, do not switch tools or methods
-to bypass it. Explain the blocked action and stated reason, complete unaffected
-work, and request only the missing approval. If the user completes the step,
-inspect the new state and resume; do not preserve an obsolete blocker.
+After a write, re-fetch the record or re-open the form and verify values, media,
+identifiers, and state. A disabled Save button or successful upload alone is
+insufficient. Before retrying an uncertain upload, submission, or release, inspect
+the remote result; do not duplicate or cancel work to clear uncertainty. Stop
+dependent mutations when the result cannot be established. If the host blocks an
+action, report its reason and resume after it is resolved; do not bypass the block.
 
-## Resume and report accurately
+## Report the reached outcome
 
-Distinguish uploaded, processing, selectable, associated with a version, saved
-review draft, submitted, approved, and available for download. Inspect the actual
-record before retrying an uncertain upload or submission. Do not cancel an active
-review or replace its build during a status check.
+Give the target and reached stage, relevant artifact/record link, checks actually
+performed, and concrete blockers or next action. Distinguish uploaded, processing,
+beta availability, selected build, saved draft, submitted, approved, and available
+in the intended storefronts. Do not promise review approval or timing.
 
-For a rejection, inspect Apple's actual message and fix the cited issue before
-preparing a response or replacement. For approval, follow the selected release
-mode: a manual release still needs the authorized release action; automatic or
-scheduled release still needs an observed availability result. Reply to Apple,
-release manually, or schedule monitoring only within the user's authorization.
-
-Report the reached stage, exact version/build, relevant record or artifact link,
-checks performed, and concrete remaining blockers. Separate compilation and
-package inspection from user-reported device checks, independent runtime checks,
-and unresolved legal conclusions. Do not promise approval or a review deadline.
-Keep credentials and private reviewer details out of public release notes,
-reusable skills, screenshots, and distribution archives.
+For work that changes release artifacts or remote state, update the existing
+release record with relevant revision/dirty inputs, version/build, artifact hashes,
+decisions and sources, checks, and observed Connect state with time/URL. Use a
+concise handoff if no record exists; do not impose a new documentation structure.
+Keep private reviewer details and credentials out of public materials. Separate
+package inspection, runtime checks (including who performed them), and unresolved
+terms assessments; none proves the others.

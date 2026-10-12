@@ -6,20 +6,21 @@ and packaged binary. A dependency name or a commercial-use FAQ is not a complete
 license inventory. Do not send the app through a copyleft checklist when all
 shipped dependencies only require simpler notices.
 
+Choose work from the actual license obligations: attribution/notice requirements
+need the relevant notices; source-delivery requirements need matching source and
+modifications; replacement/relinking requirements also need a usable replacement
+route. Combine only the applicable work. Do not infer obligations solely from a
+package name, framework boundary, or the app's open/closed-source business model.
+
 ## Establish the applicable obligations
 
 Record component/version, origin and checksum, exact license text and any
 “or later” option, local modifications, linkage, shipped features, and delivery
 method. Read source-file headers as well as top-level license files. Distinguish
-the library from wrappers and optional codecs or decoders.
-
-For LAME, the [official commercial-use guidance](https://lame.sourceforge.io/license.txt)
-is an entry point; inspect the selected source release to establish the license
-version. Treat historical mpglib/GPL warnings as a reason to investigate the
-actual decoder sources and build output, not proof that every LAME binary includes
-that decoder. If claiming encoder-only distribution, retain configuration,
-linked-object/dependency, and relevant symbol evidence. An unused API can still
-be packaged.
+the library from wrappers and optional components with different licenses. Check
+build configuration, linked objects/dependencies, and relevant symbols before
+claiming that an optional component is excluded. An unused API can still be
+packaged; a historical warning is a reason to inspect, not proof of inclusion.
 
 LGPL can permit a proprietary application under its conditions; neither a
 commercial-use statement nor a separately named framework proves those conditions
@@ -30,7 +31,7 @@ are met. Consult the applicable text, such as
 delivery and combined-work clauses rather than silently upgrading the license.
 The selected route may require corresponding library source, modifications,
 notices, and materials allowing recipients to modify the library and relink the
-application. Dynamic linking on a signed mobile platform does not by itself
+application. Dynamic linking on a signed platform does not by itself
 demonstrate usable replacement. Evaluate the actual route and license version.
 
 ## Prepare and verify the developer's delivery

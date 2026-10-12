@@ -13,17 +13,17 @@ paper-planning skills.
 
 ## Current Release
 
-The current repository release is [v0.7.0](https://github.com/jxpeng98/skills/releases/tag/v0.7.0).
+The current repository release is [v0.8.0](https://github.com/jxpeng98/skills/releases/tag/v0.8.0).
 It contains 21 distributable skills across five plugins. Starting with v0.6.1,
 the repository tag and every bundled plugin use the same synchronized version.
 
 | Plugin | Version | Highlights |
 | --- | --- | --- |
-| `dev-tools` | `0.7.0` | Adds App Store preparation, build/upload, metadata, and review submission workflows. |
-| `faculty-tools` | `0.7.0` | Synchronized release; skill behavior unchanged. |
-| `presentation-tools` | `0.7.0` | Synchronized release; skill behavior unchanged. |
-| `productivity` | `0.7.0` | Synchronized release; skill behavior unchanged. |
-| `writing-tools` | `0.7.0` | Synchronized release; skill behavior unchanged. |
+| `dev-tools` | `0.8.0` | Expands Apple-platform and TestFlight workflows; respects authorized task completion. |
+| `faculty-tools` | `0.8.0` | Adds readable teaching handouts and adapts plans, rubrics, and statements to the requested scope. |
+| `presentation-tools` | `0.8.0` | Improves slide explanations, layouts, companion handouts, and scoped editing and export. |
+| `productivity` | `0.8.0` | Continues authorized commit tasks and compares only decision-relevant criteria. |
+| `writing-tools` | `0.8.0` | Strengthens natural English and Chinese word order, logical precision, and source-supported detail. |
 
 ## Repository Layout
 
@@ -93,8 +93,8 @@ App Store releases.
 | `change-review` | Review a fixed diff for request fidelity, correctness, regression, compatibility, and meaningful test gaps. |
 | `rust-windows-cross-build` | Cross-build a Rust app on Apple Silicon for Windows x64 and validate it in Parallels Windows 11 Arm. |
 | `repo-boundary-review` | Review file ownership and placement without moving files or approving a release. |
-| `release-readiness` | Verify readiness with fresh evidence before a separate publish, tag, or push action. |
-| `app-store-release` | Prepare, audit, build, upload, or submit an iOS/iPadOS app with verified metadata, privacy, age ratings, accessibility, and applicable open-source distribution materials. |
+| `release-readiness` | Verify readiness with fresh evidence, including as a gate within an already authorized release. |
+| `app-store-release` | Prepare, audit, build, upload, distribute through TestFlight, submit, or release Apple-platform apps, adapting to the project's stack and requested stage. |
 
 ### `faculty-tools`
 
@@ -103,7 +103,7 @@ meetings, and light academic-service writing.
 
 | Skill | Use When |
 | --- | --- |
-| `course-planner` | Plan courses, weekly classes, seminars, tutorials, reading sessions, or classroom activities. |
+| `course-planner` | Plan courses, teaching sessions, or activities, and prepare student handouts from supplied materials. |
 | `assignment-brief` | Create assignment prompts, essay or report briefs, submission requirements, and rubrics. |
 | `feedback-writer` | Write constructive feedback on student essays, reports, assignments, drafts, presentations, or projects. |
 | `faculty-email` | Draft emails to students, colleagues, administrators, committees, or teaching teams. |
@@ -128,8 +128,16 @@ LaTeX Beamer decks.
 
 | Skill | Use When |
 | --- | --- |
-| `presentation-tool` | Choose and build across presentation formats, including native editable PPTX from Slidev sources and new PPTX/Beamer projects. |
-| `slidev-slides` | Create, edit, review, build, or export a deck after Slidev has been chosen. |
+| `presentation-tool` | Create decks and accompanying handouts with concrete explanations and clear layouts, or perform scoped edits, reviews, and exports. |
+| `slidev-slides` | Create or improve Slidev decks and accompanying handouts, or perform scoped edits, reviews, and exports. |
+
+Presentation creation uses content-filled layouts and checks both the explanation
+and the rendered page. Important findings retain their comparison bases, units,
+sources, and limitations; mechanisms and examples explain how the subject works.
+Requested reading handouts develop the explanation for independent reading;
+speaker notes and slide printouts remain distinct deliverables. Shared facts,
+terms, examples, and caveats stay consistent across the requested materials.
+Local edits and exports reuse the existing deck without unnecessary redesign.
 
 ## Development
 

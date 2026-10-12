@@ -31,7 +31,9 @@ Apply 信、达、雅 in every output language, in this order:
   uncertainty, and relationships between claims. Do not add a causal link or
   weaken a qualification to make the argument read more smoothly.
 - **达 — clear and idiomatic:** use the language's natural syntax and collocations;
-  keep subjects and references clear, and let each sentence develop the thought.
+  make the actor, action, and object easy to follow. Place conditions, negation,
+  and qualifications next to what they govern; do not distort word order to fit
+  an impressive term. Let each sentence develop the thought.
 - **雅 — apt and restrained:** use precise, familiar words and a rhythm suited to
   the genre. Elegance does not require literary diction, ornate transitions, or
   conspicuous symmetry. Never trade fidelity or clarity for polish.
@@ -42,19 +44,29 @@ Apply 信、达、雅 in every output language, in this order:
    the constraints above. Flag suspected errors as `Needs verification`.
 3. Read `references/english-writing.md` for English output and
    `references/chinese-writing.md` for Chinese output. Read
-   `references/academic-editing.md` for academic or coursework editing, and
-   `references/style-diagnostics.md` for multi-paragraph drafts, awkward flow,
-   abrupt transitions, or robotic/generic style problems.
+   `references/academic-editing.md` for academic or coursework editing. Read
+   `references/style-diagnostics.md` only for unresolved reasoning, referents,
+   or transitions, or when an initial revision still sounds unnatural. A routine
+   polish or the label "AI-like" alone does not require that diagnostic pass.
 4. Trace each paragraph's point and how its sentences explain, support, qualify,
-   or develop it. Rewrite from that meaning, using natural information order.
+   or develop it. Rebuild the sentence's main clause before choosing vocabulary;
+   replacing formal words alone cannot repair tangled syntax.
    Keep the topic and referents stable; introduce a topic shift with enough
    source-supported context or a paragraph break, not a decorative connector.
+   Replace vague benefits with relevant detail from the supplied draft and notes:
+   what happens, how it works, under which condition, or what a concrete example
+   demonstrates. Explain the relationship, not just a list of facts. Choose only
+   detail that helps this reader; a label or short notice need not become an essay.
+   If needed substance is absent, identify the specific gap instead of inventing
+   it or stretching a slogan into a longer paragraph.
 5. Check each transition against the actual relationship. Keep useful contrasts,
    causes, and sequence markers; remove or replace misleading ones. If the source
    lacks a premise or has an ambiguous referent, flag it or ask a focused question
    rather than inventing a bridge or silently changing the writer's conclusion.
-6. Read continuously, checking paragraph movement, collocations, and rhythm before
-   comparing protected content with the source. Repair awkward passages; stop when
+6. Read continuously for natural word order, paragraph movement, and useful
+   explanation, then compare meaning and protected content with the source,
+   especially who acts, when, and whether a claim is conditional or causal.
+   Repair awkward passages; stop when
    the revision meets the request. Do not impose connector quotas, sentence-length
    patterns, forced slang, or a recap that adds nothing.
 
