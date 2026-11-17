@@ -1,92 +1,17 @@
-# Style Diagnostics
+# When a passage still feels awkward
 
-Read when reasoning, referents, or transitions remain unclear, or an initial
-revision still sounds unnatural. Routine polish does not need this extra pass.
-Treat these as writing-quality symptoms, not detector-evasion targets.
+Read up to the first point where you have to go back. Try the smallest change
+that would let a reader keep going.
 
-## Trace the reasoning
+| Where the reader hesitates | What usually helps |
+| --- | --- |
+| “They asked for a revision.” Two people could be “they.” | Name the person if the source identifies them. If the choice changes who is responsible, ask the writer. |
+| A sentence is grammatical but hard to say aloud. | Find its subject and main verb. Put the long qualification after the action if its scope stays clear. |
+| One sentence gives a result and the next just says it matters. | Show what the result meant using an example from the source, or stop after the result. |
+| “Therefore” joins two observations. | Check whether the writer provides a reason. If the conclusion depends on a missing premise, flag it for the writer. |
+| Every point opens with a rebuttal. | Lead with what happened. Keep an objection when someone actually raised it or the distinction changes the reader's decision. |
+| Two paragraphs start by setting up the same topic. | Read the end of the first beside the start of the second. Keep the shared context once, then introduce what is new. |
 
-Identify each paragraph's main point and the job of its sentences: explanation,
-evidence, example, qualification, consequence, or action. Use this silently to
-find gaps and repetition; do not impose these roles as a fixed paragraph template.
-
-Across sentence and paragraph boundaries, check:
-
-- **Continuity:** can the reader identify the topic and each pronoun's referent?
-  Carry a key term or a source-supported idea forward instead of relying on a
-  generic connector. Avoid synonym changes that suggest a new concept.
-- **Progression:** does the next sentence develop the point, or merely repeat it?
-  Remove genuine repetition while retaining distinct evidence, caveats, and actions.
-- **Relationship:** is the intended link addition, contrast, cause, sequence, or
-  a new topic? Do not turn adjacency into causation or simultaneous timing.
-- **Gaps:** is a premise, subject, comparison, or link actually missing? Smooth
-  wording around known facts, but leave substantive decisions with the author.
-  Flag material gaps in a brief note or ask when an answer is needed; do not
-  invent a rationale or silently replace the author's stated conclusion.
-
-## Choose the transition
-
-| Relationship | Useful treatment | Check before using it |
-| --- | --- | --- |
-| Elaboration or addition | Continue with the relevant subject; add a connector only if it helps. | The new sentence develops or adds to the same point. |
-| Contrast or concession | Keep a natural `but`, `although`, `however`, `但`, or `尽管` when needed. | There is a real opposition, limitation, or counterexpectation. |
-| Reason or consequence | Use `because`, `therefore`, `因为`, or `因此` when warranted. | The source supports that relationship; a missing premise cannot be supplied by a connector. |
-| Time or sequence | State the time or order clearly. | `Then` or `随后` does not by itself establish cause; `meanwhile` or `与此同时` requires overlap. |
-| Topic change | Introduce the new subject or start a paragraph within the allowed structure. | The reader needs a new frame, not a decorative `moreover` or `此外`. |
-
-If the relationship is already evident, direct adjacency may be smoother. If it
-is not evident, simply deleting the connector may make the passage less coherent.
-
-## Diagnose
-
-Look for clusters, not isolated words:
-
-- an opening that announces a broad topic without making the writer's point;
-- paragraphs that repeat setup, explanation, and summary in the same tidy shape;
-- mechanical transitions, abrupt topic changes, unclear references, repeated
-  sentence openings, and an imposed sentence-length pattern;
-- serial three-part lists, repeated `not X but Y` contrasts, rhetorical questions,
-  or dash-heavy asides used as a default pattern;
-- abstract noun stacks, vague verbs, and generic claims without context;
-- formal synonyms where a common word would be more natural, or idioms and slang
-  added only to display fluency;
-- over-neutral, over-formal, promotional, or falsely balanced tone;
-- meta-commentary such as `this highlights`, `this underscores`, or `it is worth
-  noting` where the concrete implication should be stated directly;
-- literal-translation residue: possible grammar but unusual collocations,
-  source-language word order or emphasis, copied idioms or metaphors, excessive
-  subjects or connectors, and foreign punctuation or paragraph rhythm;
-- a register that sounds like a language exercise, prestige performance, or
-  generic polished output rather than writing for this reader and setting;
-- polished but empty sentences that add no evidence, decision, or meaning;
-- repeated conclusions, throat-clearing, and endings that recap instead of stop.
-
-## Revise
-
-- If simpler vocabulary still leaves an awkward sentence, reconstruct its main
-  clause and modifier order. Check who acts and the scope of each condition or
-  negation before restoring supporting detail.
-- Break accidental symmetry. A short sentence or one-line paragraph is useful
-  when the thought is short; longer syntax is useful only when the logic needs it.
-- Replace generic evaluation with a supported action, mechanism, comparison, or
-  example and explain its relevance. Remove repetition, not the detail that lets
-  a reader understand how something works. Flag missing substance rather than
-  inventing an implication or quietly changing the author's conclusion.
-- Match contractions, pronouns, and warmth to the voice anchor rather than
-  applying one universal conversational style.
-
-Avoid stock phrases such as `In today's fast-paced world`, `It is important to
-note`, `delve`, `leverage`, and `utilize` when plainer wording is more precise.
-Do not add slang, fragments, contractions, cultural markers, typos, or factual
-detail merely to look human. Use contractions, idioms, and local expressions only
-when they are normal for the writer, audience, and setting.
-
-## Verify
-
-If a sentence could be pasted into many unrelated texts without changing,
-sharpen it from the source or delete it. A reader should not have to mentally
-translate a sentence back into another language to understand its phrasing.
-Read paragraph endings and the following openings together. Confirm the thread
-remains clear without abrupt shifts, false contrasts, or invented explanations.
-Keep a closing sentence when it contributes a real implication or requested action;
-remove it only when it merely repeats the paragraph.
+After the edit, read the whole passage at its natural pace. Check the author's
+claim against the original, especially the strength of the evidence, the order
+of events and who made the decision.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Store Connect API"
+  short_description: "Manage Apple app releases through the Connect API."
+  default_prompt: "Use $app-store-connect-api to bring this app to the requested release stage and verify its state in App Store Connect."

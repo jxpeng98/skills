@@ -1,4 +1,4 @@
 interface:
   display_name: "Humanizer"
-  short_description: "Make English and Chinese prose faithful, natural, and fluent."
-  default_prompt: "Use $humanizer to make this draft faithful, idiomatic, and coherent in the requested language, preserving its facts and voice while smoothing paragraph flow and transitions."
+  short_description: "Make a draft sound natural in the writer's own voice."
+  default_prompt: "Use $humanizer to polish this draft for its intended readers, keeping my voice and making the reasoning easy to follow."

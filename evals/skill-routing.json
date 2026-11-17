@@ -1,5 +1,10 @@
 {
   "skills": {
+    "app-store-connect-api": {
+      "direct": "Use the App Store Connect API to select build 37 and submit this iOS version for review.",
+      "paraphrase": "让 CI 在不打开网页的情况下用团队密钥更新上架文案，然后查回刚保存的版本。",
+      "adjacent_negative": "Audit the signing and entitlements of this local Mac App Store archive before upload."
+    },
     "app-store-release": {
       "direct": "Prepare this macOS app for Mac App Store submission, including its build, screenshots, privacy, and age rating.",
       "paraphrase": "沿用项目的 CI，把已生成的 iOS build 分发到已授权的 TestFlight 内测组，完成后就停止。",
@@ -107,6 +112,89 @@
     }
   },
   "scenarios": {
+    "api-submit-timeout": {
+      "available_skills": ["app-store-release", "app-store-connect-api"],
+      "prompt": "Our headless job for iOS 2.4 build 37 timed out on the final review submission request for S8. Our recovery read returned S8 in WAITING_FOR_REVIEW with only version 2.4, and the version still selects build 37. The job was authorized through submission with manual release. What should the job do now? Use only these records.",
+      "expected_skill": "app-store-connect-api",
+      "checks": [
+        "Report that Apple received S8 for the intended version and build, with review pending.",
+        "Finish the submission job without replaying the write, creating a draft, releasing or changing the release policy."
+      ]
+    },
+    "api-draft-with-unrelated-item": {
+      "available_skills": ["app-store-connect-api"],
+      "prompt": "Our release job should prepare an App Review draft for iOS 2.4, version V2, selected build B37. Draft D1 contains an unrelated event from the marketing team. No other draft or item exists. Using these records, describe the API requests for a separate draft and the check that finishes the job. Do not make live calls.",
+      "expected_skill": "app-store-connect-api",
+      "checks": [
+        "Create a draft for the same app and platform and attach V2 as a reviewSubmissionItem to its returned submission ID.",
+        "Read back the new draft's items and selected build, leave D1 intact, and stop before setting submitted."
+      ]
+    },
+    "humanizer-ordinary-progress-note": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "把这段例行进度更新改得像同事发在群里的话，只返回改稿。原稿：有必要先行澄清的是，周三完成的事项并不是正式上线，而是内测包的上传工作。对于周五是否开放下载这一问题，目前尚待审核结果才能确定。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Lead with Wednesday's test build upload, in a voice suited to a team chat.",
+        "Keep public download on Friday conditional on the review outcome. Convey the status directly, without an invented objection, disclaimer or promise."
+      ]
+    },
+    "humanizer-zh-email-colleague": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "给熟悉的同事小陈回邮件。草稿太像公函，请改得自然，只返回邮件正文。草稿：针对你询问的周四演示是否照常进行这一事宜，现予以肯定答复。关于演示所需的两张截图，烦请于周三下班前发给我。测试账号由我负责准备。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Answer the colleague's question about Thursday's demo promptly, in a familiar workplace register.",
+        "Ask for exactly two screenshots by close of business Wednesday and keep the sender responsible for the test account."
+      ]
+    },
+    "humanizer-en-email-editor": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Polish the body of this email reply to a journal editor. It sounds translated. Give me just the prose to send. Draft: In response to your question concerning the availability of the revised figure, its presence in the attachment is hereby confirmed. Concerning the caption, a clarification has been introduced to the effect that the bars show the range across runs. The analysis itself has undergone no changes.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Answer the editor's question about the attached revised figure directly and courteously.",
+        "Distinguish the caption clarification from the unchanged analysis. The bars show the range across runs, with no invented uncertainty measure or scientific claim."
+      ]
+    },
+    "humanizer-zh-readme-preview": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "这段 README 像翻译稿。请改成开发者照着就能操作的中文，只返回改稿。原稿：变更清单会进行显示。对于配置的预览，由执行 `plan --config team.toml` 这一命令实现。进入存有 `team.toml` 的目录是前置事项。预览期间文件写入不会发生。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Lead the reader from the directory containing team.toml to the exact command plan --config team.toml, then explain what is displayed.",
+        "Keep the preview read-only and preserve the literal names. Add no install or apply step."
+      ]
+    },
+    "humanizer-en-readme-export": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Polish this README excerpt so it reads like idiomatic English developer documentation. Return only the excerpt. Draft: The location of the resulting report is the currently active directory, under the naming of `report.csv`. For its production, invocation of `ledger export --format csv` is performed. Prior selection of a project by means of `ledger use demo` is necessary. An existing `report.csv` causes the export to stop.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Place ledger use demo before ledger export --format csv, preserving both commands exactly.",
+        "Locate report.csv in the current directory and explain the stop condition without adding overwrite, deletion or recovery instructions."
+      ]
+    },
+    "humanizer-zh-journal-signal": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "这是期刊论文讨论段的虚构练习，原文有翻译腔。请直接给一段自然的中文改稿，保留文内引文。原稿：两路信号的时间对齐采用了周等（2022）的方法。关于处理前后的比较，中位时间偏差从18毫秒降到了6毫秒。在此过程中，采样时钟的校准参数亦被实施了更新。鉴于两项调整同时完成，关于时间偏差下降应当如何在时间对齐与时钟校准之间归因，本次比较不能给出各自的贡献。",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Return manuscript prose. Keep 周等（2022） attached to the alignment method used for the two signals and distinguish it from the present result.",
+        "Preserve the median time offset falling from 18 to 6 milliseconds. Let the concurrent calibration change explain why the comparison cannot isolate the two contributions.",
+        "Keep the two procedures identifiable across sentences, with idiomatic Chinese verb choices and no invented mechanism, significance or stronger attribution."
+      ]
+    },
+    "humanizer-en-journal-retrieval": {
+      "available_skills": ["humanizer", "rewrite-for-clarity"],
+      "prompt": "Polish this invented journal discussion paragraph into natural academic English. Return only a publication-ready paragraph. Draft: Reranking was carried out by us using the procedure of Chen (2021). In the comparison of the original and revised systems, there was an upward movement from 0.61 to 0.68 for mean recall@20. Furthermore, an expansion from 100 to 200 documents was carried out for the candidate pool in the revised system at the same time as reranking was introduced. In terms of attribution of the observed gain to reranking considered in isolation, this comparison does not permit such a determination.",
+      "expected_skill": "humanizer",
+      "checks": [
+        "Attribute the reranking procedure to Chen (2021) and present the original-to-revised system comparison as the authors' result.",
+        "Preserve mean recall@20, 0.61 and 0.68, the candidate pool increasing from 100 to 200 documents, and concurrent introduction of reranking.",
+        "Connect the second change to the limit on attributing the gain to reranking alone. Use consistent terms and fluent scholarly prose without adding statistical significance or a result reported by Chen."
+      ]
+    },
     "clarity-requested-tone": {
       "available_skills": [
         "humanizer",
@@ -265,6 +353,7 @@
       "expected_skill": "humanizer",
       "checks": [
         "Return two coherent professional paragraphs with findings and limitations together, followed by the proposed next step; avoid mechanical sentence-by-sentence signposting.",
+        "Keep the unmeasured duration of the time saving with the timing result. Introduce the phone issue as a separate observation, with a clear link to the proposed mobile test.",
         "Preserve four weeks, 18 staff, the median change from five to three days, six reports of the phone issue, and unmeasured lasting gains; do not turn six reports into six people.",
         "Preserve the unapproved proposal, the budget owner's 14 October review, and continued use of the current form; do not present lack of approval as a consequence of proposing the test."
       ]

@@ -1,6 +1,6 @@
 ---
 name: app-store-release
-description: Prepare, audit, build, upload, distribute through TestFlight, submit, or release Apple-platform apps through App Store Connect. Use for App Store 上架, release configuration, store information, and review issues at the requested stage; not general feature development, other app stores, or direct macOS distribution.
+description: Prepare, audit, build, upload, distribute through TestFlight, submit, or release Apple-platform apps through App Store Connect. Use for App Store 上架, release configuration, store information and review issues. For explicit API automation, prefer app-store-connect-api when available.
 ---
 
 # App Store Release
@@ -9,6 +9,8 @@ Move an app from its evidenced current state to the user's requested App Store
 or TestFlight stage. Apply the same workflow to iOS/iPadOS, macOS, tvOS, visionOS,
 and watchOS, adapting to the actual targets and Connect records. Preserve the
 project's framework, build system, locales, distribution choices, and tooling.
+For a headless release job or direct API calls, use `app-store-connect-api`
+when available. Otherwise use the project's authenticated tooling.
 
 ## Establish the task
 

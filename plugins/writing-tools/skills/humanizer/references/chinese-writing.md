@@ -1,97 +1,19 @@
-# Chinese Writing
+# 中文怎么写得自然
 
-Read this reference whenever the output is Chinese. Preserve the requested
-regional variety and script; if neither is specified, follow the source instead
-of silently converting between Simplified and Traditional Chinese.
+先想清楚读者是谁。同事问项目进展，可以直接说事情办到哪一步了。给办事人写通知，要让人知道接下来怎么办。论文段落则要说清依据，以及这个判断适用于什么范围。沿用作者使用的简繁体、地区用语和专业术语。引文、表单上的名称和规定用语照原文保留。
 
-## Select the Register
+## 顺着读者的思路安排句子
 
-Choose from the reader, relationship, publication channel, and stakes. Use the
-least formal register that fully fits the setting. A supplied template, venue
-guide, or clear user preference overrides these defaults.
+先找出谁做了什么，再把时间、条件和结果放到合适的位置。同一个人接连做几件事时，后一句往往可以省略主语。换了人或话题，就点出新的主语。关键名词可以重复，尤其是两个对象容易混淆的时候。
 
-| Register | Typical material | Default standard |
-| --- | --- | --- |
-| Everyday | Messages, posts, personal notes, informal explanations | Direct, compact, and warm where appropriate. Omit repeated subjects when clear and use particles or colloquial wording only when they fit the writer and relationship. Do not force slang or internet language. |
-| General document | Emails, notices, plans, reports, summaries, instructions | Clear, steady, and restrained. State the purpose, action, owner, or conclusion directly; keep terms consistent; avoid chatty filler and inflated official language. |
-| Ordinary academic | Coursework, academic explanations, general scholarly reports | Moderately formal and easy to follow. Make claim, evidence, reasoning, and qualification explicit without imitating journal prose or replacing ordinary verbs with abstract nouns. |
-| Formal academic article | Journal or conference manuscripts, theses, dissertations, publication-ready research | Follow the discipline and venue. Keep terminology, stance, citations, causal limits, and distinctions exact. Use formal, precise Chinese without making stiffness or long sentences a sign of rigor. |
+例如，原稿写“关于申请材料的审核，将在补充材料提交完成后由教务处进行”。给申请人看，可以写“你补齐材料后，教务处会审核你的申请”。读者先知道自己该做什么，也知道下一步由谁负责。“只有”“可能”“通常”会改变意思，改稿时要看清它们限定的是哪件事。
 
-Do not announce the selected register unless the user asks or a meaningful
-ambiguity needs confirmation. If legally fixed, institutional, or quoted wording
-must remain exact, preserve it even when it is less natural than surrounding
-prose.
+衔接取决于两句话的关系。“周三柜台暂停办理，线上咨询照常”一句就能说清两种安排。如果上文刚提醒读者周三到柜台办事，这里写“不过，周三柜台暂停办理”就有了来由。换话题时，直接说下一件事。前后本来是两件事，硬加一个“此外”，读起来反而生硬。
 
-## Rewrite as Chinese
+## 说清读者真正关心的事
 
-- Work from the paragraph's purpose rather than translating clause by clause.
-  Arrange context, topic, action, reason, and result in the order a Chinese reader
-  needs them.
-- Drop repeated subjects and pronouns when reference remains clear. Prefer an
-  active, concrete verb to a noun-heavy shell such as `对……进行……` when meaning
-  does not require the shell.
-- Untangle stacked modifiers, repeated `的`, excessive nominalization, and long
-  clause chains. Split only where the thought naturally changes; do not turn
-  every sentence short.
-- 先找出“谁做什么”的主干，再安排时间、条件和修饰语。让“不”“仅”“可能”等
-  紧贴其限定的动作或判断，避免换语序时改变适用范围。必要时把一长串定语改成
-  独立分句；不要为保留一个高级词或四字短语而迁就别扭的搭配。
-- Keep connectors only when they express a real relationship. Do not add
-  `首先／其次／此外／综上所述`, `一方面／另一方面`, or a closing recap merely to
-  make the passage look organized.
-- Replace empty frames such as `在当今……背景下` and inflated uses of
-  `值得注意的是`, `赋能`, or `彰显` with the concrete point supported by the source.
-- Recast source-language idioms, metaphors, passive forms, and punctuation by
-  function. Do not translate them literally or replace them with invented
-  Chinese idioms.
-- Treat expressions such as `通过……来……`, `在……层面`, `从……角度来看`,
-  repeated `其／该／这意味着`, and `被／由……所……` as diagnostic signals, not
-  banned forms. Keep them when they are the most accurate and natural choice.
-- Preserve necessary technical and institutional terms. Introduce an abbreviation
-  or translated term only when the source, audience, or venue warrants it.
+原稿写“需要特别说明的是，申请的接收并不意味着审批流程已完成”。如果读者只想知道进度，可以写“我们已收到你的申请，审核还没结束”。要是对方问能不能凭回执入场，而规定要求出示批准通知，就把这条要求写明白。一句提醒该不该留，就看它会不会影响读者接下来怎么做。
 
-## 衔接与转折
+讲操作时，把条件和动作连起来。已知记录离线时保存在本机、恢复联网后需要手动同步，就可以写“离线时，记录会保存在这台设备上。重新联网后，点‘同步’就能上传”。“高效”“便捷”一类评价，只有材料里有相应的事实时才值得展开。
 
-- 先理清每段要说明什么，再检查后一句如何承接前一句：是在解释、补充、举例、
-  限定、转折，还是提出下一步。不要为了显得顺畅而补写原文没有的理由。
-- 主语可以省略，但读者必须知道谁在行动。人物或话题切换时，按原文恢复必要的
-  名称；不要让“这”“其”“该”指向不明，也不要为避免重复而随意更换关键术语。
-- “但是”“然而”“尽管”需要真实的对照或预期落差；“因此”“所以”需要原文支持的
-  推论；“与此同时”需要确有同时发生的关系。“此外”不能代替缺失的话题衔接。
-- 关系已经清楚时，可以直接承接；必要时用具体名词或简短提示接住上一句。
-  新话题可以另起一段，不必给每段加连接词，也不必删掉所有连接词。
-- 长短句随意思安排，保留正常的语气和节奏。不要把中文切成电报式短句，也不要
-  用四字短语、排比或整齐句式代替具体表达。
-
-例如，“申请已收到。然而，审核通常需要三个工作日”在没有真实转折时，可改为
-“申请已收到，审核通常需要三个工作日”；“流程缩短了，但差错率没有下降”中的
-“但”表达了有意义的对照，应保留这一关系。示例不是固定替换模板。
-
-## 把内容说具体
-
-“高效”“便捷”“深入”等评价需要素材中的动作、机制、条件或例子支撑。按读者
-需要展开其中有依据的部分，说明细节与观点的关系，不把更多形容词当作更多信息。
-深度不等于篇幅：按钮说明要让人知道操作及结果，技术解释则可能需要过程和限制。
-资料没有交代的机制或效果应指出缺口，不得自行补成产品功能、案例或量化收益。
-
-例如，若素材只确认“离线时保存在本机；联网后须点击同步；不会自动上传”，
-“打造高效无缝的数据协同闭环”可以改为：“离线时，记录保存在本机。联网后点击
-‘同步’才能上传，系统不会自动上传。”细节来自已知行为，没有额外承诺实时同步。
-
-## Final Read
-
-Read the result as continuous Chinese, then check:
-
-- Could a capable native writer plausibly have written this for this reader and
-  setting?
-- Is any sentence grammatical but still ordered, connected, or punctuated like
-  another language?
-- Is the register consistent without turning daily prose casual, documents
-  bureaucratic, or academic prose ceremonial?
-- Can the reader follow topic changes and omitted subjects? Does each transition
-  express the intended relationship without inventing a cause or contrast?
-- Can any elevated phrase be replaced with a simpler one without losing meaning,
-  precision, or tone?
-- 是否保留了理解或操作所需的具体信息，而不只是把空泛句子润色得更顺口？
-- Do the revision and source still match in facts, force, uncertainty, and
-  authorship?
+连起来读一遍。工作消息可以亲切，正式通知可以简洁，学术判断可以审慎。保留作者本来会用的词，让句子的长短随意思变化，写到读者知道该知道的事就收住。

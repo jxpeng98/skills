@@ -1,75 +1,68 @@
 ---
 name: humanizer
-description: "Rewrite stiff, translated, generic, or machine-like drafts into faithful, idiomatic prose with coherent flow, including English and Chinese register guidance. Use rewrite-for-clarity for direct clarity or tone edits; never for detector evasion."
+description: "Polish stiff or translated English and Chinese in emails, READMEs, work documents and journal manuscripts. Use humanizer for natural voice and flow, and rewrite-for-clarity for a requested change of length, tone or audience."
 ---
 
 # Humanizer
 
-For mixed requests, choose the primary problem: unnatural voice belongs here;
-direct clarity, length, or tone changes belong in `rewrite-for-clarity` when
-available. Complete secondary edits in that workflow without automatically
-chaining both skills. If the sibling is unavailable, complete the request here.
+Read for meaning first. Make sure the ideas follow from one another, help the
+reader follow them from sentence to sentence, then choose phrasing that feels
+natural in the reader's language and setting. These priorities reflect 信、达、雅.
+Use the writer's own words or a supplied sample as a guide to their voice.
 
-Preserve facts, claims, intent, citations, quotations, terminology, commitments,
-caveats, and conclusions. Never invent experience, credentials, relationships,
-sources, or detail. Do not help evade AI, plagiarism, authorship, or moderation
-checks. For assessed work, coach or lightly polish existing reasoning without
-supplying missing intellectual work.
+## Choose the approach that fits the passage
 
-Use `Polisher Mode` for a draft and `Coach Mode` for learning or assessed work.
-Rebuild sentences and within-paragraph flow; reserve `deep` editing for reordering
-ideas or paragraphs, respecting fixed structure and assessed-work limits.
+| Setting | What the reader needs |
+| --- | --- |
+| Email or everyday message | Give the answer the recipient is waiting for, or make the request easy to find. Include the context, action and timing they need to respond. Let the relationship guide the greeting and level of formality. |
+| README or usage guide | Walk through the task in the order someone can perform it. Put a prerequisite before the command and the observable result after it. Copy commands, flags, paths and interface labels exactly. |
+| Work document or report | Bring each finding or decision together with its basis. Preserve who reported a finding and how widely it was reported. Distinguish a team receiving an issue from agreeing to handle it. Keep proposals, decisions, owners and dates clear. |
+| Journal manuscript | Edit the passage for its role in the paper and for readers in the field. Keep technical terms stable and attach each interpretation to the result or source that supports it. Use `references/academic-editing.md` for publication and coursework. |
 
-Anchor voice in a supplied sample or preference, then the writer's natural
-phrasing, then the relationship and genre. Otherwise use familiar, fluent,
-slightly polished language appropriate to the region and setting. Apply requested
-tone changes without inventing personal qualities or strengthening evidence.
+A cover letter to a journal editor can use the directness of an email. When
+it describes the paper's contribution, use the same care with evidence and
+certainty as in the manuscript.
 
-Apply 信、达、雅 in every output language, in this order:
+## Edit the thought in context
 
-- **信 — faithful:** preserve what the writer says, including scope, emphasis,
-  uncertainty, and relationships between claims. Do not add a causal link or
-  weaken a qualification to make the argument read more smoothly.
-- **达 — clear and idiomatic:** use the language's natural syntax and collocations;
-  make the actor, action, and object easy to follow. Place conditions, negation,
-  and qualifications next to what they govern; do not distort word order to fit
-  an impressive term. Let each sentence develop the thought.
-- **雅 — apt and restrained:** use precise, familiar words and a rhythm suited to
-  the genre. Elegance does not require literary diction, ornate transitions, or
-  conspicuous symmetry. Never trade fidelity or clarity for polish.
+Keep sentences that already work. If two fluent sentences are hard to follow
+together, find the point where the subject changes, a term first needs explaining
+or the writer jumps from an observation to a conclusion. Often you can move a
+definition or comparison already in the draft to where the reader needs it.
 
-1. Identify audience, genre, intended change, mode, length, and structure. Ask
-   only when missing context changes meaning, audience fit, or authorship limits.
-2. Protect names, numbers, dates, methods, findings, and exact wording alongside
-   the constraints above. Flag suspected errors as `Needs verification`.
-3. Read `references/english-writing.md` for English output and
-   `references/chinese-writing.md` for Chinese output. Read
-   `references/academic-editing.md` for academic or coursework editing. Read
-   `references/style-diagnostics.md` only for unresolved reasoning, referents,
-   or transitions, or when an initial revision still sounds unnatural. A routine
-   polish or the label "AI-like" alone does not require that diagnostic pass.
-4. Trace each paragraph's point and how its sentences explain, support, qualify,
-   or develop it. Rebuild the sentence's main clause before choosing vocabulary;
-   replacing formal words alone cannot repair tangled syntax.
-   Keep the topic and referents stable; introduce a topic shift with enough
-   source-supported context or a paragraph break, not a decorative connector.
-   Replace vague benefits with relevant detail from the supplied draft and notes:
-   what happens, how it works, under which condition, or what a concrete example
-   demonstrates. Explain the relationship, not just a list of facts. Choose only
-   detail that helps this reader; a label or short notice need not become an essay.
-   If needed substance is absent, identify the specific gap instead of inventing
-   it or stretching a slogan into a longer paragraph.
-5. Check each transition against the actual relationship. Keep useful contrasts,
-   causes, and sequence markers; remove or replace misleading ones. If the source
-   lacks a premise or has an ambiguous referent, flag it or ask a focused question
-   rather than inventing a bridge or silently changing the writer's conclusion.
-6. Read continuously for natural word order, paragraph movement, and useful
-   explanation, then compare meaning and protected content with the source,
-   especially who acts, when, and whether a claim is conditional or causal.
-   Repair awkward passages; stop when
-   the revision meets the request. Do not impose connector quotas, sentence-length
-   patterns, forced slang, or a recap that adds nothing.
+Find the main verb in a tangled sentence and give it a subject the source
+supports. If the actor is unknown, the action or result can stay in focus.
+Put conditions and exceptions beside the action they govern.
+For a vague claim, look in the supplied material for the detail that explains
+it. A reader learns more from “you can open the saved draft on another device”
+than from “a seamless experience” when that is what the product actually does.
 
-Return only the revision for quick polish. In `Polisher Mode`, add notes only for
-material changes or uncertainties. In `Coach Mode`, give 1-3 priorities, targeted
-revisions, reasons, and decisions the author must make.
+Read the end of one sentence with the start of the next. Carry a familiar word
+forward or bring the next fact closer to the point it explains. Keep a contrast
+when a reader would reasonably expect a different result. If a sentence opens
+by rebutting an objection nobody raised, start with what happened. Put any
+limit that changes the reader's next step beside the action it affects.
+If several caveats come together, attach each to the finding it qualifies and
+give a separate issue its own sentence. Read the paragraph through once to
+hear where it still sounds like a translation.
+
+Match the scope of the edit. Work within the requested format and keep fixed
+headings. A deeper edit can move a paragraph so a reader meets the evidence
+before the conclusion. Compare the result with the source for names, figures,
+quotations, citations, terms, promises and uncertainty. Where a missing fact
+would change the meaning, flag that particular gap or ask a focused question.
+
+## Language and delivery
+
+- Use `references/chinese-writing.md` for Chinese and `references/english-writing.md` for English, including translations into either language.
+- If a passage still feels disjointed after the first edit, use `references/style-diagnostics.md` to find where the reader loses the thread.
+
+For a polish, return the revised passage. Add a note only if the author needs
+to decide something or asked for an explanation. For coaching, show a specific
+edit, explain why it reads better and leave the author a manageable next step.
+Handle secondary tone or length requests in the same pass. When used on its own,
+this skill can also do a direct clarity edit.
+
+If the request specifically asks to evade an authorship, plagiarism or moderation
+check, offer ordinary editorial feedback. Keep routine editing replies focused
+on the text.

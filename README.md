@@ -13,17 +13,12 @@ paper-planning skills.
 
 ## Current Release
 
-The current repository release is [v0.8.0](https://github.com/jxpeng98/skills/releases/tag/v0.8.0).
-It contains 21 distributable skills across five plugins. Starting with v0.6.1,
+The current repository release is [v0.9.0](https://github.com/jxpeng98/skills/releases/tag/v0.9.0).
+It contains 22 distributable skills across five plugins. Starting with v0.6.1,
 the repository tag and every bundled plugin use the same synchronized version.
 
-| Plugin | Version | Highlights |
-| --- | --- | --- |
-| `dev-tools` | `0.8.0` | Expands Apple-platform and TestFlight workflows; respects authorized task completion. |
-| `faculty-tools` | `0.8.0` | Adds readable teaching handouts and adapts plans, rubrics, and statements to the requested scope. |
-| `presentation-tools` | `0.8.0` | Improves slide explanations, layouts, companion handouts, and scoped editing and export. |
-| `productivity` | `0.8.0` | Continues authorized commit tasks and compares only decision-relevant criteria. |
-| `writing-tools` | `0.8.0` | Strengthens natural English and Chinese word order, logical precision, and source-supported detail. |
+- `dev-tools` adds `app-store-connect-api` for build uploads, TestFlight distribution, App Review and storefront rollout. A bundled Node.js client signs requests with short-lived tokens.
+- `writing-tools` updates `humanizer` for English and Chinese emails, READMEs, work reports and journal manuscripts. See the [bilingual editing examples](evals/humanizer-genre-check.md).
 
 ## Repository Layout
 
@@ -95,6 +90,7 @@ App Store releases.
 | `repo-boundary-review` | Review file ownership and placement without moving files or approving a release. |
 | `release-readiness` | Verify readiness with fresh evidence, including as a gate within an already authorized release. |
 | `app-store-release` | Prepare, audit, build, upload, distribute through TestFlight, submit, or release Apple-platform apps, adapting to the project's stack and requested stage. |
+| `app-store-connect-api` | Run a headless App Store release, from a signed build and store metadata through TestFlight, App Review and storefront availability. |
 
 ### `faculty-tools`
 
@@ -117,7 +113,7 @@ transformation.
 
 | Skill | Use When |
 | --- | --- |
-| `humanizer` | Rewrite stiff or translated drafts with faithful meaning, coherent paragraphs, and natural transitions; includes English and Chinese register guidance. |
+| `humanizer` | Polish English and Chinese emails, READMEs, work documents and journal manuscripts for natural phrasing, coherent paragraphs and precise technical claims. |
 | `rewrite-for-clarity` | Make direct clarity, tone, channel, or audience edits while preserving meaning. |
 | `summarize-material` | Summarize sources, including brief meeting summaries; prefer an available `meeting-synthesizer` for university decision and action records, with a standalone fallback. |
 
