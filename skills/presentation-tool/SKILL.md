@@ -43,8 +43,10 @@ Content and layout requirements:
 - Give each substantive slide a clear point or question and enough concrete
   support to understand it: a finding, mechanism, worked example, comparison,
   or decision with its tradeoff. Keep essential explanation on the slide; notes
-  can extend it, but cannot rescue an empty body. Covers and section dividers
-  need not carry evidence. Do not equate short bullets with useful substance.
+  can extend it. Fit the content to the time and audience by removing repetition
+  and choosing the strongest support. Restructure a crowded slide before
+  cutting the evidence or qualification the audience needs. Keep covers and
+  section dividers simple.
 - Use a supported takeaway title for a finding; use a specific topic title for
   a process, definition, or setup. Avoid unsupported insight or generic labels.
   Use natural English or Chinese clause order, with clear actors, actions, and
@@ -64,8 +66,9 @@ Content and layout requirements:
   illustration; do not fabricate numbers, explanations, or citations for depth.
 - Make the template concrete: consistent title, evidence/body, and source areas;
   a readable type hierarchy, alignment, spacing, and color roles; a small set of
-  layouts selected for the content. Test them with real, dense material before
-  extending them. Repeated decorative panels are not a substitute for structure.
+  layouts selected for the content. Use imagery that explains the subject or
+  serves the supplied design. Test layouts with real, dense material before
+  extending them.
 - Preserve required native editable text, tables, charts, diagrams, and notes.
   Image-only Slidev export cannot satisfy native editable PPTX. Give demos and
   interactions a static fallback, and preserve accessible reading order,

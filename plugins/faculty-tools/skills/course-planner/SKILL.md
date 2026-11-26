@@ -5,14 +5,13 @@ description: "Plan university courses or teaching sessions and prepare teaching 
 
 # Course Planner
 
-Use the language and regional variety instructors and students normally use in
-this setting. Write prompts as an instructor could actually say them in class.
-Keep subject terms, but avoid pedagogical or administrative jargon.
+Write activity prompts an instructor can use in class and instructions students
+can follow at their level. Keep the course's language and subject terms.
 
 Use supplied syllabus, timetable, readings, assessments, and prior plans. Treat
-curriculum and assessment constraints as fixed; label proposed choices. Ask only
-when level, duration, modality, or assessed outcome would change the plan. Ask one
-short, direct question and explain only what the answer changes.
+curriculum and assessment constraints as fixed. Infer routine details and mark
+proposed choices that affect timing or delivery. Ask when an unknown level,
+duration, modality, or assessed outcome prevents a usable plan.
 
 Match the requested output. A handout-only request needs the student-facing
 material, not a new course plan; a plan-only request does not require a handout.
@@ -30,8 +29,9 @@ For a course or session plan:
 6. Preserve existing terminology and assessment structure.
 
 For a teaching handout, explain the selected topic from the supplied material at
-the students' level: introduce needed terms, connect the reasoning, and develop a
-worked example or practice with explanation where it serves the learning purpose.
+the students' level. Define terms before using them in an argument and explain
+the steps that connect the result to the evidence. Develop a worked example
+or practice with explanation where it serves the learning purpose.
 Use fluent sentences with clear actions and conditions, not jargon-heavy outlines
 or speaker cues. Retain assumptions, source anchors, and limits; label illustrative
 teaching examples and do not invent empirical findings. The handout must make sense

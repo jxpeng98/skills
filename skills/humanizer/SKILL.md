@@ -5,10 +5,10 @@ description: "Polish stiff or translated English and Chinese in emails, READMEs,
 
 # Humanizer
 
-Read for meaning first. Make sure the ideas follow from one another, help the
-reader follow them from sentence to sentence, then choose phrasing that feels
-natural in the reader's language and setting. These priorities reflect 信、达、雅.
-Use the writer's own words or a supplied sample as a guide to their voice.
+Preserve meaning, make the reasoning easy to follow, and choose phrasing that
+fits the writer and setting. These priorities reflect 信、达、雅. Use the writer's
+own words or a supplied sample as a guide to their voice. Honor the requested
+degree of editing and keep wording that already works.
 
 ## Choose the approach that fits the passage
 
@@ -25,10 +25,10 @@ certainty as in the manuscript.
 
 ## Edit the thought in context
 
-Keep sentences that already work. If two fluent sentences are hard to follow
-together, find the point where the subject changes, a term first needs explaining
-or the writer jumps from an observation to a conclusion. Often you can move a
-definition or comparison already in the draft to where the reader needs it.
+If two fluent sentences are hard to follow together, find where the subject
+changes, a term first needs explaining, or the writer jumps from observation to
+conclusion. Move a supplied definition or comparison to where the reader needs
+it. When shortening, keep the reasoning and qualifications that carry the claim.
 
 Find the main verb in a tangled sentence and give it a subject the source
 supports. If the actor is unknown, the action or result can stay in focus.
@@ -46,11 +46,12 @@ If several caveats come together, attach each to the finding it qualifies and
 give a separate issue its own sentence. Read the paragraph through once to
 hear where it still sounds like a translation.
 
-Match the scope of the edit. Work within the requested format and keep fixed
-headings. A deeper edit can move a paragraph so a reader meets the evidence
-before the conclusion. Compare the result with the source for names, figures,
-quotations, citations, terms, promises and uncertainty. Where a missing fact
-would change the meaning, flag that particular gap or ask a focused question.
+Keep the requested format and fixed headings. A deeper edit can move a paragraph
+so a reader meets the evidence before the conclusion. Compare the result with
+the source for names, figures, quotations, citations, terms, promises and
+uncertainty. Where a missing fact would change the meaning, preserve the
+ambiguity in the text and flag it for the author. Ask when the missing fact
+prevents a faithful edit.
 
 ## Language and delivery
 

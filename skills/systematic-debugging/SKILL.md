@@ -27,6 +27,7 @@ complete the relevant fix and verification within existing authorization.
    then stop when the requested behavior works or a concrete blocker remains.
    Remove temporary instrumentation.
 
-Return the root cause, decisive evidence, change made if any, checks run, and
-remaining risk. Do not call an unrun check passed or hide a failure behind a
-workaround.
+Lead with the result. Include the failing condition, the evidence tying it to
+the cause, and the observed result of the fix or workaround. Report checks run
+and material gaps. If the cause remains uncertain, report the strongest evidence
+and the condition that still needs verification.

@@ -9,21 +9,21 @@ Use this for a decision and action record, not merely because the source is a
 meeting. For a brief summary, use `summarize-material` if available; otherwise
 summarize here in the requested length without adding an unrequested action table.
 
-Use the language and regional variety normal for the group. Prefer common words,
-short sentences, and concrete verbs. Keep official terms where needed, but avoid
-bureaucratic wording and abstract nouns that hide who decided or will act.
+Use the group's language and official terms. Name the decision-maker or action
+owner when the record establishes who it was.
 
 Use all supplied notes, transcript segments, agenda items, and prior action logs.
 Preserve the organization's minutes template when supplied.
 
 1. Separate confirmed decisions from proposals, discussion, and inference.
-2. Preserve the rationale and source context needed to understand each decision.
+2. Write decisions so someone who missed the meeting can understand their
+   rationale, scope, conditions, and status from the record.
 3. Extract each action with status, owner, due date, dependency, and checkpoint;
    carry forward relevant prior actions.
 4. Merge duplicates and surface contradictions instead of silently resolving them.
 5. Limit sensitive detail to what the audience needs.
 
-Return decisions, an action table, and open questions. Add a follow-up message
-only when requested. Before returning it, verify that every decision and action is
-traceable to the supplied record. Mark missing or ambiguous status, owners, dates,
-consensus, or approvals as `Needs confirmation`; never invent them.
+Use the supplied template or return decisions, an action table, and open
+questions. Add a follow-up message only when requested. Verify that every
+decision and action is traceable to the supplied record. Mark missing or
+ambiguous status, owners, dates, consensus, or approvals as `Needs confirmation`.

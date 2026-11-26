@@ -5,10 +5,6 @@ description: "Compare concrete approaches, tools, architectures, vendors, workfl
 
 # Decide Between Options
 
-Use the language required by the user or audience. Prefer common words and
-familiar sentence patterns. Keep needed technical terms, but do not add formal,
-corporate, or showy wording just to sound polished.
-
 1. State the decision, viable options, hard constraints, time horizon, and costly
    or irreversible consequences.
 2. Inspect available evidence. If a missing fact could change the recommendation
@@ -22,6 +18,7 @@ corporate, or showy wording just to sound polished.
    reversible experiment and a temporary default, with a clear signal for
    revisiting it.
 
-Lead with the recommendation, then give the reason, material tradeoffs,
-assumptions, and what would change the decision. Use a compact paragraph when a
-table or headings add nothing.
+Lead with the recommendation. Tie it to the constraint or evidence that makes
+the options differ, name the downside the reader must accept, and give the
+observable condition that would change the choice. Use the requested format
+and give enough context for someone who missed the deliberation.

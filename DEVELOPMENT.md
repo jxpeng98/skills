@@ -236,6 +236,21 @@ actual outcomes separately from structural validation. A sibling skill may be
 absent in an independent plugin or Hermes installation, so provide a usable
 fallback instead of treating a routing hint as an installed dependency.
 
+## Content Prompts
+
+Define the deliverable, its reader, and what that reader needs to understand or
+do. Keep the author's wording for targeted edits and identify the terms, evidence,
+and qualifications that must survive a rewrite. Make the artifact understandable
+without the source chat. Specify length when the channel or assignment requires
+it. GPT-6.2 already tends toward concise answers, so check that a shorter result
+still explains the claim and carries its limits.
+
+For multistep work, specify the observable result and the evidence that verifies
+it. Let the agent resolve routine, reversible details within the request and
+continue supported work when a material fact is missing. Keep shared agent
+defaults in the host instructions and retain domain-specific requirements in the
+skill so standalone installations work. [OpenAI GPT-6.2 prompting guide](https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices)
+
 ## Supporting Resources
 
 Use `references/` for detailed material the agent should load only when relevant:

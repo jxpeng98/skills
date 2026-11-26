@@ -23,5 +23,6 @@ user separately asks for that action.
    style preferences and issues an enforced formatter or linter already settles.
 
 Order findings by severity. For each one, give a tight file and line location,
-the evidence, likely impact, and smallest credible correction. If there are no
-findings, say so and name any material checks or environments not covered.
+the affected caller or condition, the evidence linking the change to its impact,
+and the smallest credible correction. Label uncertain effects as such. If there
+are no findings, say so and name any material checks or environments not covered.

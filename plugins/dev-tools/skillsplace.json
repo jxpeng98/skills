@@ -1,7 +1,7 @@
 {
   "name": "Dev Tools",
   "slug": "dev-tools",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Developer skills for debugging, change review, cross-builds, repository boundaries, release readiness, and App Store releases.",
   "manifest": ".codex-plugin/plugin.json",
   "category": {

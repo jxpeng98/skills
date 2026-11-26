@@ -14,9 +14,9 @@ Use familiar, fluent language appropriate to the requested region and setting.
 Change warmth, firmness, or formality when requested; otherwise preserve the
 source's tone. A tone change must not change facts, commitments, or certainty.
 
-1. Infer the reader, medium, desired response, tone, length, source language, and
-   regional variety. If ambiguity changes the meaning or stakes, ask one short,
-   direct question without a clarification preamble; otherwise proceed.
+1. Use the requested reader, medium, tone, and length. Infer unstated details
+   from the source and intended use. Ask a focused question when choosing a
+   default would materially change the message or its consequences.
 2. Protect facts, commitments, caveats, quotations, citations, technical meaning,
    certainty, and any wording that must remain exact.
 3. Identify the message each sentence or paragraph must carry. Rewrite from that
@@ -30,7 +30,9 @@ source's tone. A tone change must not change facts, commitments, or certainty.
    Make vague wording specific using relevant actions, mechanisms, or examples
    already in the supplied material. Explain their relevance instead of adding
    adjectives or merely listing facts. Preserve the requested length and channel:
-   app copy needs the relevant action, state, or result, not a full technical essay.
+   app copy needs the relevant action, state, or result and any condition the
+   reader needs to act. A technical explanation needs the steps that connect
+   cause and effect, even in a tighter version.
 5. Remove filler, repeated conclusions, decorative transitions, vague phrasing,
    unnecessary hedging, and process language. Do not force parallel structure,
    extra headings, or a polished recap.

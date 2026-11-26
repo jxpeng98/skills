@@ -5,13 +5,12 @@ description: "Draft or improve teaching and service statements, grant-support te
 
 # Statement Drafter
 
-Use straightforward professional language in the author's regional variety.
-Prefer common words and natural sentences. Match the requested formality and
-improve idiomatic expression without inflating claims or inventing expertise.
+Match the author's voice, the audience, and the requested formality. Give readers
+outside the institution the context they need to assess the author's contribution.
 
 Use the call, criteria, CV, activity record, prior draft, and supplied examples.
-If evidence is thin, return an outline and evidence gaps instead of polished
-unsupported prose.
+Draft supported sections and flag the gaps that affect the criteria. Return an
+outline with evidence gaps when the supplied facts cannot support a usable draft.
 
 1. Identify audience, length, deadline, criteria, and the claim the document must
    support.
@@ -23,7 +22,8 @@ unsupported prose.
    impact; do not strengthen the evidence.
 5. For teaching, connect philosophy to practice and learning evidence; for grants
    or awards, preserve eligibility and submission requirements.
-6. Preserve the author's voice and use only the detail needed for the audience.
+6. Fit the length to the genre and request. Retain the concrete contributions
+   and evidence the reader needs to assess a claim.
 
 Preserve the author's substantive views and contribution. Better fluency or a
 requested tone change does not justify adding credentials, experiences, or outcomes.

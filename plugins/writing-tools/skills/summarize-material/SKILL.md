@@ -11,17 +11,13 @@ is unavailable, complete the record here: distinguish decisions from proposals,
 trace actions to the source, and mark missing status, owners, or dates as
 `Needs confirmation`. Do not assume another plugin is installed.
 
-Read all in-scope material first. Identify who will use the summary and what they
-need to understand, decide, or do; then choose the shortest structure that serves
-that purpose. Infer the reader from context; ask one short, direct question only
-when the answer would materially change what belongs in the summary. If no source
-is available, ask for it instead of inventing a summary.
+Read the in-scope material. Choose the depth and structure around what the reader
+needs to understand, decide, or do. Infer the reader from context. If no source
+is available, ask for it. With partial material, summarize what it supports and
+state the missing coverage when it affects the result.
 
-Use capable native usage for the requested language and region: familiar words,
-natural sentence patterns, and the normal register for the setting. An academic
-summary may be moderately more formal, but it should remain easy to read. Keep
-necessary technical terms without turning ordinary material into executive,
-academic, literary, or promotional prose.
+Use the requested language and register and keep the source terms needed for
+precision.
 
 1. Extract facts, dates, names, decisions, risks, actions, and open questions.
 2. Rank them by consequence for the reader, not by source order. Lead with the
@@ -34,11 +30,12 @@ academic, literary, or promotional prose.
    instead of forcing consensus.
 5. Keep attribution when it changes meaning or accountability. Missing evidence
    is unknown, not proof of absence.
-6. Quote only when wording matters; otherwise paraphrase in plain target-language
-   prose for the audience. When languages differ, translate the meaning rather
-   than preserving the source's syntax, idioms, or paragraph frame.
+6. Quote when wording matters. Paraphrase the rest in natural target-language
+   prose. Put an interpretation and its source or material limitation together,
+   even when the summary must fit a tight word limit.
 
 Use natural paragraphs by default. Use bullets for genuinely discrete items such
 as actions, decisions, or risks, and headings only when the summary has distinct
 parts. Do not open with `This document discusses` or end by repeating the summary.
-State incomplete source coverage and inferred conclusions.
+Before returning the summary, check that a reader without the source can follow
+the main conclusion and see its scope, attribution, and material uncertainties.

@@ -5,24 +5,22 @@ description: "Draft or revise university emails from supplied context and policy
 
 # Faculty Email
 
-Use the language and regional variety normal for the relationship. Prefer common
-words, direct sentences, and the usual level of politeness for that setting. Do
-not add ceremonial openings, corporate phrases, or stock warmth to sound polished.
+Match the sender's voice, the relationship, and the stakes. Give the recipient
+the context they need even if they have not seen the thread.
 
 Use the supplied thread, policy, names, dates, relationship, and requested action.
-Ask only when authority, confidentiality, or the requested commitment changes the
-message. Ask one short, direct question without a formal clarification preamble.
+Draft what the evidence supports. Ask a focused question when missing authority,
+confidentiality, or commitment details prevent a usable draft.
 
 1. Separate confirmed facts, policy, and decisions from requests or interpretation.
 2. Put the point or request early in natural, direct language.
-3. Match tone to the relationship and stakes; preserve the sender's voice.
-4. Include only context the recipient needs.
-5. Make owner, deadline, link, meeting time, or decision explicit.
-6. Keep tentative language tentative; never turn discussion into approval.
-7. Minimize sensitive student, health, or personal details.
+3. Identify the next action and include the owner, deadline, link, or meeting
+   time where known and relevant. Keep any opt-out or condition beside the action.
+4. Preserve the status of decisions and commitments, including any dependencies.
+5. Minimize sensitive student, health, or personal details.
 
-Return only a send-ready subject and email by default. Add `Notes to sender` only
-for unresolved policy, promises, recipient details, or attachments. Do not send
-the email or invent policy exceptions, grades, accommodations, funding,
+Return a send-ready subject and email by default. Put material questions about
+policy, promises, recipient details, or attachments in `Notes to sender`. Do not
+send the email or invent policy exceptions, grades, accommodations, funding,
 references, approvals, or confidential facts. Before returning it, verify that the
 recipient can tell why they are receiving it and what, if anything, happens next.

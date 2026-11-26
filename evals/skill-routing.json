@@ -974,6 +974,60 @@
         "Describe preserving all 12 slides in order, a three-page four-up output, and inspecting legibility/clipping and output page count after export.",
         "State the deck is needed to execute and make no claim of completed export or rendering."
       ]
+    },
+    "faculty-email-forwarded-recipient": {
+      "available_skills": [
+        "faculty-email",
+        "humanizer",
+        "rewrite-for-clarity"
+      ],
+      "prompt": "Draft a send-ready English email to module convenors who were not in the accreditation meeting. Use a subject and at most 100 words of body. The School Office is checking whether existing module handbooks use the updated resit wording for the October accreditation review. Convenors should send their current handbook to the School Office by 2 October, only if they have not already uploaded it to the review folder. The committee discussed revising the assessment policy but did not approve a change. The office's note also named two students awaiting results; those cases aren't relevant to the request.",
+      "expected_skill": "faculty-email",
+      "checks": [
+        "Draft the actual subject and email within the requested body length, with enough context for a convenor unfamiliar with the meeting.",
+        "Preserve what is requested, the School Office recipient, the 2 October deadline, the condition for people who already uploaded, and the accreditation purpose.",
+        "Omit the unrelated sensitive cases and avoid implying an assessment policy change was approved."
+      ]
+    },
+    "summary-partial-source-with-consequential-limit": {
+      "available_skills": [
+        "summarize-material",
+        "meeting-synthesizer"
+      ],
+      "prompt": "用三句话给还没有看材料的教务主任概括试点，供他决定是否等完整报告再推广。现有材料只有《试点简报》第2页。记录说，开放共享电子表单后，两个班的导师可以在同一份表上登记反馈，省去了由教务人员合并邮件的步骤。两个班共36份记录，处理时间的中位数从5天降到3天。同期又增派了一位助理，两个变化都可能影响耗时。第三个班的数据在未提供的附录中。简报没有给出推广决定。",
+      "expected_skill": "summarize-material",
+      "checks": [
+        "Return a three-sentence Chinese summary that is understandable without the source or chat.",
+        "Keep the shared-form mechanism, the 5-to-3-day median, scope of two classes and 36 records, and added assistant as a limit on attribution.",
+        "Identify the missing third-class evidence and avoid implying a rollout decision or that the form caused the entire change."
+      ]
+    },
+    "statement-partially-supported-draft": {
+      "available_skills": [
+        "statement-drafter",
+        "rewrite-for-clarity"
+      ],
+      "prompt": "Draft one paragraph for an external teaching award. The form asks about inclusive design and evidence of effectiveness. I redesigned two seminars so students could post solutions in writing or explain them aloud. The year-end report says 18 of 23 respondents found the written option helpful. There was no comparison group or assessment of attainment. The form also asks whether the approach improved attainment. Use the material I have and tell me what evidence I would need for that criterion.",
+      "expected_skill": "statement-drafter",
+      "checks": [
+        "Deliver a usable first-person paragraph from verified details and identify the attainment evidence gap separately.",
+        "Explain what was changed for a reviewer outside the institution, and preserve that 18 of 23 respondents reported helpfulness.",
+        "Avoid presenting feedback as an attainment or causal result. Identify what attainment evidence would address the requested criterion."
+      ]
+    },
+    "pr-description-required-template-and-missing-results": {
+      "available_skills": [
+        "pr-description",
+        "change-review",
+        "commit-message"
+      ],
+      "prompt": "Write only a paste-ready PR description in English. The repository requires exactly these sections in order: Summary, Testing, Rollback. Diff: the import command now rejects rows with duplicate IDs instead of silently overwriting earlier rows. The existing unique-ID path is unchanged. I ran the CSV import unit tests and they passed. The CLI integration tests and imports of previously accepted customer files have not been checked. There is no linked issue. Reverting the change restores the previous overwrite behavior. The reviewer needs to know what will happen to existing files that contain duplicates.",
+      "expected_skill": "pr-description",
+      "checks": [
+        "Return a paste-ready description in the exact requested three-section template, without reviewer findings or additional sections.",
+        "Explain overwrite versus rejection and the effect on existing duplicate-ID files for a reviewer who has not read the diff.",
+        "Record CSV unit tests as passed, integration and existing-file validation as outstanding, and describe the supplied rollback without inventing an issue or validation."
+      ]
     }
   }
 }

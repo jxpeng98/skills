@@ -27,9 +27,9 @@ For new decks or requested content/design improvements:
 
 1. Give each substantive slide a clear point or question supported by a concrete
    example, mechanism, comparison, data, or decision tradeoff. Explain what the
-   evidence means; "improve efficiency" or "key benefits" alone is not content.
-   Put essential evidence and reasoning on the slide, with extended explanation
-   in notes. Covers and dividers can stay brief. Do not impose a bullet quota.
+   evidence means to this audience. Keep the claim, what supports it, and any
+   qualification needed to interpret it visible together. Use notes for extended
+   explanation and keep covers and dividers simple.
 2. Use supported finding titles for results and specific topic titles for setup
    or explanation. Use natural clause order, clear actions, and precise modifiers
    in the audience's language; don't replace reasoning with ornate noun stacks.

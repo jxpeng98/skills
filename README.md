@@ -13,12 +13,12 @@ paper-planning skills.
 
 ## Current Release
 
-The current repository release is [v0.9.0](https://github.com/jxpeng98/skills/releases/tag/v0.9.0).
+The current repository release is [v0.9.1](https://github.com/jxpeng98/skills/releases/tag/v0.9.1).
 It contains 22 distributable skills across five plugins. Starting with v0.6.1,
 the repository tag and every bundled plugin use the same synchronized version.
 
-- `dev-tools` adds `app-store-connect-api` for build uploads, TestFlight distribution, App Review and storefront rollout. A bundled Node.js client signs requests with short-lived tokens.
-- `writing-tools` updates `humanizer` for English and Chinese emails, READMEs, work reports and journal manuscripts. See the [bilingual editing examples](evals/humanizer-genre-check.md).
+- This release revises 17 skills. The updated prompts specify what context readers need, which evidence and qualifications to preserve, and how to report verification.
+- GPT-6.2 Sol selected the intended skill in four content scenarios and met all 12 acceptance criteria. The [evaluation record](evals/gpt-6.2-content-check.md) includes the prompts' expected outcomes and the actual responses.
 
 ## Repository Layout
 
